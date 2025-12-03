@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# Todo's:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Setup Storybook, stories, docs
+- Box with padding/sizes with `src/moxReact/helpers/propsToClassNames.tsx`
+  - https://chatgpt.com/s/t_692f99b17e148191a0814326cd8bf588
+- Example to use responsive values for e.g. `padding: { mq640px: 'md' }` etc
+- Atoms: layout (shelf), checkbox, text label
+- Molecules: checkboxField
+- Organism: checkboxFormField with validation?
+- Template: form with checkboxFormField with multiple?
+- Reserch: textInline / textBlock / textStyle needed? just one?
+- polyfill `text-edge` in css for cap-baseline sizes
+- docs
+  - Atoms, Molecules, Organisms, Templates
+  - When to use margin, padding, gaps
+  - Responsive scales
+  - `as` prop
+  - `@layer` in css voor betere specificity
+  - Type safety props
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# POC for MOX (MijnOverheid X) NLDS implementation
 
-## React Compiler
+> In Latin, 'mox' means 'soon', 'early'
+> "Vive! Mox senex eris" ("Live! Soon you will be old")
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Goals
 
-## Expanding the ESLint configuration
+- Show simpler way of setting up components with atomic structure
+- Drastically lower amount of (needed) figma-tokens/CSS-vars
+- Show better, more consistent spacing system
+- Show (almost) typesafe way of using React-components with CSS-classnames
+- Setup **Definition of Done** type set of rules for creating any components for consistency, and (re)usability with predictable rules for `ref`s, `className`, `props`. Also for `as` prop to render component in different tag to allow for easier usage in Next / use links as a button / etc.
+- Setup `use client` to allow for usage of components in react-server-components in NextJS.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Current issues
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Inconsistent APIs with components from different sources
+  - Sometimes a `component` prop is available, sometimes not.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Relevant links
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### NLDS
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- [NLDS homepage](https://www.nldesignsystem.nl/)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Atomic design systems
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+...
+
+### Design
+
+- [Utopia fluid responsive design](https://utopia.fyi/)

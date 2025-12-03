@@ -1,0 +1,17 @@
+@layer base {
+  body {
+    --clamp-slope-sm: calc(
+      (var(--mox-spacing-sm-max) - var(--mox-spacing-sm-min)) /
+        (var(--viewport-max-inline-size) - var(--viewport-min-inline-size))
+    );
+    --clamp-intercept-sm: calc(
+      var(--mox-spacing-sm-min) - var(--viewport-min-inline-size) *
+        var(--clamp-slope-sm)
+    );
+    --mox-spacing-sm: clamp(
+      var(--mox-spacing-sm-min),
+      calc(var(--clamp-intercept-sm) + var(--clamp-slope-sm) * 100vw),
+      var(--mox-spacing-sm-max)
+    );
+  }
+}

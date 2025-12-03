@@ -1,0 +1,24 @@
+@import "./tokens.css";
+@import "./spaces/index.css";
+
+@layer reset, tokens, base, atoms, molecules, organisms, templates, pages, overrides;
+
+/* Some reset styles */
+@layer reset {
+  :root {
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+@layer base {
+  .mox-theme-1 {
+    font-size: var(--mox-spacing-md);
+    font-family: "RijkssansVF", "Rijkssans", "Fira Sans", sans-serif;
+  }
+}
