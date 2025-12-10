@@ -46,17 +46,26 @@
   - React, Vue, etc components can be build on the shared css-classes
 - Decrease the token-list:
   - `tokens` will only be used for Atoms (see below), only for lower levels as exception
-- Atomic design system:
-  - **Atoms**:
-    - Globally adjustable by `tokens` from Figma Tokens Studio
-    - Locally adjustable by consistent React API:
-      - Always `ref`, `classNames`, `as` prop (to change `tag`/`component` to render as), additional props, like `styles` (`{...props}`)
-      - Same way of adding styling-props accross all components (e.g. `<Box inlineSize="xl">`) with option to allow for responsive styles
-    - Almost never changes in API
-      - if it does, API usually gets more options, not less (e.g. `inlineSize` prop has [`3xs`, `2xs`, ... , ]. It gets updated to also allow `4xs`)
-    - CSS: Always styled in a @layer `atoms`, to allow for easy specificity overrides
-    - Tiny components, usually single `tag` (e.g. `<div>`)
-    - Examples: `box`, `text`, `link`, `shelf` / `stack` (horizontal / vertical flexbox), `checkbox` (just the `<input>`). The checkbox would be build like this:
+- Atomic design system
+
+### Atomic building blocks
+
+#### Level 0: Base - `CSS only`
+
+- Some basic styling, like reset-styles, calculated vars, shared styling across **Atoms**, etc.
+- Globally adjustable by `tokens` from Figma Tokens Studio
+
+#### Level 1: Atoms - `React & CSS`
+
+- Globally adjustable by `tokens` from Figma Tokens Studio
+- Locally adjustable by consistent React API:
+  - Always `ref`, `classNames`, `as` prop (to change `tag`/`component` to render as), additional props, like `styles` (`{...props}`)
+  - Same way of adding styling-props accross all components (e.g. `<Box inlineSize="xl">`) with option to allow for responsive styles
+- Almost never changes in API
+  - if it does, API usually gets more options, not less (e.g. `inlineSize` prop has [`3xs`, `2xs`, ... , ]. It gets updated to also allow `4xs`)
+- CSS: Always styled in a @layer `atoms`, to allow for easy specificity overrides
+- Tiny components, usually single `tag` (e.g. `<div>`)
+- Examples: `box`, `text`, `link`, `shelf` / `stack` (horizontal / vertical flexbox), `checkbox` (just the `<input>`). The checkbox would be build like this:
 
 ```tsx
 <input
@@ -68,22 +77,43 @@
 />
 ```
 
-- **Molecules**:
-  - Consists of Atom(s)
-  - Globally adjustable to build your own variation based on `Atoms`
-  - Locally adjustable by component API:
-    - Usually `ref` for any focusable Atoms inside the Molecule, like a `link`
-    - Always `classNames`, additional props (like `styles`) for top component
-    - Usually `as` prop for any interactive component
-  - Could change in API: not as robust as Atoms
-  - CSS: Always styled in a @layer `molecules`, to allow for easy specificity overrides
-  - Examples: `checkboxWithLabel` which is built with atoms:
-  ```tsx
-    <Shelf gap="sm">
-      <Input {...props}>
-      <Label>{children}</Label>
-    </Shelf>
-  ```
+#### Level 2: Molecules - `React only`
+
+- Consists of single/more **Atoms**
+- Globally adjustable to build your own variation based on **Atoms**
+- Locally adjustable by component API:
+  - Usually `ref` for any focusable Atoms inside the Molecule, like a `link`
+  - Always `classNames`, additional props (like `styles`) for top component
+  - Usually `as` prop for any interactive component
+- Could change in API: not as robust as Atoms
+- CSS: Always styled in a @layer `molecules`, to allow for easy specificity overrides
+- Examples: `checkboxField` which is built with atoms:
+
+```tsx
+  <Shelf gap="sm">
+    <Input {...props}>
+    <Text as="label">{children}</Text>
+  </Shelf>
+```
+
+#### Level 3: Organisms - `React only`
+
+- Consists of single/more **Atoms** and/or **Molecules**
+- Globally adjustable to build your own variation on **Atoms** and/or **Molecules**
+- Locally adjustable by component API:
+  - Always `classNames`, additional props (like `styles`) for top component
+  - Sometimes `as` prop for any interactive component
+  - Sometimes `asFactory` prop for multiple interactive components (e.g. breadcrumb, navList)
+- Could change in API: less robust than Molecules & Atoms
+- CSS: Always styled in a @layer `organisms`, to allow for easy specificity overrides
+- Examples: `checkboxFieldBlock` which is built with atoms / molecules:
+
+```tsx
+<Stack gap="xs">
+  <CheckboxField>Some label</CheckboxField>
+  <ErrorText>some error</ErrorText>
+</Stack>
+```
 
 ## Relevant links
 

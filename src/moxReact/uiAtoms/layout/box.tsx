@@ -12,38 +12,36 @@
  */
 
 import clsx from "clsx";
-import React, {
-  type ReactNode,
-  type ComponentPropsWithoutRef,
-  type ElementType,
-  useEffect,
-} from "react";
+import { type ElementType } from "react";
+import type { AtomProps } from "../AtomTypes";
+import { propsToClassNames } from "../../helpers/propsToClassNames";
 
-type BoxProps<T extends ElementType = "div"> = {
-  children?: ReactNode;
-  className?: string;
-  as?: T;
-} & ComponentPropsWithoutRef<T>;
+const stylingPropMap = {
+  inlineSize: "inlineSize",
+  blockSize: "blockSize",
+  // bloep: "bar",
+  // backgroundColor: ["red", "blue", "green", "transparent"],
+} as const;
 
 // Components are always named exported with `Mox` and `level (Atom, Molecule, etc)` prefix
-export const MoxAtomBox = <T extends ElementType = "div">(
-  props: BoxProps<T> & { ref?: React.Ref<unknown> }
-) => {
-  const { children, as, className, ref, ...restProps } = props;
+export const MoxAtomBox = <T extends ElementType = "div">({
+  children,
+  as,
+  className,
+  ref,
+  ...restProps
+}: AtomProps<T, typeof stylingPropMap>) => {
   const Component = as || ("div" as ElementType);
 
   // convert props into correct classnames
-  const propClassNames: Array<string> = [];
+  const stylePropClassNames = propsToClassNames(stylingPropMap, restProps);
+
+  console.log(restProps, stylePropClassNames);
 
   return (
     <Component
       ref={ref}
-      className={clsx(
-        "some-class",
-        "another-one",
-        ...propClassNames,
-        className
-      )}
+      className={clsx(...stylePropClassNames, className)}
       {...restProps}
     >
       {children}
@@ -51,5 +49,5 @@ export const MoxAtomBox = <T extends ElementType = "div">(
   );
 };
 
-// Easier imports for heavily used Atom components
+// Easier imports for often used Atom components
 export const MoxBox = MoxAtomBox;

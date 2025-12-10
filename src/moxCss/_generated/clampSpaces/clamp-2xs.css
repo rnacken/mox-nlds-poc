@@ -1,3 +1,11 @@
+
+/**
+  * This file is auto-generated. Do not edit directly.
+  * Generated from src/moxCss/mox.config.ts and script: `generateCss.ts`
+  *
+  * Responsive spacing for the space-size `2xs`
+*/
+
 @layer base {
   body {
     --clamp-slope-2xs: calc(
@@ -11,7 +19,8 @@
     --mox-spacing-2xs: clamp(
       var(--mox-spacing-2xs-min),
       calc(var(--clamp-intercept-2xs) + var(--clamp-slope-2xs) * 100vw),
-      var(--mox-spacing-xs-max)
+      var(--mox-spacing-2xs-max)
     );
   }
 }
+        

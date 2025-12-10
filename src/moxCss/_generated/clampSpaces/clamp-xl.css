@@ -1,3 +1,11 @@
+
+/**
+  * This file is auto-generated. Do not edit directly.
+  * Generated from src/moxCss/mox.config.ts and script: `generateCss.ts`
+  *
+  * Responsive spacing for the space-size `xl`
+*/
+
 @layer base {
   body {
     --clamp-slope-xl: calc(
@@ -6,7 +14,7 @@
     );
     --clamp-intercept-xl: calc(
       var(--mox-spacing-xl-min) - var(--viewport-min-inline-size) *
-        var(--clamp-slope-xl) var(--slope-xl)
+        var(--clamp-slope-xl)
     );
     --mox-spacing-xl: clamp(
       var(--mox-spacing-xl-min),
@@ -15,3 +23,4 @@
     );
   }
 }
+        

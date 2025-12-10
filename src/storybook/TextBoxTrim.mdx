@@ -1,0 +1,101 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+import Leading from "./assets/textBox/half-leading-content-box.png";
+import Figma from "./assets/textBox/type-settings-in-figma.png";
+import CapAlphabet from "./assets/textBox/cap-alphabet-text.png";
+import Card from "./assets/textBox/card.png";
+import CardSymmetry from "./assets/textBox/card-symmetry.png";
+import TextImageAlignment from "./assets/textBox/text-image-alignment.png";
+
+<Meta title="CSS: text-box trim" />
+
+<div className="sb-container">
+  <div className='sb-section-title'>
+    # Text-box formaat
+
+    Het Mox design system tracht om componenten te kunnen ontwerpen en bouwen op een **intuitieve & voorspelbare** manier, zonder 'magische wit-ruimte'. Browsers geven op dit moment helaas nog onvoorspelbare wit-ruimte om tekst heen. Hier beschrijven we hoe Mox hiermee omgaat.
+
+    ## Probleem: Half-leading & content-box
+
+    Standaard tekst in een browser krijgt 'half-leading'. Dat is extra wit-ruimte tussen zinnen. Deze white-space komt nog *bovenop* eventuele `line-height`.
+    Daarnaast staat tekst in een `content-box`, die ook niet strak tegen de letters aanstaat, maar altijd iets groter is.
+    Dit komt uit een idee om zo altijd genoeg ruimte te hebben tussen tekst-blokken, zelfs met `margin: 0`.
+
+    <img src={Leading} alt="Voorbeeld tekst met standaard half-leading" />
+
+    > *"In theory, half-leading works great since it provides space between lines while also giving the whole text block room to breathe.*
+    > *In practice, however, there are a lot of cases where we want to manage the spacing between blocks of text ourselves, especially in titles where there aren’t as many text lines, but leading is still there."*
+    >
+    > — [Juan Diego Rodríguez, CSS-tricks](https://css-tricks.com/almanac/properties/t/text-box/#aa-the-problem-with-text-leading)
+
+    Problemen ontstaan als je dus die extra white-space *niet* wilt. Als je werkt met het Mox systeem moet je plaatjes, teksten, kleurvlakken, etc vrij naast elkaar kunnen gebruiken. De half-leading is in principe geen probleem tussen 2 paragrafen, maar bij elk ander element wil je dat de boven/onderkant **consistent** is t.o.v. elk ander element.
+
+
+    ### Voorbeeld 2: Align to top/bottom
+
+    Als je een tekst en een plaatje (of icoon, shape, etc) *naast* elkaar wilt positioneren, krijgt tekst nu de extra ongewilde white-space:
+
+    <img src={TextImageAlignment} alt="Alignment probleem: tekst met en zonder standaard half-leading" />
+
+    Het tweede component is strakker qua vormgeving.
+
+    Dit probleem komt ook voor bij bv icons naast tekst zetten. We hebben 1 scaling system voor typografie én spaces, dus als we bv een chevron-link willen maken, waarbij het icoon zo groot is als de tekst proberen we zoiets:
+
+    ```css
+    .my-link { display: flex; flex-flow: row; align-items: start; } /* Icon en tekst naast elkaar, align aan bovenkant */
+    .my-chevron-icon { block-size: var(--mox-space-md); } /* Fijn! We kunnen voor zowel tekst als icons `md` gebruiken als scale... toch? */
+    .my-link-text { block-size: var(--mox-space-md); }
+    ```
+
+    Dit werkt echter niet: de hoogte van de tekst krijgt de extra ongewenste wit-ruimte erbij, dus het icon lijnt dus niet mooi uit met de tekst. Je moet white-space toevoegen bij het icon via `viewbox` (waardoor het icoon op andere plekken minder goed te gebruiken wordt), of het icon `center` alignen (maar dit levert problemen op zodra de tekst over meerdere regels valt), of custom padding boven het icon zetten (hacky en breekt als de scales ooit veranderen). Alle drie niet fijn. Door de half-leading van de tekst te snijden alignen icon en tekst perfect met elkaar.
+
+    ### Voorbeeld 3: Symmetrical padding
+
+    Als je inline & block padding wilt instellen (bv: voor een Card), dan wil je 1 size gebruiken. Door `half-leading` krijg je op de verticale as echter extra ongewenste ruimte:
+
+    <img src={Card} alt="Padding probleem tekst met en zonder standaard half-leading" />
+
+    Card 1 ziet er niet strak uit, omdat je oog de hoek van de tekst neemt als optisch hoekpunt, wat niet overeenkomt met het hoekpunt van de card:
+
+    <img src={CardSymmetry} alt="Voorbeeld tekst met standaard half-leading" />
+
+    ## Oplossing: (later) CSS property `text-box`
+
+    We willen dus af van die 'magic white-space'. Dat kan via een nieuwe CSS-property: `text-box-trim` en `text-box-edge` (samen te gebruiken via `text-box`): [CSS level 3 spec](https://drafts.csswg.org/css-inline-3/#text-box-shorthand)
+    Je hebt dan invloed op of en hoe de tekst in een browser getrimmed wordt;
+
+    ```css
+    .trimmedText {
+        text-box: trim-both cap alphabetic; /* text-box loopt van `cap` naar `alphabetic` lijn.
+    }
+    ```
+
+    <img src={CapAlphabet} alt="Snijlijnen voor trimming" />
+
+    ### Baseline Firefox & polyfill
+
+    Momenteel is `text-box-trim` Firefox (en Opera & IE) niet ondersteund (zie [caniuse text-box](https://caniuse.com/css-text-box-trim)). De CSS doet daarmee helaas nog niet aan de [NL DesignSystem Baseline](https://www.nldesignsystem.nl/baseline/).
+    Als tijdelijke oplossing wordt dit met `CSS psuedo selectors ::after en ::before` gepolyfilled. Deze styling passen we echter niet toe op alle tekst want dat zou weer voor onverwachte resultaten zorgen.
+    In plaats daarvan is het specifiek styling:
+    - **CSS:** `.trim-text` class
+    - **React:** `<MoxText>` element maakt gebruik van deze class
+
+    Dit is een tijdelijke oplossing; we houden in de gaten wanneer de CSS property voldoet aan de Baseline en zullen vanaf dan de CSS property gebruiken.
+    Zonder deze class is er geen verandering in text-box. Dat betekent dat er voor bv een Call-to-action button in React dit gedaan moet worden:
+
+    ```tsx
+    <MoxBox as="button" padding="sm">
+        <MoxText>The text inside the button</MoxText> // MoxText zorgt voor de trimming, zonder dit breekt de symmetrical padding, want de tekst heeft dan ongewenste white-space boven en onder.
+    </MoxBox>
+    ```
+
+    Dit is sowieso een goed idee, zodat de styling van de tekst in buttons, etc overal consistent is voor bv afmetingen, kleuren, etc.
+
+    ## Figma
+
+    Figma is al ingesteld op de mogelijkheid om de *trimmed* text-box te gebruiken, zodat designs en implementatie hetzelfde kunnen zijn.
+    Bij `Type settings` is er de optie `Vertical trim` die gezet kan worden op `Cap height to baseline`.
+
+   <img src={Figma} alt="Figma type-settings" />
+  </div>
+</div>

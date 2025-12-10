@@ -1,4 +1,4 @@
-@import "./moxCss/uiAtoms/main.css";
+@import "./moxCss/index.css";
 
 #root {
   max-width: 1280px;

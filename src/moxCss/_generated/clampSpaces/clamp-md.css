@@ -1,4 +1,10 @@
-/* Responsive spacing for the base space-size `md` of a normal character */
+
+/**
+  * This file is auto-generated. Do not edit directly.
+  * Generated from src/moxCss/mox.config.ts and script: `generateCss.ts`
+  *
+  * Responsive spacing for the space-size `md`
+*/
 
 @layer base {
   body {
@@ -17,3 +23,4 @@
     );
   }
 }
+        

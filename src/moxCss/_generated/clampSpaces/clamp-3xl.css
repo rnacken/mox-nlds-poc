@@ -1,3 +1,11 @@
+
+/**
+  * This file is auto-generated. Do not edit directly.
+  * Generated from src/moxCss/mox.config.ts and script: `generateCss.ts`
+  *
+  * Responsive spacing for the space-size `3xl`
+*/
+
 @layer base {
   body {
     --clamp-slope-3xl: calc(
@@ -11,7 +19,8 @@
     --mox-spacing-3xl: clamp(
       var(--mox-spacing-3xl-min),
       calc(var(--clamp-intercept-3xl) + var(--clamp-slope-3xl) * 100vw),
-      var(--mox-spacing-xl-max)
+      var(--mox-spacing-3xl-max)
     );
   }
 }
+        

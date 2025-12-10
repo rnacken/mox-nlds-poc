@@ -1,16 +1,17 @@
 import { moxConfig } from "../../moxCss/mox.config";
+import type { StylePropMap, StylePropTypes } from "../uiAtoms/AtomTypes";
 
-type Breakpoint = keyof typeof moxConfig.viewportBreakpoints &
-  keyof typeof moxConfig.containerBreakpoints;
-
-// Todo: type the key to the possible values (get from config?)
 export const propsToClassNames = (
-  props: Record<string, string | Record<Breakpoint, string>>
+  stylingPropMap: StylePropMap,
+  props: StylePropTypes<typeof stylingPropMap>
 ): Array<string> => {
   const classNames: Array<string> = [];
   const { prefix } = moxConfig;
 
   for (const [prop, value] of Object.entries(props)) {
+    // Only allow props that are defined in the styling map
+    if (!(prop in stylingPropMap)) continue;
+
     // Either string is given (no responsiveness)
     if (typeof value === "string") {
       // inlineSize="xl"
@@ -30,4 +31,4 @@ export const propsToClassNames = (
   return classNames;
 };
 
-/** Todo: Some unit-tests */
+/** Todo: Some unit-tests? */

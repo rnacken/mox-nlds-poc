@@ -1,9 +1,2 @@
 @import "./tokens.css";
-@import "./spaces/index.css";
-/* 
-@import "./atoms/index.css";
-@import "./molecules/index.css";
-@import "./organisms/index.css";
-@import "./templates/index.css";
-@import "./pages/index.css";
-@import "./overrides/index.css"; */
+@import "./base/index.css";
