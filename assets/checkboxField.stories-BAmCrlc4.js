@@ -1,4 +1,4 @@
-import{j as o}from"./jsx-runtime-u17CrQMm.js";import{r as a}from"./iframe-NQVydbms.js";import{M as i}from"./Checkbox-fv2Iaxle.js";import{M as c}from"./Shelf-DbyNGQ4a.js";import"./preload-helper-PPVm8Dsz.js";const s=({children:r})=>{const t=a.useId();return o.jsxs(c,{children:[o.jsx(i,{id:t}),o.jsx("label",{htmlFor:t,children:r})]})};s.__docgenInfo={description:`Checkbox component with a label.
+import{j as o}from"./jsx-runtime-u17CrQMm.js";import{r as a}from"./iframe-DDp4sV61.js";import{M as i}from"./Checkbox-fv2Iaxle.js";import{M as c}from"./Shelf-DbyNGQ4a.js";import"./preload-helper-DivXI2Cm.js";const s=({children:r})=>{const t=a.useId();return o.jsxs(c,{children:[o.jsx(i,{id:t}),o.jsx("label",{htmlFor:t,children:r})]})};s.__docgenInfo={description:`Checkbox component with a label.
 
 If you want a component with an error-message and explanation options, use the Organism \`MoxCheckboxField\`.
 
