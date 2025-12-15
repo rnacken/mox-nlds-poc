@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { MoxAtomBox } from "./Box";
 
 const meta = {
-  title: "Atoms/Layout/Box",
+  title: "React/Atoms/Layout/Box",
   component: MoxAtomBox,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],

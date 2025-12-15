@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { MoxAtomLink } from "./Link";
 
 const meta = {
-  title: "Atoms/Interactive/Link",
+  title: "React/Atoms/Interactive/Link",
   component: MoxAtomLink,
   tags: ["autodocs"],
   parameters: {},

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { MoxAtomText } from "./Text";
 
 const meta = {
-  title: "Atoms/Typography/Text",
+  title: "React/Atoms/Typography/Text",
   component: MoxAtomText,
   tags: ["autodocs"],
   parameters: {},

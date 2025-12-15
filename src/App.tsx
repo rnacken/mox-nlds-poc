@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { MoxAtomBox, MoxBox } from "./moxReact/uiAtoms/layout/Box";
+import { MoxShelf } from "./moxReact/uiAtoms/layout/Shelf";
 
 const Comp = ({ foo }: { foo: string }) => <div>{foo}</div>;
 
@@ -12,6 +13,16 @@ const App = () => {
 
   return (
     <>
+      <MoxShelf gap="2xl">
+        <p>Click there</p>
+        <button
+          onClick={() => console.log("dfsj")}
+          className="button-min-touch"
+        >
+          Click me
+        </button>
+      </MoxShelf>
+
       <MoxBox>Simple box (shorthand import for Atom-component)</MoxBox>
       <MoxAtomBox as="section" href="#">
         Section

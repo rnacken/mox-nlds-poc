@@ -14,10 +14,10 @@ type Breakpoint =
   | `${keyof typeof moxConfig.containerBreakpoints}Min`
   | `${keyof typeof moxConfig.containerBreakpoints}Max`;
 
-export type PropKey = keyof typeof moxConfig.properties;
+type PropKey = keyof typeof moxConfig.properties;
 
 type PropOptions<K extends PropKey> =
-  (typeof moxConfig.properties)[K]["varOptions"][number];
+  (typeof moxConfig.properties)[K]["options"][number];
 
 type PossibleResponsivePropValue<K extends PropKey> =
   | PropOptions<K>
@@ -36,5 +36,8 @@ export type AtomProps<
   className?: string;
   as?: T;
   ref?: React.Ref<ElementFromElementType<T>>;
-} & StylePropTypes<S> &
+} & Partial<StylePropTypes<S>> &
   ComponentPropsWithoutRef<T>;
+
+// Whenever you create a styling-prop map for an Atom component, use this type to satisfy agains (`{...} as const satisfies StylingPropMap`)
+export type StylingPropMap = Record<string, PropKey>;

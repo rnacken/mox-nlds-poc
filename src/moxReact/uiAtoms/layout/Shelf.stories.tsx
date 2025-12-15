@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { MoxShelf } from "./Shelf";
 
 const meta = {
-  title: "Atoms/Layout/Shelf",
+  title: "React/Atoms/Layout/Shelf",
   component: MoxShelf,
   tags: ["autodocs"],
   parameters: {},

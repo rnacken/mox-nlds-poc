@@ -1,0 +1,40 @@
+.mox-atom-input-checkbox {
+  appearance: none;
+  border: 1px solid var(--mox-form-input-option-border-color);
+  border-radius: var(--mox-form-input-checkbox-radius);
+  inline-size: var(--mox-form-input-option-inline-size);
+  block-size: var(--mox-form-input-option-block-size);
+  margin: 0;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+
+  &:checked {
+    background-color: var(--mox-form-input-option-checked-color);
+    border-color: var(--mox-form-input-option-checked-color);
+  }
+
+  &:focus {
+    outline: 2px solid var(--mox-focus-color);
+    /* box-shadow: 0 0 0 2px var(--mox-form-primary-color); */
+  }
+
+  &:checked::after {
+    content: "";
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+
+    background-color: var(--mox-form-input-option-checked-color-contrast);
+    clip-path: polygon(
+      24% 48%,
+      10% 34%,
+      24% 20%,
+      48% 44%,
+      86% 11%,
+      90% 25%,
+      48% 94%
+    );
+    opacity: 1;
+  }
+}

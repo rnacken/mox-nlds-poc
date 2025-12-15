@@ -11,7 +11,12 @@ const generateClassNames = () => {
   const files: string[] = [];
 
   Object.entries(moxConfig.properties).forEach(
-    ([propertyName, { varName, property, varOptions, responsive }]) => {
+    ([propertyName, { property, options, ...restConfig }]) => {
+      const responsive =
+        "responsive" in restConfig && restConfig.responsive ? true : false;
+      const optionsMap =
+        "optionsMap" in restConfig ? restConfig.optionsMap : undefined;
+
       // Create a separate CSS file for each property
       const result: Array<string> = [
         `
@@ -20,10 +25,9 @@ const generateClassNames = () => {
   * Generated from src/moxCss/mox.config.ts and script: \`generateCss.ts\`
 */`,
       ];
-
-      for (const option of varOptions) {
+      for (const option of options) {
         result.push(`.${moxConfig.prefix}-${property}-${option} {
-    ${property}: var(--mox-${varName}-${option});
+    ${property}: ${optionsMap == null ? option : optionsMap[option] ?? option};
 }`);
       }
 
@@ -37,13 +41,17 @@ const generateClassNames = () => {
           result.push(`/* Viewport breakpoint: ${key} (${width}px) */`);
 
           // ... add a min and max media query...
-          for (const direction of ["min", "max"] as const) {
-            result.push(`@media (${direction}-width: ${width}px) {`);
+          for (const direction of ["Min", "Max"] as const) {
+            result.push(
+              `@media only screen and (${direction.toLowerCase()}-device-width: ${width}px) {`
+            );
 
             // ... for each option
-            for (const option of varOptions) {
-              result.push(`\t.${moxConfig.prefix}-${property}-${option} {
-\t\t${property}: var(--${moxConfig.prefix}-${varName}-${option});
+            for (const option of options) {
+              result.push(`\t.${
+                moxConfig.prefix
+              }-${property}-${option}\\@${key}${direction} {
+\t\t${property}: ${optionsMap == null ? option : optionsMap[option] ?? option};
 \t}`);
             }
 
@@ -59,13 +67,17 @@ const generateClassNames = () => {
           result.push(`/* Container breakpoint: ${key} (${width}px) */`);
 
           // ... add a min and max container query...
-          for (const direction of ["min", "max"] as const) {
-            result.push(`@container (${direction}-width: ${width}px) {`);
+          for (const direction of ["Min", "Max"] as const) {
+            result.push(
+              `@container (${direction.toLowerCase()}-width: ${width}px) {`
+            );
 
             // ... for each option
-            for (const option of varOptions) {
-              result.push(`\t.${moxConfig.prefix}-${property}-${option} {
-\t\t${property}: var(--${moxConfig.prefix}-${varName}-${option});
+            for (const option of options) {
+              result.push(`\t.${
+                moxConfig.prefix
+              }-${property}-${option}\\@${key}${direction} {
+\t\t${property}:  ${optionsMap == null ? option : optionsMap[option] ?? option};
 \t}`);
             }
 
@@ -115,17 +127,17 @@ const generateClampSpaces = () => {
 @layer base {
   body {
     --clamp-slope-${space}: calc(
-      (var(--mox-spacing-${space}-max) - var(--mox-spacing-${space}-min)) /
+      (var(--mox-space-${space}-max) - var(--mox-space-${space}-min)) /
         (var(--viewport-max-inline-size) - var(--viewport-min-inline-size))
     );
     --clamp-intercept-${space}: calc(
-      var(--mox-spacing-${space}-min) - var(--viewport-min-inline-size) *
+      var(--mox-space-${space}-min) - var(--viewport-min-inline-size) *
         var(--clamp-slope-${space})
     );
-    --mox-spacing-${space}: clamp(
-      var(--mox-spacing-${space}-min),
+    --mox-space-${space}: clamp(
+      var(--mox-space-${space}-min),
       calc(var(--clamp-intercept-${space}) + var(--clamp-slope-${space}) * 100vw),
-      var(--mox-spacing-${space}-max)
+      var(--mox-space-${space}-max)
     );
   }
 }

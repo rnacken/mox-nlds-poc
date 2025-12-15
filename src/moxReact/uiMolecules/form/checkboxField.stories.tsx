@@ -1,12 +1,32 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { MoxMoleculeCheckboxField } from "./checkboxField";
+import { MoxMoleculeCheckboxField } from "./CheckboxField";
 
 const meta = {
-  title: "Molecules/Form/CheckboxField",
+  title: "React/Molecules/Form/CheckboxField",
   component: MoxMoleculeCheckboxField,
   tags: ["autodocs"],
-  parameters: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `
+---
+
+<details>
+<summary>**How this component is built**</summary>
+
+\`\`\`tsx
+<MoxAtomShelf>
+  <MoxAtomCheckbox id={id} />
+  <label htmlFor={id}>{children}</label>
+</MoxAtomShelf>
+\`\`\`
+
+</details>
+        `,
+      },
+    },
+  },
   args: {
     children: "Click me!",
   },

@@ -1,22 +1,21 @@
 # Todo's:
 
-- Setup Storybook, stories, docs
-- Box with padding/sizes with `src/moxReact/helpers/propsToClassNames.tsx`
-  - https://chatgpt.com/s/t_692f99b17e148191a0814326cd8bf588
+- Storybook: show composites of Molecules with Atoms in code-view.
 - Example to use responsive values for e.g. `padding: { mq640px: 'md' }` etc
-- Atoms: layout (shelf), checkbox, text label
+- Atoms: layout (shelf), checkbox, text label, etc
 - Molecules: checkboxField
 - Organism: checkboxFormField with validation?
 - Template: form with checkboxFormField with multiple?
-- Reserch: textInline / textBlock / textStyle needed? just one?
-- polyfill `text-edge` in css for cap-baseline sizes
+- Research: textInline / textBlock / textStyle needed? just one? Inheritance of styles (inc. Underline for links)
+- polyfill `text-box` in css for cap-baseline sizes
+  - Link Atom, LinkText Atom (for text-box?)
 - docs
   - Atoms, Molecules, Organisms, Templates
   - When to use margin, padding, gaps
   - Responsive scales
   - `as` prop
   - `@layer` in css voor betere specificity
-  - Type safety props
+  - Type safety in props
 
 ---
 
@@ -128,3 +127,11 @@
 ### Design
 
 - [Utopia fluid responsive design](https://utopia.fyi/)
+
+## Ideas for components
+
+- Nice horizontal scroll
+- Tooltip (a11y!)
+- Toast (a11y!)
+- Dialog
+- Aside dialog

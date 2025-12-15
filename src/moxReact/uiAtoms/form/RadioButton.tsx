@@ -5,32 +5,32 @@ import clsx from "clsx";
 /**
  * **⚠️ Warning:**
  * You'll probably want to use:
- * - The **Molecule** `CheckboxField`, with a label
- * - The **Organism** `CheckboxField`, with label, explanation and error-message.
+ * - The **Molecule** `RadioButtonField`, with a label
+ * - The **Organism** `RadioButtonField`, with label, explanation and error-message.
  *
  * ---
  *
- * A Single checkbox input element.
+ * A Single radio button input element.
  * This Atom is not responsible for labels, explanations or error-messages.
  *
  * Responsibilities:
- * 1. Render a checkbox input element.
+ * 1. Render a radio button input element.
  *
  * Not responsible for:
  * 1. Labels, explanations or error-messages.
  */
 
-export const MoxAtomCheckbox = (props: AtomProps<"input", {}>) => {
+export const MoxAtomRadioButton = (props: AtomProps<"input", {}>) => {
   const { as, className, ref, ...restProps } = props;
   const Component = as || ("input" as ElementType);
 
   return (
     <Component
-      className={clsx("mox-atom-input-checkbox", className)}
-      type="checkbox"
+      className={clsx("mox-atom-radio-button", className)}
+      type="radio"
       {...restProps}
     />
   );
 };
 
-// The Molecule Checkbox component is exported as `MoxCheckbox`
+// The Molecule RadioButton component is exported as `MoxRadioButton`

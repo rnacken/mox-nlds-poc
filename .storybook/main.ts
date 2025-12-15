@@ -9,5 +9,9 @@ const config: StorybookConfig = {
     "@storybook/addon-docs",
   ],
   framework: "@storybook/react-vite",
+  viteFinal: (config) => {
+    config.base = "/mox-nlds-poc/";
+    return config;
+  },
 };
 export default config;

@@ -9,17 +9,17 @@
 @layer base {
   body {
     --clamp-slope-4xl: calc(
-      (var(--mox-spacing-4xl-max) - var(--mox-spacing-4xl-min)) /
+      (var(--mox-space-4xl-max) - var(--mox-space-4xl-min)) /
         (var(--viewport-max-inline-size) - var(--viewport-min-inline-size))
     );
     --clamp-intercept-4xl: calc(
-      var(--mox-spacing-4xl-min) - var(--viewport-min-inline-size) *
+      var(--mox-space-4xl-min) - var(--viewport-min-inline-size) *
         var(--clamp-slope-4xl)
     );
-    --mox-spacing-4xl: clamp(
-      var(--mox-spacing-4xl-min),
+    --mox-space-4xl: clamp(
+      var(--mox-space-4xl-min),
       calc(var(--clamp-intercept-4xl) + var(--clamp-slope-4xl) * 100vw),
-      var(--mox-spacing-4xl-max)
+      var(--mox-space-4xl-max)
     );
   }
 }

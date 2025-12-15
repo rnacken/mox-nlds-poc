@@ -17,9 +17,11 @@ export const MoxMoleculeCheckboxField = ({
   const id = useId();
 
   return (
-    <MoxShelf>
+    <MoxShelf gap="4xl" alignItems={{ desktopMax: "start", desktopMin: "end" }}>
       <MoxAtomCheckbox id={id} />
-      <label htmlFor={id}>{children}</label>
+      <label className="mox-text-block" htmlFor={id}>
+        {children}
+      </label>
     </MoxShelf>
   );
 };

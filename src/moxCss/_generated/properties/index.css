@@ -1,4 +1,5 @@
 @import './inlineSize.css';
 @import './blockSize.css';
+@import './gap.css';
+@import './alignItems.css';
 @import './borderWidth.css';
-@import './bar.css';
