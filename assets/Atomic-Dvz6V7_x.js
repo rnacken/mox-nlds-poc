@@ -1,4 +1,4 @@
-import{j as e}from"./jsx-runtime-u17CrQMm.js";import{useMDXComponents as t}from"./index-DXCESExB.js";import{M as o}from"./blocks-prxLtb7x.js";import"./iframe-DDp4sV61.js";import"./preload-helper-DivXI2Cm.js";import"./index-BWC6vadl.js";function n(i){const s={h1:"h1",h2:"h2",h3:"h3",li:"li",p:"p",ul:"ul",...t(),...i.components};return e.jsxs(e.Fragment,{children:[e.jsx(o,{title:"Atomic system"}),`
+import{j as e}from"./jsx-runtime-u17CrQMm.js";import{useMDXComponents as t}from"./index-B5a-IBDX.js";import{M as o}from"./blocks-CGxlvMn2.js";import"./iframe-BNZIUcNb.js";import"./preload-helper-BoFc_b8q.js";import"./index-DcAnwqSq.js";function n(i){const s={h1:"h1",h2:"h2",h3:"h3",li:"li",p:"p",ul:"ul",...t(),...i.components};return e.jsxs(e.Fragment,{children:[e.jsx(o,{title:"Atomic system"}),`
 `,e.jsx("div",{className:"sb-container",children:e.jsxs("div",{className:"sb-section-title",children:[e.jsx(s.h1,{id:"atomic-system",children:"Atomic system"}),e.jsx(s.p,{children:"Dit design system is opgebouwd in meerdere lagen in toenemende complexiteit:"}),e.jsxs(s.ul,{children:[`
 `,e.jsx(s.li,{children:"Atoms"}),`
 `,e.jsx(s.li,{children:"Molecules"}),`

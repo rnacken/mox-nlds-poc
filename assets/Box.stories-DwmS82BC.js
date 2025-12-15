@@ -1,0 +1,10 @@
+import{j as f}from"./jsx-runtime-u17CrQMm.js";import"./iframe-BNZIUcNb.js";import"./preload-helper-BoFc_b8q.js";function l(s){var r,o,e="";if(typeof s=="string"||typeof s=="number")e+=s;else if(typeof s=="object")if(Array.isArray(s)){var n=s.length;for(r=0;r<n;r++)s[r]&&(o=l(s[r]))&&(e&&(e+=" "),e+=o)}else for(o in s)s[o]&&(e&&(e+=" "),e+=o);return e}function d(){for(var s,r,o=0,e="",n=arguments.length;o<n;o++)(s=arguments[o])&&(r=l(s))&&(e&&(e+=" "),e+=r);return e}const u={prefix:"mox"},g=(s,r)=>{const o=[],{prefix:e}=u;for(const[n,t]of Object.entries(r))if(n in s){if(typeof t=="string")o.push(`${e}-${n}-${t}`);else if(typeof t=="object"&&t!==null)for(const[a,p]of Object.entries(t))p&&o.push(`${e}-${n}-${p}\\@${a}`)}return o},x={inlineSize:"inlineSize",blockSize:"blockSize"},m=({children:s,as:r,className:o,ref:e,...n})=>{const t=r||"div",a=g(x,n);return console.log(n,a),f.jsx(t,{ref:e,className:d(...a,o),...n,children:s})};m.__docgenInfo={description:"",methods:[],displayName:"MoxAtomBox",props:{children:{required:!1,tsType:{name:"ReactNode"},description:""},className:{required:!1,tsType:{name:"string"},description:""},as:{required:!1,tsType:{name:"T"},description:""},ref:{required:!1,tsType:{name:"ReactRef",raw:"React.Ref<ElementFromElementType<T>>",elements:[{name:"unknown"}]},description:""}}};const h={title:"Atoms/Layout/Box",component:m,tags:["autodocs"],parameters:{},args:{inlineSize:"3xl",blockSize:"3xl",backgroundColor:"transparent",children:"📦",style:{border:"1px solid black",padding:"16px"}}},i={args:{as:"section"}},c={args:{href:"#",as:"a"}};i.parameters={...i.parameters,docs:{...i.parameters?.docs,source:{originalSource:`{
+  args: {
+    as: "section"
+  }
+}`,...i.parameters?.docs?.source}}};c.parameters={...c.parameters,docs:{...c.parameters?.docs,source:{originalSource:`{
+  args: {
+    href: "#",
+    as: "a"
+  }
+}`,...c.parameters?.docs?.source}}};const k=["AsSection","AsLink"];export{c as AsLink,i as AsSection,k as __namedExportsOrder,h as default};
