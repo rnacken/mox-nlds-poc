@@ -1,5 +1,0 @@
-import{j as r}from"./iframe-DlIsFcSq.js";import{M as e}from"./Shelf-B4sB_vd-.js";import"./preload-helper-DivXI2Cm.js";import"./clsx-B-dksMZM.js";import"./propsToClassNames-idq_0HoY.js";const m={title:"React/Atoms/Layout/Shelf",component:e,tags:["autodocs"],parameters:{},args:{children:r.jsxs(r.Fragment,{children:[r.jsx(e,{children:"📦"}),r.jsx(e,{children:"📦"})]})}},s={args:{}};s.parameters={...s.parameters,docs:{...s.parameters?.docs,source:{originalSource:`{
-  args: {
-    // as: "section",
-  }
-}`,...s.parameters?.docs?.source}}};const i=["AsSection"];export{s as AsSection,i as __namedExportsOrder,m as default};
