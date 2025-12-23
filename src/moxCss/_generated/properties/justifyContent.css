@@ -1,0 +1,355 @@
+
+/**
+  * This file is auto-generated. Do not edit directly.
+  * Generated from src/moxCss/mox.config.ts and script: `generateCss.ts`
+*/
+.mox-justify-content-start {
+    justify-content: start;
+}
+.mox-justify-content-center {
+    justify-content: center;
+}
+.mox-justify-content-end {
+    justify-content: end;
+}
+.mox-justify-content-stretch {
+    justify-content: stretch;
+}
+.mox-justify-content-space-between {
+    justify-content: space-between;
+}
+.mox-justify-content-space-around {
+    justify-content: space-around;
+}
+.mox-justify-content-space-evenly {
+    justify-content: space-evenly;
+}
+/* Viewport breakpoint: mobile (600px) */
+@media only screen and (min-device-width: 600px) {
+	.mox-justify-content-start\@mobileMin {
+		justify-content: start;
+	}
+	.mox-justify-content-center\@mobileMin {
+		justify-content: center;
+	}
+	.mox-justify-content-end\@mobileMin {
+		justify-content: end;
+	}
+	.mox-justify-content-stretch\@mobileMin {
+		justify-content: stretch;
+	}
+	.mox-justify-content-space-between\@mobileMin {
+		justify-content: space-between;
+	}
+	.mox-justify-content-space-around\@mobileMin {
+		justify-content: space-around;
+	}
+	.mox-justify-content-space-evenly\@mobileMin {
+		justify-content: space-evenly;
+	}
+}
+@media only screen and (max-device-width: 600px) {
+	.mox-justify-content-start\@mobileMax {
+		justify-content: start;
+	}
+	.mox-justify-content-center\@mobileMax {
+		justify-content: center;
+	}
+	.mox-justify-content-end\@mobileMax {
+		justify-content: end;
+	}
+	.mox-justify-content-stretch\@mobileMax {
+		justify-content: stretch;
+	}
+	.mox-justify-content-space-between\@mobileMax {
+		justify-content: space-between;
+	}
+	.mox-justify-content-space-around\@mobileMax {
+		justify-content: space-around;
+	}
+	.mox-justify-content-space-evenly\@mobileMax {
+		justify-content: space-evenly;
+	}
+}
+/* Viewport breakpoint: tablet (900px) */
+@media only screen and (min-device-width: 900px) {
+	.mox-justify-content-start\@tabletMin {
+		justify-content: start;
+	}
+	.mox-justify-content-center\@tabletMin {
+		justify-content: center;
+	}
+	.mox-justify-content-end\@tabletMin {
+		justify-content: end;
+	}
+	.mox-justify-content-stretch\@tabletMin {
+		justify-content: stretch;
+	}
+	.mox-justify-content-space-between\@tabletMin {
+		justify-content: space-between;
+	}
+	.mox-justify-content-space-around\@tabletMin {
+		justify-content: space-around;
+	}
+	.mox-justify-content-space-evenly\@tabletMin {
+		justify-content: space-evenly;
+	}
+}
+@media only screen and (max-device-width: 900px) {
+	.mox-justify-content-start\@tabletMax {
+		justify-content: start;
+	}
+	.mox-justify-content-center\@tabletMax {
+		justify-content: center;
+	}
+	.mox-justify-content-end\@tabletMax {
+		justify-content: end;
+	}
+	.mox-justify-content-stretch\@tabletMax {
+		justify-content: stretch;
+	}
+	.mox-justify-content-space-between\@tabletMax {
+		justify-content: space-between;
+	}
+	.mox-justify-content-space-around\@tabletMax {
+		justify-content: space-around;
+	}
+	.mox-justify-content-space-evenly\@tabletMax {
+		justify-content: space-evenly;
+	}
+}
+/* Viewport breakpoint: desktop (1200px) */
+@media only screen and (min-device-width: 1200px) {
+	.mox-justify-content-start\@desktopMin {
+		justify-content: start;
+	}
+	.mox-justify-content-center\@desktopMin {
+		justify-content: center;
+	}
+	.mox-justify-content-end\@desktopMin {
+		justify-content: end;
+	}
+	.mox-justify-content-stretch\@desktopMin {
+		justify-content: stretch;
+	}
+	.mox-justify-content-space-between\@desktopMin {
+		justify-content: space-between;
+	}
+	.mox-justify-content-space-around\@desktopMin {
+		justify-content: space-around;
+	}
+	.mox-justify-content-space-evenly\@desktopMin {
+		justify-content: space-evenly;
+	}
+}
+@media only screen and (max-device-width: 1200px) {
+	.mox-justify-content-start\@desktopMax {
+		justify-content: start;
+	}
+	.mox-justify-content-center\@desktopMax {
+		justify-content: center;
+	}
+	.mox-justify-content-end\@desktopMax {
+		justify-content: end;
+	}
+	.mox-justify-content-stretch\@desktopMax {
+		justify-content: stretch;
+	}
+	.mox-justify-content-space-between\@desktopMax {
+		justify-content: space-between;
+	}
+	.mox-justify-content-space-around\@desktopMax {
+		justify-content: space-around;
+	}
+	.mox-justify-content-space-evenly\@desktopMax {
+		justify-content: space-evenly;
+	}
+}
+/* Viewport breakpoint: mq1440 (1440px) */
+@media only screen and (min-device-width: 1440px) {
+	.mox-justify-content-start\@mq1440Min {
+		justify-content: start;
+	}
+	.mox-justify-content-center\@mq1440Min {
+		justify-content: center;
+	}
+	.mox-justify-content-end\@mq1440Min {
+		justify-content: end;
+	}
+	.mox-justify-content-stretch\@mq1440Min {
+		justify-content: stretch;
+	}
+	.mox-justify-content-space-between\@mq1440Min {
+		justify-content: space-between;
+	}
+	.mox-justify-content-space-around\@mq1440Min {
+		justify-content: space-around;
+	}
+	.mox-justify-content-space-evenly\@mq1440Min {
+		justify-content: space-evenly;
+	}
+}
+@media only screen and (max-device-width: 1440px) {
+	.mox-justify-content-start\@mq1440Max {
+		justify-content: start;
+	}
+	.mox-justify-content-center\@mq1440Max {
+		justify-content: center;
+	}
+	.mox-justify-content-end\@mq1440Max {
+		justify-content: end;
+	}
+	.mox-justify-content-stretch\@mq1440Max {
+		justify-content: stretch;
+	}
+	.mox-justify-content-space-between\@mq1440Max {
+		justify-content: space-between;
+	}
+	.mox-justify-content-space-around\@mq1440Max {
+		justify-content: space-around;
+	}
+	.mox-justify-content-space-evenly\@mq1440Max {
+		justify-content: space-evenly;
+	}
+}
+/* Container breakpoint: cq200 (200px) */
+@container (min-width: 200px) {
+	.mox-justify-content-start\@cq200Min {
+		justify-content:  start;
+	}
+	.mox-justify-content-center\@cq200Min {
+		justify-content:  center;
+	}
+	.mox-justify-content-end\@cq200Min {
+		justify-content:  end;
+	}
+	.mox-justify-content-stretch\@cq200Min {
+		justify-content:  stretch;
+	}
+	.mox-justify-content-space-between\@cq200Min {
+		justify-content:  space-between;
+	}
+	.mox-justify-content-space-around\@cq200Min {
+		justify-content:  space-around;
+	}
+	.mox-justify-content-space-evenly\@cq200Min {
+		justify-content:  space-evenly;
+	}
+}
+@container (max-width: 200px) {
+	.mox-justify-content-start\@cq200Max {
+		justify-content:  start;
+	}
+	.mox-justify-content-center\@cq200Max {
+		justify-content:  center;
+	}
+	.mox-justify-content-end\@cq200Max {
+		justify-content:  end;
+	}
+	.mox-justify-content-stretch\@cq200Max {
+		justify-content:  stretch;
+	}
+	.mox-justify-content-space-between\@cq200Max {
+		justify-content:  space-between;
+	}
+	.mox-justify-content-space-around\@cq200Max {
+		justify-content:  space-around;
+	}
+	.mox-justify-content-space-evenly\@cq200Max {
+		justify-content:  space-evenly;
+	}
+}
+/* Container breakpoint: cq400 (400px) */
+@container (min-width: 400px) {
+	.mox-justify-content-start\@cq400Min {
+		justify-content:  start;
+	}
+	.mox-justify-content-center\@cq400Min {
+		justify-content:  center;
+	}
+	.mox-justify-content-end\@cq400Min {
+		justify-content:  end;
+	}
+	.mox-justify-content-stretch\@cq400Min {
+		justify-content:  stretch;
+	}
+	.mox-justify-content-space-between\@cq400Min {
+		justify-content:  space-between;
+	}
+	.mox-justify-content-space-around\@cq400Min {
+		justify-content:  space-around;
+	}
+	.mox-justify-content-space-evenly\@cq400Min {
+		justify-content:  space-evenly;
+	}
+}
+@container (max-width: 400px) {
+	.mox-justify-content-start\@cq400Max {
+		justify-content:  start;
+	}
+	.mox-justify-content-center\@cq400Max {
+		justify-content:  center;
+	}
+	.mox-justify-content-end\@cq400Max {
+		justify-content:  end;
+	}
+	.mox-justify-content-stretch\@cq400Max {
+		justify-content:  stretch;
+	}
+	.mox-justify-content-space-between\@cq400Max {
+		justify-content:  space-between;
+	}
+	.mox-justify-content-space-around\@cq400Max {
+		justify-content:  space-around;
+	}
+	.mox-justify-content-space-evenly\@cq400Max {
+		justify-content:  space-evenly;
+	}
+}
+/* Container breakpoint: cq600 (600px) */
+@container (min-width: 600px) {
+	.mox-justify-content-start\@cq600Min {
+		justify-content:  start;
+	}
+	.mox-justify-content-center\@cq600Min {
+		justify-content:  center;
+	}
+	.mox-justify-content-end\@cq600Min {
+		justify-content:  end;
+	}
+	.mox-justify-content-stretch\@cq600Min {
+		justify-content:  stretch;
+	}
+	.mox-justify-content-space-between\@cq600Min {
+		justify-content:  space-between;
+	}
+	.mox-justify-content-space-around\@cq600Min {
+		justify-content:  space-around;
+	}
+	.mox-justify-content-space-evenly\@cq600Min {
+		justify-content:  space-evenly;
+	}
+}
+@container (max-width: 600px) {
+	.mox-justify-content-start\@cq600Max {
+		justify-content:  start;
+	}
+	.mox-justify-content-center\@cq600Max {
+		justify-content:  center;
+	}
+	.mox-justify-content-end\@cq600Max {
+		justify-content:  end;
+	}
+	.mox-justify-content-stretch\@cq600Max {
+		justify-content:  stretch;
+	}
+	.mox-justify-content-space-between\@cq600Max {
+		justify-content:  space-between;
+	}
+	.mox-justify-content-space-around\@cq600Max {
+		justify-content:  space-around;
+	}
+	.mox-justify-content-space-evenly\@cq600Max {
+		justify-content:  space-evenly;
+	}
+}

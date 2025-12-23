@@ -1,5 +1,7 @@
 @import './inlineSize.css';
 @import './blockSize.css';
 @import './gap.css';
+@import './fontSize.css';
 @import './alignItems.css';
+@import './justifyContent.css';
 @import './borderWidth.css';

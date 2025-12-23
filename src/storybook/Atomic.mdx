@@ -1,36 +1,81 @@
 import { Meta } from "@storybook/addon-docs/blocks";
+import AtomicDesignSystem from "./assets/atomic-design-system.png";
 
 <Meta title="Atomic system" />
 
 <div className="sb-container">
   <div className='sb-section-title'>
-    # Atomic system
+# Atomic system
 
-    Dit design system is opgebouwd in meerdere lagen in toenemende complexiteit:
-    - Atoms
-    - Molecules
-    - Organisms
-    - Templates
+Dit design system is opgebouwd in meerdere lagen in toenemende complexiteit:
 
-...
+- Atoms
+- Molecules
+- Organisms
+- Templates
+- Pages
+
+<img src={AtomicDesignSystem} alt="Opbouw van een atomic design system" />
+
+De reden hiervoor is dat dit de beste aanpak is om een design systeem op te zetten voor een brede doelgroep:
+
+- Sommige mensen willen snel pagina's kunnen opzetten en leunen op bestaande Templates
+- Anderen willen juist controle hebben en componenten kunnen aanpassen op detail-niveau
+- ... en iedereen die daar tussen valt
+
+Met een atomic design system kan je de uitgebreide `organisms` of zelfs `templates` gebruiken om snel een pagina op te zetten.
+Maar je kan ook `organisms` of `molecules` afpellen tot de `atoms` voor volledige aanpasbaarheid.
+Iedereen kan via `design tokens` een eigen huisstijl toepassen, binnen de grenzen van de Rijkshuisstijl.
+Het Mox Design system is een poging om aan de wensen van een brede gebruikersgroep te voldoen.
 
 ## Bouwblokken van het atomic system
 
-### Atoms
+### lv. 0 - Base
 
-Beloftes
+Hier heb je als gebruiker geen invloed op, maar is belangrijk voor een consistente stijl. Denk bijvoorbeeld aan CSS reset styles.
 
-### Molecules
+### lv. 1 - Atoms
 
-Beloftes
+**Atoms** zijn de kleinste bouwblokjes van het design-systeem.
 
-### Organisms
+#### Beloftes
 
-Beloftes
+- Er zullen altijd uitzonderingen zijn, maar in principe kan je met **atoms** bijna alle grotere componenten opbouwen
+- De styling wordt altijd gedaan via CSS (zie de `Mox-css atoms`)
+- Uitgebreide aanpasbaarheid qua styling via `design tokens`
+- Consistente API tussen alle `atom` componenten:
+  - `as`, `ref`, `className` en `styling` props
+- Nooit omringende spacing zoals `padding` of `margin` (gebruik altijd layout-componenten zoals `stack` of `box` om de spaces tussen elementen te bepalen)
+- Atoms zullen bijna nooit breaking changes hebben bij updates
 
-### Templates
+### lv. 2 - Molecules
 
-## Hoe gebruik ik dit voor mijn project?
+**Molecules** zijn opgebouwd uit **atoms** en zijn daardoor complexer
+
+#### Beloftes
+
+- In principe geen `design tokens`
+- Aanpasbaarheid door de API van het component
+- Docs over hoe het opgebouwd is, zodat je zelf makkelijk het kan nabouwen met **atoms** voor volledige aanpasbaarheid
+- Anders dan **atoms** kunnen hier sneller breaking changes in voorkomen
+- Nooit omringende spacing zoals `padding` of `margin`
+
+### lv. 3 - Organisms
+
+**Organisms** zijn weer opgebouwd uit **molecules** en/of **atoms**. Deze componenten zijn complexer dan **molecules** en kunnen custom interactiviteit hebben.
+
+#### Beloftes
+
+- Net als **molecules**: geen `design tokens`, minder sterke belofte omtrent breaking changes
+- Nooit omringende spacing zoals `padding` of `margin`
+
+### lv. 4 - Templates
+
+Sommige pagina's zullen een gebruikelijke opbouw hebben. Denk bijvoorbeeld aan een basis-homepage of een contact-formulier.
+
+### lv. 5 - Pages
+
+Pages zijn de meest complexe bouwwerken. Ze kunnen gebaseerd zijn op **templates**, of helemaal opgebouwd zijn uit alle lagere levels van bouwblokken.
 
 </div>
 

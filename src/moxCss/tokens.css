@@ -221,8 +221,7 @@ Example:
     /* Form stuff */
     --mox-form-input-option-border-color: var(--mox-color-primary);
     --mox-form-input-checkbox-radius: var(--mox-border-radius-sm);
-    --mox-form-input-option-inline-size: var(--mox-space-md);
-    --mox-form-input-option-block-size: var(--mox-space-md);
+    --mox-form-input-option-size: var(--mox-space-sm);
     --mox-form-input-option-checked-color: var(--mox-color-primary);
     --mox-form-input-option-checked-color-contrast: var(
       --mox-color-primary-contrast

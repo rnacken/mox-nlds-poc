@@ -1,10 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-
-import { MoxMoleculeCheckboxField } from "./CheckboxField";
+import { MoxMoleculeRadioButtonField } from "./RadioButtonField";
 
 const meta = {
-  title: "React/Molecules/Form/CheckboxField",
-  component: MoxMoleculeCheckboxField,
+  title: "React/Molecules/Form/RadioButtonField",
+  component: MoxMoleculeRadioButtonField,
   tags: ["autodocs"],
   parameters: {
     docs: {
@@ -17,7 +16,7 @@ const meta = {
 
 \`\`\`tsx
 <MoxAtomShelf>
-  <MoxAtomCheckbox id={id} />
+  <MoxAtomRadioButton id={id} />
   <MoxTextBlock as="label" htmlFor={id}>{children}</MoxTextBlock>
 </MoxAtomShelf>
 \`\`\`
@@ -30,11 +29,11 @@ const meta = {
   args: {
     children: "Click me!",
   },
-} satisfies Meta<typeof MoxMoleculeCheckboxField>;
+} satisfies Meta<typeof MoxMoleculeRadioButtonField>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const CheckboxFieldDefault: Story = {
+export const RadioButtonFieldDefault: Story = {
   args: {},
 };

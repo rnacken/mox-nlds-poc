@@ -43,7 +43,7 @@ export const MoxAtomShelf = <T extends ElementType = "div">({
   return (
     <Component
       ref={ref}
-      className={clsx("mox-atom-shelf", ...stylePropClassNames, className)}
+      className={clsx("mox-atom-shelf", stylePropClassNames, className)}
       {...restProps}
     >
       {children}

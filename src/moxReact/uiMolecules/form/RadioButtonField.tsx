@@ -1,17 +1,17 @@
 import { useId } from "react";
-import { MoxAtomCheckbox } from "../../uiAtoms/form/Checkbox";
 import { MoxShelf } from "../../uiAtoms/layout/Shelf";
 import { MoxTextBlock } from "../../uiAtoms/typography/TextBlock";
+import { MoxAtomRadioButton } from "../../uiAtoms/form/RadioButton";
 
 /**
- * Checkbox component with a label.
+ * Radio-button component with a label.
  *
- * If you want a component with an error-message and explanation options, use the Organism `MoxCheckboxField`.
+ * If you want a component with an error-message and explanation options, use the Organism `MoxRadioButtonField`.
  *
  * Responsibilities:
- * 1. Render a checkbox with a label.
+ * 1. Render a radio-button with a label.
  */
-export const MoxMoleculeCheckboxField = ({
+export const MoxMoleculeRadioButtonField = ({
   className,
   children,
 }: {
@@ -22,7 +22,7 @@ export const MoxMoleculeCheckboxField = ({
 
   return (
     <MoxShelf gap="md" alignItems={"start"} className={className}>
-      <MoxAtomCheckbox id={id} />
+      <MoxAtomRadioButton id={id} />
       <MoxTextBlock as="label" htmlFor={id}>
         {children}
       </MoxTextBlock>

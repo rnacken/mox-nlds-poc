@@ -87,6 +87,12 @@ export const moxConfig = {
       options: spaces,
       responsive: true,
     },
+    fontSize: {
+      property: "font-size",
+      optionsMap: spaceOptionsMaps,
+      options: spaces,
+      responsive: true,
+    },
     alignItems: {
       property: "align-items",
       options: ["start", "center", "end", "stretch", "baseline"],

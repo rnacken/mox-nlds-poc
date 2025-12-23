@@ -1,0 +1,54 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="React/Atoms/Layout" />
+
+<div className="sb-container">
+  <div className='sb-section-title'>
+  # Layout
+
+Deze componenten zijn de bouwblokken waarbinnen andere componenten goed gepositioneerd kunnen worden.
+
+De opzet van de layout in het Mox systeem leunt op een aantal ideeen:
+
+- `margin` heeft geen plek in layout. Dit is een property om afstand **tussen tekst** te beschrijven. Geen enkel component heeft daarom een `margin` prop.
+- `padding` wordt gebruikt om de afstand duidelijk te maken vanaf **de rand van een `Box`**. Een Box-rand kan ontstaan door:
+  - Een achtergrond-kleur
+  - Een border
+  - Een shadow
+- Voor afstand **tussen** componenten gebruiken we `gap` (i.c.m. `flex` en `grid`) of `column-gap` (voor `columns`)
+- Je kan de `inline/block-size` van de layout componenten bepalen via de gebruikelijke `space` values (`xs`, `md`, `lg`, etc)
+- Een los component moet rondom **nooit** `padding` of `margin` hebben. Elk component is dus `trimmed` en kan zo goed gebruikt worden zodat je ooit ongewilde white-space krijgt.
+
+Uiteraard zijn er soms uitzonderingen op deze regels.
+
+We bieden een set van componenten, met beperkte opties om het overzichtelijk te houden. Zodra je complexere eisen hebt, zoals een `grid` met meerdere `grid-areas`, dan is het tijd om een eigen uniek component te maken. Wat we echter wel bieden:
+
+## Box
+
+Een simpele container, om aan te geven dat dit een speciaal blok is, d.m.v.
+
+- Een achtergrond-kleur
+- Een border
+- Een shadow
+  Dit is de enige plek waar je in principe `padding` gebruikt.
+
+## Shelf / Stack / FlexBox
+
+Componenten om dingen _naast_ of _onder elkaar_ te tonen. Een `gap` bepaald de afstand. In principe `wrappen` de componenten niet, maar blijven op 1 lijn. Er is wel een `prop` om dit alsnog toe te staan.
+Met de `FlexBox` kan je responsive een `Stack` veranderen in een `Shelf` op een bepaalde media/container query.
+
+## Columns
+
+De inhoud wordt in `columns` getoond, afhankelijk van een `columnCount` prop (responsive).
+
+## Pile
+
+Als je 2 of meer elementen wilt overlappen. We gebruiken hiervoor niet meer `position: absolute`, maar `grid`, want dit is een layout issue.
+
+## Occupy
+
+Soms wil je een bepaald component plaatsen op een plek die niet goed te vangen is in `align-items` of `justify-content` (bv een icoontje dat je buiten de container wilt plaatsen). Voor dat soort uitzonderingen kan je dat element in een `Occupy` block zetten voor meer invloed op de positionering.
+
+</div>
+
+</div>

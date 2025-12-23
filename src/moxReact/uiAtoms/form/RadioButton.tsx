@@ -26,7 +26,7 @@ export const MoxAtomRadioButton = (props: AtomProps<"input", {}>) => {
 
   return (
     <Component
-      className={clsx("mox-atom-radio-button", className)}
+      className={clsx("mox-atom-input-radio-button", className)}
       type="radio"
       {...restProps}
     />
