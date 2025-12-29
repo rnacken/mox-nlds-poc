@@ -38,7 +38,7 @@ export const MoxAtomShelf = <T extends ElementType = "div">({
   // convert style props into correct classnames
   const stylePropClassNames = propsToClassNames(stylingPropMap, props);
 
-  const { gap, alignItems, ...restProps } = props;
+  const { gap, alignItems, justifyContent, ...restProps } = props;
 
   return (
     <Component

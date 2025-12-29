@@ -5,6 +5,9 @@ import { propsToClassNames } from "../../helpers/propsToClassNames";
 
 export const stylingPropMap = {
   fontSize: "fontSize",
+  color: "textColor",
+  fontWeight: "fontWeight",
+  lineHeight: "lineHeight",
 } as const satisfies StylingPropMap;
 
 /**
@@ -30,8 +33,8 @@ export const MoxAtomTextBlock = <T extends ElementType = "span">({
   // convert style props into correct classnames
   const stylePropClassNames = propsToClassNames(stylingPropMap, props);
 
-  const { fontSize, ...restProps } = props;
-  console.log(stylePropClassNames);
+  const { fontSize, color, fontWeight, lineHeight, ...restProps } = props;
+
   return (
     <Component
       ref={ref}

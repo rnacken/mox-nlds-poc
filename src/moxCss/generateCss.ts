@@ -2,6 +2,24 @@ import { posix as posixPath } from "path";
 import { moxConfig, spaces } from "./mox.config";
 import * as fs from "fs";
 
+const getClassName = ({
+  property,
+  option,
+  responsive,
+  state,
+}: {
+  property: string;
+  option: string;
+  responsive?: string;
+  state?: "hover" | "active" | "focus" | "disabled";
+}) => {
+  return `${responsive != null ? "\t" : ""}.${
+    moxConfig.prefix
+  }-${property}-${option.replace(/[^a-zA-Z0-9-]/g, "-")}${
+    responsive != null ? `\\@${responsive}` : ""
+  }${state != null ? `-${state}:${state}` : ""}`;
+};
+
 /**
  * Function to generate CSS class files based on the MOX CSS configuration.
  * It reads the configuration from `mox.config.ts` and creates CSS files
@@ -17,6 +35,7 @@ const generateClassNames = () => {
       const optionsMap =
         "optionsMap" in restConfig ? restConfig.optionsMap : undefined;
 
+      const state = "state" in restConfig ? restConfig.state : undefined;
       // Create a separate CSS file for each property
       const result: Array<string> = [
         `
@@ -26,7 +45,11 @@ const generateClassNames = () => {
 */`,
       ];
       for (const option of options) {
-        result.push(`.${moxConfig.prefix}-${property}-${option} {
+        result.push(`${getClassName({
+          property,
+          option,
+          state,
+        })} {
     ${property}: ${optionsMap == null ? option : optionsMap[option] ?? option};
 }`);
       }
@@ -48,9 +71,12 @@ const generateClassNames = () => {
 
             // ... for each option
             for (const option of options) {
-              result.push(`\t.${
-                moxConfig.prefix
-              }-${property}-${option}\\@${key}${direction} {
+              result.push(`${getClassName({
+                property,
+                option,
+                responsive: `${key}${direction}`,
+                state,
+              })} {
 \t\t${property}: ${optionsMap == null ? option : optionsMap[option] ?? option};
 \t}`);
             }
@@ -74,9 +100,12 @@ const generateClassNames = () => {
 
             // ... for each option
             for (const option of options) {
-              result.push(`\t.${
-                moxConfig.prefix
-              }-${property}-${option}\\@${key}${direction} {
+              result.push(`${getClassName({
+                property,
+                option,
+                responsive: `${key}${direction}`,
+                state,
+              })} {
 \t\t${property}:  ${optionsMap == null ? option : optionsMap[option] ?? option};
 \t}`);
             }

@@ -5,3 +5,9 @@
 @import './alignItems.css';
 @import './justifyContent.css';
 @import './borderWidth.css';
+@import './textDecoration.css';
+@import './textDecorationHover.css';
+@import './lineHeight.css';
+@import './fontWeight.css';
+@import './textColor.css';
+@import './textColorHover.css';

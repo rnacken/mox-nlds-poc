@@ -1,0 +1,9 @@
+.mox-atom-link {
+  cursor: pointer;
+}
+.mox-link-color {
+  --text-decoration-default: "none";
+}
+.mox-atom-link-hover {
+  --text-decoration-hover: "underline";
+}

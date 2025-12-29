@@ -1,17 +1,17 @@
 /* textBlock is a special block of text that trims whitespace from the start and end, and adjusts the size/line-height based on the current font-size */
 
 @layer atoms {
-  body {
-    /** Generated for RijksSans at https://seek-oss.github.io/capsize/ */
-    /* --units-per-em: 1000;
+  /* body { */
+  /** Generated for RijksSans at https://seek-oss.github.io/capsize/ */
+  /* --units-per-em: 1000;
     --cap-height: 656;
     --ascent: 899;
     --descent: -279;
     --descent-absolute: calc(-1 * var(--descent));
     --x-height: 489; */
 
-    /** Generated for Fire Sans at https://seek-oss.github.io/capsize/ */
-    /* --units-per-em: 1000;
+  /** Generated for Fire Sans at https://seek-oss.github.io/capsize/ */
+  /* --units-per-em: 1000;
     --cap-height: 689;
     --ascent: 935;
     --descent: -265;
@@ -62,26 +62,31 @@
     margin-block-start: calc(1em * var(--text-block-trim-after));
     display: flow-root;
   } */
+  /* } */
 
-    .mox-atom-text-block {
-      display: block flow-root;
-      --current-font-size: var(--mox-space-md);
-      font-size: var(--current-font-size);
-      text-box-trim: trim-both;
-      text-box-edge: cap alphabetic;
+  .mox-atom-text-block {
+    display: block flow-root;
+    --current-font-size: var(--mox-space-md);
+    font-size: var(--current-font-size);
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+    text-decoration: var(--text-decoration, "none");
+  }
+
+  .mox-atom-text-block:hover {
+    text-decoration: var(--text-decoration-hover, "none");
+  }
+
+  @supports not (text-box-trim: both) {
+    .mox-text-block:not(input)::before {
+      content: "";
+      margin-block-end: -0.265em;
+      display: flow-root;
     }
-
-    @supports not (text-box-trim: both) {
-      .mox-text-block:not(input)::before {
-        content: "";
-        margin-block-end: -0.265em;
-        display: flow-root;
-      }
-      .mox-text-block:not(input)::after {
-        content: "";
-        margin-block-start: -0.254em;
-        display: flow-root;
-      }
+    .mox-text-block:not(input)::after {
+      content: "";
+      margin-block-start: -0.254em;
+      display: flow-root;
     }
   }
 }

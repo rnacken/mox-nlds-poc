@@ -38,8 +38,6 @@ export const spaces = [
   "4xl",
 ] as const;
 
-const borderWidths = ["0px", "1px", "2px", "4px", "8px"] as const;
-
 /**
  * Maps CSS class options to their corresponding CSS variable names.
  * e.g. `{ 'md': 'var(--mox-space-md)', ... }`
@@ -113,8 +111,52 @@ export const moxConfig = {
     },
     borderWidth: {
       property: "border-width",
-      optionsMap: mapOptionsToCSSVars(borderWidths, "border-width"),
-      options: borderWidths,
+      options: ["0px", "1px", "2px", "4px", "8px"],
+    },
+    textDecoration: {
+      property: "--text-decoration",
+      options: ["none", "underline"],
+      responsive: true,
+    },
+    textDecorationHover: {
+      property: "--text-decoration-hover",
+      state: "hover",
+      options: ["none", "underline"],
+      responsive: true,
+    },
+    lineHeight: {
+      property: "line-height",
+      options: ["1.3", "1.5"],
+    },
+    fontWeight: {
+      property: "font-weight",
+      options: ["light", "normal", "medium", "bold"],
+    },
+    textColor: {
+      property: "--text-color",
+      options: [
+        "primary",
+        "secondary",
+        "tertiary",
+        "error",
+        "warning",
+        "success",
+        "info",
+        "inherit",
+      ],
+    },
+    textColorHover: {
+      property: "--text-color-hover",
+      options: [
+        "primary",
+        "secondary",
+        "tertiary",
+        "error",
+        "warning",
+        "success",
+        "info",
+        "inherit",
+      ],
     },
   },
 } as const satisfies MoxConfig;
@@ -130,6 +172,7 @@ type MoxConfig = {
       optionsMap?: Record<string, string>;
       options: readonly string[];
       responsive?: boolean;
+      state?: "hover" | "focus" | "active" | "disabled";
     };
   };
 };

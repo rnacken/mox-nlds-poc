@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { MoxAtomLink } from "./Link";
+import { MoxTextBlock } from "../typography/TextBlock";
 
 const meta = {
   title: "React/Atoms/Interactive/Link",
@@ -8,7 +9,7 @@ const meta = {
   tags: ["autodocs"],
   parameters: {},
   args: {
-    children: "Click me!",
+    children: <MoxTextBlock>Click me!</MoxTextBlock>,
   },
 } satisfies Meta<typeof MoxAtomLink>;
 
@@ -16,7 +17,17 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    underline: "none",
+    underlineHover: "underline",
+  },
+};
+
+export const InlineText: Story = {
+  args: {
+    underline: "underline",
+    underlineHover: "none",
+  },
 };
 
 export const AsButton: Story = {

@@ -22,34 +22,34 @@ export const Default: Story = {
   },
 };
 
-export const H1: Story = {
+export const Heading1: Story = {
   args: {
     level: 1,
   },
 };
 
-export const H2: Story = {
+export const Heading2: Story = {
   args: {
     level: 2,
   },
 };
 
-export const H3: Story = {
+export const Heading3: Story = {
   args: {
     level: 3,
   },
 };
-export const H4: Story = {
+export const Heading4: Story = {
   args: {
     level: 4,
   },
 };
-export const H5: Story = {
+export const Heading5: Story = {
   args: {
     level: 5,
   },
 };
-export const H6: Story = {
+export const Heading6: Story = {
   args: {
     level: 6,
   },
