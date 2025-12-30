@@ -86,7 +86,7 @@ ${Object.entries(optionValue)
               })} {
 ${Object.entries(optionValue)
   .map(([cssProp, cssValue]) => `\t\t\t${cssProp}: ${cssValue};`)
-  .join("\n")}  ;
+  .join("\n")}
 \t\t}`);
             }
 
@@ -117,7 +117,7 @@ ${Object.entries(optionValue)
               })} {
 ${Object.entries(optionValue)
   .map(([cssProp, cssValue]) => `\t\t\t${cssProp}: ${cssValue};`)
-  .join("\n")}  ;
+  .join("\n")}
 \t\t}`);
             }
 

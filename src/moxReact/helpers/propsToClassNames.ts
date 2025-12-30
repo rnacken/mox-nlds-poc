@@ -45,6 +45,11 @@ export const propsToClassNames = <P extends Record<string, any>>(
     }
 
     const propConfig = moxConfig.props[propKey];
+    if (!propConfig) {
+      // Prop is in styleProps but not defined in moxConfig
+      restProps[_propKey as keyof P] = value;
+      continue;
+    }
     const state = "state" in propConfig ? `-${propConfig.state}` : "";
 
     // Either string is given (no responsiveness)

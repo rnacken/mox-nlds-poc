@@ -8,10 +8,28 @@
 	.mox-backgroundColor-transparent {
 		background-color: transparent;  
 	}
+	.mox-backgroundColor-primary {
+		background-color: var(--mox-color-primary);
+		--mox-text-color: var(--mox-color-primary-contrast);  
+	}
+	.mox-backgroundColor-secondary {
+		background-color: var(--mox-color-secondary);
+		--mox-text-color: var(--mox-color-secondary-contrast);  
+	}
+	.mox-backgroundColor-subtle {
+		background-color: var(--mox-color-subtle);
+		--mox-text-color: var(--mox-color-subtle-contrast);  
+	}
+	.mox-backgroundColor-muted {
+		background-color: var(--mox-color-muted);
+		--mox-text-color: var(--mox-color-muted-contrast);  
+	}
 	.mox-backgroundColor-black {
-		background-color: black;  
+		background-color: black;
+		--mox-text-color: var(--mox-color-black-contrast);  
 	}
 	.mox-backgroundColor-white {
-		background-color: white;  
+		background-color: white;
+		--mox-text-color: var(--mox-color-white-contrast);  
 	}
 }

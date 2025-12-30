@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { MoxShelf } from "./Shelf";
+import { getStylePropArgTypes } from "../../../storybook/helpers/getStylePropArgTypes";
+import { stackStyleProps } from "./Stack";
 
 const meta = {
   title: "React/Atoms/Layout/Shelf",
@@ -16,6 +18,7 @@ const meta = {
       </>
     ),
   },
+  argTypes: getStylePropArgTypes(stackStyleProps),
 } satisfies Meta<typeof MoxShelf>;
 
 export default meta;

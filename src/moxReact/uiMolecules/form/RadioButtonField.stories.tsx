@@ -15,7 +15,7 @@ const meta = {
 <summary>**How this component is built**</summary>
 
 \`\`\`tsx
-<MoxAtomShelf>
+<MoxAtomShelf gap="md" alignItems="start">
   <MoxAtomRadioButton id={id} />
   <MoxTextBlock as="label" htmlFor={id}>{children}</MoxTextBlock>
 </MoxAtomShelf>

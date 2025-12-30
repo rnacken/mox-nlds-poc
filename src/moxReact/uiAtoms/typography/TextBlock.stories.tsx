@@ -1,6 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { MoxAtomTextBlock, MoxTextBlock } from "./TextBlock";
+import {
+  MoxAtomTextBlock,
+  MoxTextBlock,
+  textBlockStyleProps,
+} from "./TextBlock";
+import { getStylePropArgTypes } from "../../../storybook/helpers/getStylePropArgTypes";
 
 const meta = {
   title: "React/Atoms/Typography/TextBlock",
@@ -9,6 +14,10 @@ const meta = {
   parameters: {},
   args: {
     children: "Sample text content",
+  },
+  argTypes: {
+    children: { table: { disable: true } },
+    ...getStylePropArgTypes(textBlockStyleProps),
   },
 } satisfies Meta<typeof MoxAtomTextBlock>;
 
@@ -33,19 +42,19 @@ export const FontWeightBold: Story = {
   },
 };
 
-export const LineHeight1_3: Story = {
+export const LineHeightTight: Story = {
   args: {
-    lineHeight: "1.3",
+    lineHeight: "tight",
     children:
-      "This is some text with line height 1.3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "This is some text with line height tight (1.3). Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   },
 };
 
-export const LineHeight1_5: Story = {
+export const LineHeightNormal: Story = {
   args: {
-    lineHeight: "1.5",
+    lineHeight: "normal",
     children:
-      "This is some text with line height 1.5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "This is some text with line height normal (1.5). Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   },
 };
 

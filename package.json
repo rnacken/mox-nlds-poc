@@ -6,14 +6,21 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:unit": "vitest run --project=unit",
     "generate:css": "ts-node src/moxCss/generateCss.ts",
     "preview": "vite preview",
     "dev:storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
-    "deploy:storybook": "npm run build:storybook && gh-pages -d storybook-static"
+    "deploy:storybook": "npm run build:storybook && gh-pages -d storybook-static",
+    "build:react": "rm -rf ./dist && npm run generate:css && tsc -b tsconfig.components.json && cp -R src/moxCss dist/"
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "homepage": "https://rnacken.github.io/mox-nlds/",
   "dependencies": {
+    "@tabler/icons-react": "^3.36.1",
     "clsx": "^2.1.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"

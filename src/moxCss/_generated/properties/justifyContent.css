@@ -26,288 +26,288 @@
 	/* Viewport breakpoint: mobile (600px) */
 	@media only screen and (min-device-width: 600px) {
 		.mox-justifyContent-flexStart\@mobileMin {
-			justify-content: flex-start;  ;
+			justify-content: flex-start;
 		}
 		.mox-justifyContent-flexEnd\@mobileMin {
-			justify-content: flex-end;  ;
+			justify-content: flex-end;
 		}
 		.mox-justifyContent-center\@mobileMin {
-			justify-content: center;  ;
+			justify-content: center;
 		}
 		.mox-justifyContent-spaceBetween\@mobileMin {
-			justify-content: space-between;  ;
+			justify-content: space-between;
 		}
 		.mox-justifyContent-spaceAround\@mobileMin {
-			justify-content: space-around;  ;
+			justify-content: space-around;
 		}
 		.mox-justifyContent-spaceEvenly\@mobileMin {
-			justify-content: space-evenly;  ;
+			justify-content: space-evenly;
 		}
 	}
 	@media only screen and (max-device-width: 600px) {
 		.mox-justifyContent-flexStart\@mobileMax {
-			justify-content: flex-start;  ;
+			justify-content: flex-start;
 		}
 		.mox-justifyContent-flexEnd\@mobileMax {
-			justify-content: flex-end;  ;
+			justify-content: flex-end;
 		}
 		.mox-justifyContent-center\@mobileMax {
-			justify-content: center;  ;
+			justify-content: center;
 		}
 		.mox-justifyContent-spaceBetween\@mobileMax {
-			justify-content: space-between;  ;
+			justify-content: space-between;
 		}
 		.mox-justifyContent-spaceAround\@mobileMax {
-			justify-content: space-around;  ;
+			justify-content: space-around;
 		}
 		.mox-justifyContent-spaceEvenly\@mobileMax {
-			justify-content: space-evenly;  ;
+			justify-content: space-evenly;
 		}
 	}
 	/* Viewport breakpoint: tablet (900px) */
 	@media only screen and (min-device-width: 900px) {
 		.mox-justifyContent-flexStart\@tabletMin {
-			justify-content: flex-start;  ;
+			justify-content: flex-start;
 		}
 		.mox-justifyContent-flexEnd\@tabletMin {
-			justify-content: flex-end;  ;
+			justify-content: flex-end;
 		}
 		.mox-justifyContent-center\@tabletMin {
-			justify-content: center;  ;
+			justify-content: center;
 		}
 		.mox-justifyContent-spaceBetween\@tabletMin {
-			justify-content: space-between;  ;
+			justify-content: space-between;
 		}
 		.mox-justifyContent-spaceAround\@tabletMin {
-			justify-content: space-around;  ;
+			justify-content: space-around;
 		}
 		.mox-justifyContent-spaceEvenly\@tabletMin {
-			justify-content: space-evenly;  ;
+			justify-content: space-evenly;
 		}
 	}
 	@media only screen and (max-device-width: 900px) {
 		.mox-justifyContent-flexStart\@tabletMax {
-			justify-content: flex-start;  ;
+			justify-content: flex-start;
 		}
 		.mox-justifyContent-flexEnd\@tabletMax {
-			justify-content: flex-end;  ;
+			justify-content: flex-end;
 		}
 		.mox-justifyContent-center\@tabletMax {
-			justify-content: center;  ;
+			justify-content: center;
 		}
 		.mox-justifyContent-spaceBetween\@tabletMax {
-			justify-content: space-between;  ;
+			justify-content: space-between;
 		}
 		.mox-justifyContent-spaceAround\@tabletMax {
-			justify-content: space-around;  ;
+			justify-content: space-around;
 		}
 		.mox-justifyContent-spaceEvenly\@tabletMax {
-			justify-content: space-evenly;  ;
+			justify-content: space-evenly;
 		}
 	}
 	/* Viewport breakpoint: desktop (1200px) */
 	@media only screen and (min-device-width: 1200px) {
 		.mox-justifyContent-flexStart\@desktopMin {
-			justify-content: flex-start;  ;
+			justify-content: flex-start;
 		}
 		.mox-justifyContent-flexEnd\@desktopMin {
-			justify-content: flex-end;  ;
+			justify-content: flex-end;
 		}
 		.mox-justifyContent-center\@desktopMin {
-			justify-content: center;  ;
+			justify-content: center;
 		}
 		.mox-justifyContent-spaceBetween\@desktopMin {
-			justify-content: space-between;  ;
+			justify-content: space-between;
 		}
 		.mox-justifyContent-spaceAround\@desktopMin {
-			justify-content: space-around;  ;
+			justify-content: space-around;
 		}
 		.mox-justifyContent-spaceEvenly\@desktopMin {
-			justify-content: space-evenly;  ;
+			justify-content: space-evenly;
 		}
 	}
 	@media only screen and (max-device-width: 1200px) {
 		.mox-justifyContent-flexStart\@desktopMax {
-			justify-content: flex-start;  ;
+			justify-content: flex-start;
 		}
 		.mox-justifyContent-flexEnd\@desktopMax {
-			justify-content: flex-end;  ;
+			justify-content: flex-end;
 		}
 		.mox-justifyContent-center\@desktopMax {
-			justify-content: center;  ;
+			justify-content: center;
 		}
 		.mox-justifyContent-spaceBetween\@desktopMax {
-			justify-content: space-between;  ;
+			justify-content: space-between;
 		}
 		.mox-justifyContent-spaceAround\@desktopMax {
-			justify-content: space-around;  ;
+			justify-content: space-around;
 		}
 		.mox-justifyContent-spaceEvenly\@desktopMax {
-			justify-content: space-evenly;  ;
+			justify-content: space-evenly;
 		}
 	}
 	/* Viewport breakpoint: mq1440 (1440px) */
 	@media only screen and (min-device-width: 1440px) {
 		.mox-justifyContent-flexStart\@mq1440Min {
-			justify-content: flex-start;  ;
+			justify-content: flex-start;
 		}
 		.mox-justifyContent-flexEnd\@mq1440Min {
-			justify-content: flex-end;  ;
+			justify-content: flex-end;
 		}
 		.mox-justifyContent-center\@mq1440Min {
-			justify-content: center;  ;
+			justify-content: center;
 		}
 		.mox-justifyContent-spaceBetween\@mq1440Min {
-			justify-content: space-between;  ;
+			justify-content: space-between;
 		}
 		.mox-justifyContent-spaceAround\@mq1440Min {
-			justify-content: space-around;  ;
+			justify-content: space-around;
 		}
 		.mox-justifyContent-spaceEvenly\@mq1440Min {
-			justify-content: space-evenly;  ;
+			justify-content: space-evenly;
 		}
 	}
 	@media only screen and (max-device-width: 1440px) {
 		.mox-justifyContent-flexStart\@mq1440Max {
-			justify-content: flex-start;  ;
+			justify-content: flex-start;
 		}
 		.mox-justifyContent-flexEnd\@mq1440Max {
-			justify-content: flex-end;  ;
+			justify-content: flex-end;
 		}
 		.mox-justifyContent-center\@mq1440Max {
-			justify-content: center;  ;
+			justify-content: center;
 		}
 		.mox-justifyContent-spaceBetween\@mq1440Max {
-			justify-content: space-between;  ;
+			justify-content: space-between;
 		}
 		.mox-justifyContent-spaceAround\@mq1440Max {
-			justify-content: space-around;  ;
+			justify-content: space-around;
 		}
 		.mox-justifyContent-spaceEvenly\@mq1440Max {
-			justify-content: space-evenly;  ;
+			justify-content: space-evenly;
 		}
 	}
 	/* Container breakpoint: cq200 (200px) */
 	@container (min-width: 200px) {
 		.mox-justifyContent-flexStart\@cq200Min {
-			justify-content: flex-start;  ;
+			justify-content: flex-start;
 		}
 		.mox-justifyContent-flexEnd\@cq200Min {
-			justify-content: flex-end;  ;
+			justify-content: flex-end;
 		}
 		.mox-justifyContent-center\@cq200Min {
-			justify-content: center;  ;
+			justify-content: center;
 		}
 		.mox-justifyContent-spaceBetween\@cq200Min {
-			justify-content: space-between;  ;
+			justify-content: space-between;
 		}
 		.mox-justifyContent-spaceAround\@cq200Min {
-			justify-content: space-around;  ;
+			justify-content: space-around;
 		}
 		.mox-justifyContent-spaceEvenly\@cq200Min {
-			justify-content: space-evenly;  ;
+			justify-content: space-evenly;
 		}
 	}
 	@container (max-width: 200px) {
 		.mox-justifyContent-flexStart\@cq200Max {
-			justify-content: flex-start;  ;
+			justify-content: flex-start;
 		}
 		.mox-justifyContent-flexEnd\@cq200Max {
-			justify-content: flex-end;  ;
+			justify-content: flex-end;
 		}
 		.mox-justifyContent-center\@cq200Max {
-			justify-content: center;  ;
+			justify-content: center;
 		}
 		.mox-justifyContent-spaceBetween\@cq200Max {
-			justify-content: space-between;  ;
+			justify-content: space-between;
 		}
 		.mox-justifyContent-spaceAround\@cq200Max {
-			justify-content: space-around;  ;
+			justify-content: space-around;
 		}
 		.mox-justifyContent-spaceEvenly\@cq200Max {
-			justify-content: space-evenly;  ;
+			justify-content: space-evenly;
 		}
 	}
 	/* Container breakpoint: cq400 (400px) */
 	@container (min-width: 400px) {
 		.mox-justifyContent-flexStart\@cq400Min {
-			justify-content: flex-start;  ;
+			justify-content: flex-start;
 		}
 		.mox-justifyContent-flexEnd\@cq400Min {
-			justify-content: flex-end;  ;
+			justify-content: flex-end;
 		}
 		.mox-justifyContent-center\@cq400Min {
-			justify-content: center;  ;
+			justify-content: center;
 		}
 		.mox-justifyContent-spaceBetween\@cq400Min {
-			justify-content: space-between;  ;
+			justify-content: space-between;
 		}
 		.mox-justifyContent-spaceAround\@cq400Min {
-			justify-content: space-around;  ;
+			justify-content: space-around;
 		}
 		.mox-justifyContent-spaceEvenly\@cq400Min {
-			justify-content: space-evenly;  ;
+			justify-content: space-evenly;
 		}
 	}
 	@container (max-width: 400px) {
 		.mox-justifyContent-flexStart\@cq400Max {
-			justify-content: flex-start;  ;
+			justify-content: flex-start;
 		}
 		.mox-justifyContent-flexEnd\@cq400Max {
-			justify-content: flex-end;  ;
+			justify-content: flex-end;
 		}
 		.mox-justifyContent-center\@cq400Max {
-			justify-content: center;  ;
+			justify-content: center;
 		}
 		.mox-justifyContent-spaceBetween\@cq400Max {
-			justify-content: space-between;  ;
+			justify-content: space-between;
 		}
 		.mox-justifyContent-spaceAround\@cq400Max {
-			justify-content: space-around;  ;
+			justify-content: space-around;
 		}
 		.mox-justifyContent-spaceEvenly\@cq400Max {
-			justify-content: space-evenly;  ;
+			justify-content: space-evenly;
 		}
 	}
 	/* Container breakpoint: cq600 (600px) */
 	@container (min-width: 600px) {
 		.mox-justifyContent-flexStart\@cq600Min {
-			justify-content: flex-start;  ;
+			justify-content: flex-start;
 		}
 		.mox-justifyContent-flexEnd\@cq600Min {
-			justify-content: flex-end;  ;
+			justify-content: flex-end;
 		}
 		.mox-justifyContent-center\@cq600Min {
-			justify-content: center;  ;
+			justify-content: center;
 		}
 		.mox-justifyContent-spaceBetween\@cq600Min {
-			justify-content: space-between;  ;
+			justify-content: space-between;
 		}
 		.mox-justifyContent-spaceAround\@cq600Min {
-			justify-content: space-around;  ;
+			justify-content: space-around;
 		}
 		.mox-justifyContent-spaceEvenly\@cq600Min {
-			justify-content: space-evenly;  ;
+			justify-content: space-evenly;
 		}
 	}
 	@container (max-width: 600px) {
 		.mox-justifyContent-flexStart\@cq600Max {
-			justify-content: flex-start;  ;
+			justify-content: flex-start;
 		}
 		.mox-justifyContent-flexEnd\@cq600Max {
-			justify-content: flex-end;  ;
+			justify-content: flex-end;
 		}
 		.mox-justifyContent-center\@cq600Max {
-			justify-content: center;  ;
+			justify-content: center;
 		}
 		.mox-justifyContent-spaceBetween\@cq600Max {
-			justify-content: space-between;  ;
+			justify-content: space-between;
 		}
 		.mox-justifyContent-spaceAround\@cq600Max {
-			justify-content: space-around;  ;
+			justify-content: space-around;
 		}
 		.mox-justifyContent-spaceEvenly\@cq600Max {
-			justify-content: space-evenly;  ;
+			justify-content: space-evenly;
 		}
 	}
 }

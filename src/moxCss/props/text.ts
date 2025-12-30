@@ -36,10 +36,8 @@ export const textProps = {
   },
   lineHeight: {
     options: {
-      normal: { "line-height": "normal" },
-      relaxed: { "line-height": "1.5" },
-      snug: { "line-height": "1.375" },
-      tight: { "line-height": "1.25" },
+      normal: { "line-height": "1.5" },
+      tight: { "line-height": "1.3" },
     },
   },
 } as const satisfies MoxConfigProps;

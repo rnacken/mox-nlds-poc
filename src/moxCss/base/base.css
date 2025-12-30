@@ -5,8 +5,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 @layer base {
-  .mox-theme-1 {
-    font-size: var(--mox-spacing-md);
+  body {
+    --current-font-size: var(--mox-spacing-md);
+    font-size: var(--current-font-size);
     font-family: "RijkssansVF", "Rijkssans", "Fira Sans", serif;
   }
 }

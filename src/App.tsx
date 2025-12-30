@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import { MoxAtomBox, MoxBox } from "./moxReact/uiAtoms/layout/Box";
 import { MoxShelf } from "./moxReact/uiAtoms/layout/Shelf";
+import { MoxBox, MoxAtomBox } from "./moxReact/uiAtoms/layout/Box";
 
 const Comp = ({ foo }: { foo: string }) => <div>{foo}</div>;
 

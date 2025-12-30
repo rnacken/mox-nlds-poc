@@ -1,0 +1,223 @@
+
+/**
+  * This file is auto-generated. Do not edit directly.
+  * Generated from src/moxCss/mox.config.ts and script: `generateCss.ts`
+*/
+
+@layer props {
+	.mox-gridColumnEnd-windowStart {
+		grid-column-end: window-start;  
+	}
+	.mox-gridColumnEnd-pageStart {
+		grid-column-end: page-start;  
+	}
+	.mox-gridColumnEnd-windowEnd {
+		grid-column-end: window-end;  
+	}
+	.mox-gridColumnEnd-pageEnd {
+		grid-column-end: page-end;  
+	}
+	/* Viewport breakpoint: mobile (600px) */
+	@media only screen and (min-device-width: 600px) {
+		.mox-gridColumnEnd-windowStart\@mobileMin {
+			grid-column-end: window-start;
+		}
+		.mox-gridColumnEnd-pageStart\@mobileMin {
+			grid-column-end: page-start;
+		}
+		.mox-gridColumnEnd-windowEnd\@mobileMin {
+			grid-column-end: window-end;
+		}
+		.mox-gridColumnEnd-pageEnd\@mobileMin {
+			grid-column-end: page-end;
+		}
+	}
+	@media only screen and (max-device-width: 600px) {
+		.mox-gridColumnEnd-windowStart\@mobileMax {
+			grid-column-end: window-start;
+		}
+		.mox-gridColumnEnd-pageStart\@mobileMax {
+			grid-column-end: page-start;
+		}
+		.mox-gridColumnEnd-windowEnd\@mobileMax {
+			grid-column-end: window-end;
+		}
+		.mox-gridColumnEnd-pageEnd\@mobileMax {
+			grid-column-end: page-end;
+		}
+	}
+	/* Viewport breakpoint: tablet (900px) */
+	@media only screen and (min-device-width: 900px) {
+		.mox-gridColumnEnd-windowStart\@tabletMin {
+			grid-column-end: window-start;
+		}
+		.mox-gridColumnEnd-pageStart\@tabletMin {
+			grid-column-end: page-start;
+		}
+		.mox-gridColumnEnd-windowEnd\@tabletMin {
+			grid-column-end: window-end;
+		}
+		.mox-gridColumnEnd-pageEnd\@tabletMin {
+			grid-column-end: page-end;
+		}
+	}
+	@media only screen and (max-device-width: 900px) {
+		.mox-gridColumnEnd-windowStart\@tabletMax {
+			grid-column-end: window-start;
+		}
+		.mox-gridColumnEnd-pageStart\@tabletMax {
+			grid-column-end: page-start;
+		}
+		.mox-gridColumnEnd-windowEnd\@tabletMax {
+			grid-column-end: window-end;
+		}
+		.mox-gridColumnEnd-pageEnd\@tabletMax {
+			grid-column-end: page-end;
+		}
+	}
+	/* Viewport breakpoint: desktop (1200px) */
+	@media only screen and (min-device-width: 1200px) {
+		.mox-gridColumnEnd-windowStart\@desktopMin {
+			grid-column-end: window-start;
+		}
+		.mox-gridColumnEnd-pageStart\@desktopMin {
+			grid-column-end: page-start;
+		}
+		.mox-gridColumnEnd-windowEnd\@desktopMin {
+			grid-column-end: window-end;
+		}
+		.mox-gridColumnEnd-pageEnd\@desktopMin {
+			grid-column-end: page-end;
+		}
+	}
+	@media only screen and (max-device-width: 1200px) {
+		.mox-gridColumnEnd-windowStart\@desktopMax {
+			grid-column-end: window-start;
+		}
+		.mox-gridColumnEnd-pageStart\@desktopMax {
+			grid-column-end: page-start;
+		}
+		.mox-gridColumnEnd-windowEnd\@desktopMax {
+			grid-column-end: window-end;
+		}
+		.mox-gridColumnEnd-pageEnd\@desktopMax {
+			grid-column-end: page-end;
+		}
+	}
+	/* Viewport breakpoint: mq1440 (1440px) */
+	@media only screen and (min-device-width: 1440px) {
+		.mox-gridColumnEnd-windowStart\@mq1440Min {
+			grid-column-end: window-start;
+		}
+		.mox-gridColumnEnd-pageStart\@mq1440Min {
+			grid-column-end: page-start;
+		}
+		.mox-gridColumnEnd-windowEnd\@mq1440Min {
+			grid-column-end: window-end;
+		}
+		.mox-gridColumnEnd-pageEnd\@mq1440Min {
+			grid-column-end: page-end;
+		}
+	}
+	@media only screen and (max-device-width: 1440px) {
+		.mox-gridColumnEnd-windowStart\@mq1440Max {
+			grid-column-end: window-start;
+		}
+		.mox-gridColumnEnd-pageStart\@mq1440Max {
+			grid-column-end: page-start;
+		}
+		.mox-gridColumnEnd-windowEnd\@mq1440Max {
+			grid-column-end: window-end;
+		}
+		.mox-gridColumnEnd-pageEnd\@mq1440Max {
+			grid-column-end: page-end;
+		}
+	}
+	/* Container breakpoint: cq200 (200px) */
+	@container (min-width: 200px) {
+		.mox-gridColumnEnd-windowStart\@cq200Min {
+			grid-column-end: window-start;
+		}
+		.mox-gridColumnEnd-pageStart\@cq200Min {
+			grid-column-end: page-start;
+		}
+		.mox-gridColumnEnd-windowEnd\@cq200Min {
+			grid-column-end: window-end;
+		}
+		.mox-gridColumnEnd-pageEnd\@cq200Min {
+			grid-column-end: page-end;
+		}
+	}
+	@container (max-width: 200px) {
+		.mox-gridColumnEnd-windowStart\@cq200Max {
+			grid-column-end: window-start;
+		}
+		.mox-gridColumnEnd-pageStart\@cq200Max {
+			grid-column-end: page-start;
+		}
+		.mox-gridColumnEnd-windowEnd\@cq200Max {
+			grid-column-end: window-end;
+		}
+		.mox-gridColumnEnd-pageEnd\@cq200Max {
+			grid-column-end: page-end;
+		}
+	}
+	/* Container breakpoint: cq400 (400px) */
+	@container (min-width: 400px) {
+		.mox-gridColumnEnd-windowStart\@cq400Min {
+			grid-column-end: window-start;
+		}
+		.mox-gridColumnEnd-pageStart\@cq400Min {
+			grid-column-end: page-start;
+		}
+		.mox-gridColumnEnd-windowEnd\@cq400Min {
+			grid-column-end: window-end;
+		}
+		.mox-gridColumnEnd-pageEnd\@cq400Min {
+			grid-column-end: page-end;
+		}
+	}
+	@container (max-width: 400px) {
+		.mox-gridColumnEnd-windowStart\@cq400Max {
+			grid-column-end: window-start;
+		}
+		.mox-gridColumnEnd-pageStart\@cq400Max {
+			grid-column-end: page-start;
+		}
+		.mox-gridColumnEnd-windowEnd\@cq400Max {
+			grid-column-end: window-end;
+		}
+		.mox-gridColumnEnd-pageEnd\@cq400Max {
+			grid-column-end: page-end;
+		}
+	}
+	/* Container breakpoint: cq600 (600px) */
+	@container (min-width: 600px) {
+		.mox-gridColumnEnd-windowStart\@cq600Min {
+			grid-column-end: window-start;
+		}
+		.mox-gridColumnEnd-pageStart\@cq600Min {
+			grid-column-end: page-start;
+		}
+		.mox-gridColumnEnd-windowEnd\@cq600Min {
+			grid-column-end: window-end;
+		}
+		.mox-gridColumnEnd-pageEnd\@cq600Min {
+			grid-column-end: page-end;
+		}
+	}
+	@container (max-width: 600px) {
+		.mox-gridColumnEnd-windowStart\@cq600Max {
+			grid-column-end: window-start;
+		}
+		.mox-gridColumnEnd-pageStart\@cq600Max {
+			grid-column-end: page-start;
+		}
+		.mox-gridColumnEnd-windowEnd\@cq600Max {
+			grid-column-end: window-end;
+		}
+		.mox-gridColumnEnd-pageEnd\@cq600Max {
+			grid-column-end: page-end;
+		}
+	}
+}

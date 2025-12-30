@@ -8,6 +8,18 @@
 	.mox-borderColor-transparent {
 		border-color: transparent;  
 	}
+	.mox-borderColor-primary {
+		border-color: var(--mox-color-primary);  
+	}
+	.mox-borderColor-secondary {
+		border-color: var(--mox-color-secondary);  
+	}
+	.mox-borderColor-subtle {
+		border-color: var(--mox-color-subtle);  
+	}
+	.mox-borderColor-muted {
+		border-color: var(--mox-color-muted);  
+	}
 	.mox-borderColor-black {
 		border-color: black;  
 	}

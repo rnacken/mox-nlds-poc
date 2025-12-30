@@ -3,7 +3,7 @@ import type { AtomProps, StyleProps } from "../AtomTypes";
 import clsx from "clsx";
 import { propsToClassNames } from "../../helpers/propsToClassNames";
 
-export const styleProps = [
+export const textBlockStyleProps = [
   "color",
   "fontSize",
   "fontWeight",
@@ -30,11 +30,11 @@ export const MoxAtomTextBlock = <T extends ElementType = "span">({
   className,
   ref,
   ...props
-}: AtomProps<T, typeof styleProps>) => {
+}: AtomProps<T, typeof textBlockStyleProps>) => {
   const Component = as || ("span" as ElementType);
   // convert style props into correct classnames
   const { stylePropClassNames, restProps } = propsToClassNames(
-    styleProps,
+    textBlockStyleProps,
     props
   );
 

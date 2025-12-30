@@ -14,4 +14,7 @@
 	.mox-borderStyle-dotted {
 		border-style: dotted;  
 	}
+	.mox-borderStyle-none {
+		border-style: none;  
+	}
 }

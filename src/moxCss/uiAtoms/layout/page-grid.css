@@ -1,0 +1,21 @@
+@layer atoms {
+  .mox-atom-page-grid {
+    display: grid;
+    grid-template-columns:
+      [window-start]
+      max(
+        0px,
+        calc((100dvi - var(--mox-layout-page-grid-max-width, 1200px)) / 2)
+      )
+      [page-start]
+      repeat(12, minmax(0, 1fr))
+      [page-end]
+      max(
+        0px,
+        calc((100dvi - var(--mox-layout-page-grid-max-width, 1200px)) / 2)
+      )
+      [window-end];
+    column-gap: var(--mox-layout-page-grid-gap);
+    inline-size: 100dvi;
+  }
+}

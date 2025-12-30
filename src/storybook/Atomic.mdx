@@ -1,5 +1,6 @@
 import { Meta } from "@storybook/addon-docs/blocks";
 import AtomicDesignSystem from "./assets/atomic-design-system.png";
+import Tokens from "./assets/tokens-atoms-etc.png";
 
 <Meta title="Atomic system" />
 
@@ -7,13 +8,15 @@ import AtomicDesignSystem from "./assets/atomic-design-system.png";
   <div className='sb-section-title'>
 # Atomic system
 
-Dit design system is opgebouwd in meerdere lagen in toenemende complexiteit:
+Alles is opgebouwd uit meerdere
 
 - Atoms
 - Molecules
 - Organisms
 - Templates
 - Pages
+
+Dit zijn de complexiteits levels van meest simpel naar meest complex.
 
 <img src={AtomicDesignSystem} alt="Opbouw van een atomic design system" />
 
@@ -30,13 +33,25 @@ Het Mox Design system is een poging om aan de wensen van een brede gebruikersgro
 
 ## Bouwblokken van het atomic system
 
-### lv. 0 - Base
+React **Atom** componenten gebruiken de CSS **Atom** classNames. De volgorde is dus zo:
 
-Hier heb je als gebruiker geen invloed op, maar is belangrijk voor een consistente stijl. Denk bijvoorbeeld aan CSS reset styles.
+<img
+  src={Tokens}
+  alt="Autocomplete door TS"
+  style={{ maxInlineSize: "300px" }}
+/>
+
+Boven dit
+
+### lv. 0 - Tokens
+
+In de basis kan je via tokens je brandp-colors/spacing opties instellen voor een unieke huisstijl (of je gebruikt een standaard set tokens)
 
 ### lv. 1 - Atoms
 
 **Atoms** zijn de kleinste bouwblokjes van het design-systeem.
+
+Er zijn zowel Atoms voor CSS als voor React. De React componenten gebruiken de CSS classes.
 
 #### Beloftes
 
@@ -50,7 +65,9 @@ Hier heb je als gebruiker geen invloed op, maar is belangrijk voor een consisten
 
 ### lv. 2 - Molecules
 
-**Molecules** zijn opgebouwd uit **atoms** en zijn daardoor complexer
+**Molecules** zijn opgebouwd uit **atoms** en zijn daardoor complexer.
+
+In principe praten vanaf dit niveau alleen over React componenten (maar enkele elementen met classNames samen kan je op zich beschouwen als **molecule**).
 
 #### Beloftes
 
@@ -69,13 +86,9 @@ Hier heb je als gebruiker geen invloed op, maar is belangrijk voor een consisten
 - Net als **molecules**: geen `design tokens`, minder sterke belofte omtrent breaking changes
 - Nooit omringende spacing zoals `padding` of `margin`
 
-### lv. 4 - Templates
+### lv. 4, 5 - Templates, Pages
 
-Sommige pagina's zullen een gebruikelijke opbouw hebben. Denk bijvoorbeeld aan een basis-homepage of een contact-formulier.
-
-### lv. 5 - Pages
-
-Pages zijn de meest complexe bouwwerken. Ze kunnen gebaseerd zijn op **templates**, of helemaal opgebouwd zijn uit alle lagere levels van bouwblokken.
+Sommige pagina's of onderdelen ervan zullen een gebruikelijke opbouw hebben. Denk bijvoorbeeld aan een basis-homepage of een contact-formulier. Heel complex, heel opinionated, maar fijn om te gebruiken als je de 'standaard' gewoon wilt gebruiken.
 
 </div>
 

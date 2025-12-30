@@ -1,0 +1,223 @@
+
+/**
+  * This file is auto-generated. Do not edit directly.
+  * Generated from src/moxCss/mox.config.ts and script: `generateCss.ts`
+*/
+
+@layer props {
+	.mox-gridColumnStart-windowStart {
+		grid-column-start: window-start;  
+	}
+	.mox-gridColumnStart-pageStart {
+		grid-column-start: page-start;  
+	}
+	.mox-gridColumnStart-pageEnd {
+		grid-column-start: page-end;  
+	}
+	.mox-gridColumnStart-windowEnd {
+		grid-column-start: window-end;  
+	}
+	/* Viewport breakpoint: mobile (600px) */
+	@media only screen and (min-device-width: 600px) {
+		.mox-gridColumnStart-windowStart\@mobileMin {
+			grid-column-start: window-start;
+		}
+		.mox-gridColumnStart-pageStart\@mobileMin {
+			grid-column-start: page-start;
+		}
+		.mox-gridColumnStart-pageEnd\@mobileMin {
+			grid-column-start: page-end;
+		}
+		.mox-gridColumnStart-windowEnd\@mobileMin {
+			grid-column-start: window-end;
+		}
+	}
+	@media only screen and (max-device-width: 600px) {
+		.mox-gridColumnStart-windowStart\@mobileMax {
+			grid-column-start: window-start;
+		}
+		.mox-gridColumnStart-pageStart\@mobileMax {
+			grid-column-start: page-start;
+		}
+		.mox-gridColumnStart-pageEnd\@mobileMax {
+			grid-column-start: page-end;
+		}
+		.mox-gridColumnStart-windowEnd\@mobileMax {
+			grid-column-start: window-end;
+		}
+	}
+	/* Viewport breakpoint: tablet (900px) */
+	@media only screen and (min-device-width: 900px) {
+		.mox-gridColumnStart-windowStart\@tabletMin {
+			grid-column-start: window-start;
+		}
+		.mox-gridColumnStart-pageStart\@tabletMin {
+			grid-column-start: page-start;
+		}
+		.mox-gridColumnStart-pageEnd\@tabletMin {
+			grid-column-start: page-end;
+		}
+		.mox-gridColumnStart-windowEnd\@tabletMin {
+			grid-column-start: window-end;
+		}
+	}
+	@media only screen and (max-device-width: 900px) {
+		.mox-gridColumnStart-windowStart\@tabletMax {
+			grid-column-start: window-start;
+		}
+		.mox-gridColumnStart-pageStart\@tabletMax {
+			grid-column-start: page-start;
+		}
+		.mox-gridColumnStart-pageEnd\@tabletMax {
+			grid-column-start: page-end;
+		}
+		.mox-gridColumnStart-windowEnd\@tabletMax {
+			grid-column-start: window-end;
+		}
+	}
+	/* Viewport breakpoint: desktop (1200px) */
+	@media only screen and (min-device-width: 1200px) {
+		.mox-gridColumnStart-windowStart\@desktopMin {
+			grid-column-start: window-start;
+		}
+		.mox-gridColumnStart-pageStart\@desktopMin {
+			grid-column-start: page-start;
+		}
+		.mox-gridColumnStart-pageEnd\@desktopMin {
+			grid-column-start: page-end;
+		}
+		.mox-gridColumnStart-windowEnd\@desktopMin {
+			grid-column-start: window-end;
+		}
+	}
+	@media only screen and (max-device-width: 1200px) {
+		.mox-gridColumnStart-windowStart\@desktopMax {
+			grid-column-start: window-start;
+		}
+		.mox-gridColumnStart-pageStart\@desktopMax {
+			grid-column-start: page-start;
+		}
+		.mox-gridColumnStart-pageEnd\@desktopMax {
+			grid-column-start: page-end;
+		}
+		.mox-gridColumnStart-windowEnd\@desktopMax {
+			grid-column-start: window-end;
+		}
+	}
+	/* Viewport breakpoint: mq1440 (1440px) */
+	@media only screen and (min-device-width: 1440px) {
+		.mox-gridColumnStart-windowStart\@mq1440Min {
+			grid-column-start: window-start;
+		}
+		.mox-gridColumnStart-pageStart\@mq1440Min {
+			grid-column-start: page-start;
+		}
+		.mox-gridColumnStart-pageEnd\@mq1440Min {
+			grid-column-start: page-end;
+		}
+		.mox-gridColumnStart-windowEnd\@mq1440Min {
+			grid-column-start: window-end;
+		}
+	}
+	@media only screen and (max-device-width: 1440px) {
+		.mox-gridColumnStart-windowStart\@mq1440Max {
+			grid-column-start: window-start;
+		}
+		.mox-gridColumnStart-pageStart\@mq1440Max {
+			grid-column-start: page-start;
+		}
+		.mox-gridColumnStart-pageEnd\@mq1440Max {
+			grid-column-start: page-end;
+		}
+		.mox-gridColumnStart-windowEnd\@mq1440Max {
+			grid-column-start: window-end;
+		}
+	}
+	/* Container breakpoint: cq200 (200px) */
+	@container (min-width: 200px) {
+		.mox-gridColumnStart-windowStart\@cq200Min {
+			grid-column-start: window-start;
+		}
+		.mox-gridColumnStart-pageStart\@cq200Min {
+			grid-column-start: page-start;
+		}
+		.mox-gridColumnStart-pageEnd\@cq200Min {
+			grid-column-start: page-end;
+		}
+		.mox-gridColumnStart-windowEnd\@cq200Min {
+			grid-column-start: window-end;
+		}
+	}
+	@container (max-width: 200px) {
+		.mox-gridColumnStart-windowStart\@cq200Max {
+			grid-column-start: window-start;
+		}
+		.mox-gridColumnStart-pageStart\@cq200Max {
+			grid-column-start: page-start;
+		}
+		.mox-gridColumnStart-pageEnd\@cq200Max {
+			grid-column-start: page-end;
+		}
+		.mox-gridColumnStart-windowEnd\@cq200Max {
+			grid-column-start: window-end;
+		}
+	}
+	/* Container breakpoint: cq400 (400px) */
+	@container (min-width: 400px) {
+		.mox-gridColumnStart-windowStart\@cq400Min {
+			grid-column-start: window-start;
+		}
+		.mox-gridColumnStart-pageStart\@cq400Min {
+			grid-column-start: page-start;
+		}
+		.mox-gridColumnStart-pageEnd\@cq400Min {
+			grid-column-start: page-end;
+		}
+		.mox-gridColumnStart-windowEnd\@cq400Min {
+			grid-column-start: window-end;
+		}
+	}
+	@container (max-width: 400px) {
+		.mox-gridColumnStart-windowStart\@cq400Max {
+			grid-column-start: window-start;
+		}
+		.mox-gridColumnStart-pageStart\@cq400Max {
+			grid-column-start: page-start;
+		}
+		.mox-gridColumnStart-pageEnd\@cq400Max {
+			grid-column-start: page-end;
+		}
+		.mox-gridColumnStart-windowEnd\@cq400Max {
+			grid-column-start: window-end;
+		}
+	}
+	/* Container breakpoint: cq600 (600px) */
+	@container (min-width: 600px) {
+		.mox-gridColumnStart-windowStart\@cq600Min {
+			grid-column-start: window-start;
+		}
+		.mox-gridColumnStart-pageStart\@cq600Min {
+			grid-column-start: page-start;
+		}
+		.mox-gridColumnStart-pageEnd\@cq600Min {
+			grid-column-start: page-end;
+		}
+		.mox-gridColumnStart-windowEnd\@cq600Min {
+			grid-column-start: window-end;
+		}
+	}
+	@container (max-width: 600px) {
+		.mox-gridColumnStart-windowStart\@cq600Max {
+			grid-column-start: window-start;
+		}
+		.mox-gridColumnStart-pageStart\@cq600Max {
+			grid-column-start: page-start;
+		}
+		.mox-gridColumnStart-pageEnd\@cq600Max {
+			grid-column-start: page-end;
+		}
+		.mox-gridColumnStart-windowEnd\@cq600Max {
+			grid-column-start: window-end;
+		}
+	}
+}

@@ -38,7 +38,16 @@ export const LinkBox: Story = {
   args: {
     underline: "underline",
     underlineHover: "none",
-    children: <MoxBox padding="md">I am a link box</MoxBox>,
+    children: (
+      <MoxBox
+        padding="xl"
+        borderColor="black"
+        borderStyle={"dashed"}
+        borderWidth={"2px"}
+      >
+        <MoxTextBlock>I am a link box</MoxTextBlock>
+      </MoxBox>
+    ),
   },
 };
 

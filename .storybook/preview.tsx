@@ -8,13 +8,15 @@ const preview: Preview = {
       storySort: {
         order: [
           "Intro",
-          "Gebruik",
           "Atomic system",
           "Scaling system",
-          "CSS: text-box trim",
           "Icons",
+          "*",
+          "MoxCSS",
+          "CSS Atoms",
+          ["Text-box trim", "Atoms", "Molecules", "Organisms", "*"],
           "React",
-          ["Atoms", "Molecules", "Organisms", "*"],
+          ["Gebruik", "Atoms", "Molecules", "Organisms", "*"],
         ],
         method: "alphabetical",
       },

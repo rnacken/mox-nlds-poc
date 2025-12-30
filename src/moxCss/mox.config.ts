@@ -7,6 +7,7 @@
  *
  */
 
+import { boxProps } from "./props/box";
 import { flexProps } from "./props/flex";
 import { linkProps } from "./props/link";
 import { textProps } from "./props/text";
@@ -42,39 +43,16 @@ export const spaces = [
   "4xl",
 ] as const;
 
-const borderRadiusOptions = {
-  "0": { "border-radius": "0" },
-  "1px": { "border-radius": "1px" },
-  "2px": { "border-radius": "2px" },
-  "4px": { "border-radius": "4px" },
-  "8px": { "border-radius": "8px" },
-  circle: { "border-radius": "50%" },
-} as const;
-const getSingleBorderRadiusOptions = (
-  position: "start-start" | "start-end" | "end-start" | "end-end"
-) => {
-  return {
-    ...borderRadiusOptions,
-    "lint-0.25": {
-      [`border-${position}-radius`]: "calc(0.25 * var(--mox-lint-inline-size))",
-    },
-    "lint-0.5": {
-      [`border-${position}-radius`]: "calc(0.5 * var(--mox-lint-inline-size))",
-    },
-    "lint-1": {
-      [`border-${position}-radius`]: "calc(1 * var(--mox-lint-inline-size))",
-    },
-    "lint-2": {
-      [`border-${position}-radius`]: "calc(2 * var(--mox-lint-inline-size))",
-    },
-    "lint-4": {
-      [`border-${position}-radius`]: "calc(4 * var(--mox-lint-inline-size))",
-    },
-    "lint-8": {
-      [`border-${position}-radius`]: "calc(8 * var(--mox-lint-inline-size))",
-    },
-  };
-};
+const globalSizeOptions = [
+  "0",
+  "auto",
+  "inherit",
+  "fit-content",
+  "max-content",
+  "min-content",
+] as const;
+
+const globalGapOptions = ["0", "auto", "inherit"];
 
 /**
  * Maps CSS class options to their corresponding CSS variable names.
@@ -100,6 +78,24 @@ const mapOptionsToCSSVars = <O extends string>(
   return mappedOptions;
 };
 
+/**
+ * Map options directly to their values (no CSS variables).
+ */
+const mapOptionsToValues = <O extends string>(
+  options: ReadonlyArray<O>,
+  cssProps: Array<string>
+) => {
+  const mappedBasicOptions = {} as Record<O, Record<string, string>>;
+  for (const option of options) {
+    const result = cssProps.reduce((acc, cssProp) => {
+      acc[cssProp] = `${option}`;
+      return acc;
+    }, {} as Record<string, string>);
+    mappedBasicOptions[option] = result;
+  }
+  return mappedBasicOptions;
+};
+
 export const moxConfig = {
   prefix,
   // The clamp values will be calculated so that on these min/max sizes of the viewport, the size will lock to resp. min/max value of the space (e.g. `md`).
@@ -115,202 +111,102 @@ export const moxConfig = {
     ...linkProps,
     ...textProps,
     ...flexProps,
+    ...boxProps,
     fontSize: {
-      options: mapOptionsToCSSVars(spaces, ["--font-size"], "space"),
+      options: mapOptionsToCSSVars(spaces, ["--current-font-size"], "space"),
       responsive: true,
     },
     size: {
-      options: mapOptionsToCSSVars(
-        spaces,
-        ["inline-size", "block-size"],
-        "space"
-      ),
+      options: {
+        ...mapOptionsToCSSVars(spaces, ["inline-size", "block-size"], "space"),
+        ...mapOptionsToValues(globalSizeOptions, ["inline-size", "block-size"]),
+      },
       responsive: true,
     },
     inlineSize: {
-      options: mapOptionsToCSSVars(spaces, ["inline-size"], "space"),
+      options: {
+        ...mapOptionsToCSSVars(spaces, ["inline-size"], "space"),
+        ...mapOptionsToValues(globalSizeOptions, ["inline-size"]),
+      },
       responsive: true,
     },
     blockSize: {
-      options: mapOptionsToCSSVars(spaces, ["block-size"], "space"),
+      options: {
+        ...mapOptionsToCSSVars(spaces, ["block-size"], "space"),
+        ...mapOptionsToValues(globalSizeOptions, ["block-size"]),
+      },
       responsive: true,
     },
     padding: {
-      options: mapOptionsToCSSVars(spaces, ["padding"], "space"),
+      options: {
+        ...mapOptionsToCSSVars(spaces, ["padding"], "space"),
+        ...mapOptionsToValues(globalGapOptions, ["padding"]),
+      },
       responsive: true,
     },
     paddingBlock: {
-      options: mapOptionsToCSSVars(spaces, ["padding-block"], "space"),
+      options: {
+        ...mapOptionsToCSSVars(spaces, ["padding-block"], "space"),
+        ...mapOptionsToValues(globalGapOptions, ["padding-block"]),
+      },
       responsive: true,
     },
     paddingInline: {
-      options: mapOptionsToCSSVars(spaces, ["padding-inline"], "space"),
+      options: {
+        ...mapOptionsToCSSVars(spaces, ["padding-inline"], "space"),
+        ...mapOptionsToValues(globalGapOptions, ["padding-inline"]),
+      },
       responsive: true,
     },
     paddingBlockStart: {
-      options: mapOptionsToCSSVars(spaces, ["padding-block-start"], "space"),
+      options: {
+        ...mapOptionsToCSSVars(spaces, ["padding-block-start"], "space"),
+        ...mapOptionsToValues(globalGapOptions, ["padding-block-start"]),
+      },
       responsive: true,
     },
     paddingBlockEnd: {
-      options: mapOptionsToCSSVars(spaces, ["padding-block-end"], "space"),
+      options: {
+        ...mapOptionsToCSSVars(spaces, ["padding-block-end"], "space"),
+        ...mapOptionsToValues(globalGapOptions, ["padding-block-end"]),
+      },
       responsive: true,
     },
     paddingInlineStart: {
-      options: mapOptionsToCSSVars(spaces, ["padding-inline-start"], "space"),
+      options: {
+        ...mapOptionsToCSSVars(spaces, ["padding-inline-start"], "space"),
+        ...mapOptionsToValues(globalGapOptions, ["padding-inline-start"]),
+      },
       responsive: true,
     },
     paddingInlineEnd: {
-      options: mapOptionsToCSSVars(spaces, ["padding-inline-end"], "space"),
+      options: {
+        ...mapOptionsToCSSVars(spaces, ["padding-inline-end"], "space"),
+        ...mapOptionsToValues(globalGapOptions, ["padding-inline-end"]),
+      },
       responsive: true,
     },
     gap: {
-      options: mapOptionsToCSSVars(spaces, ["gap"], "space"),
+      options: {
+        ...mapOptionsToCSSVars(spaces, ["gap"], "space"),
+        ...mapOptionsToValues(globalGapOptions, ["gap"]),
+      },
       responsive: true,
     },
     rowGap: {
-      options: mapOptionsToCSSVars(spaces, ["row-gap"], "space"),
-      responsive: true,
-    },
-    columnnGap: {
-      options: mapOptionsToCSSVars(spaces, ["column-gap"], "space"),
-      responsive: true,
-    },
-    borderRadius: {
       options: {
-        "0": { "border-radius": "0" },
-        "1px": { "border-radius": "1px" },
-        "2px": { "border-radius": "2px" },
-        "4px": { "border-radius": "4px" },
-        "8px": { "border-radius": "8px" },
-        circle: { "border-radius": "50%" },
+        ...mapOptionsToCSSVars(spaces, ["row-gap"], "space"),
+        ...mapOptionsToValues(globalGapOptions, ["row-gap"]),
       },
       responsive: true,
     },
-    borderStartStartRadius: {
-      options: getSingleBorderRadiusOptions("start-start"),
+    columnGap: {
+      options: {
+        ...mapOptionsToCSSVars(spaces, ["column-gap"], "space"),
+        ...mapOptionsToValues(globalGapOptions, ["column-gap"]),
+      },
       responsive: true,
     },
-    borderStartEndRadius: {
-      options: getSingleBorderRadiusOptions("start-end"),
-      responsive: true,
-    },
-    borderEndStartRadius: {
-      options: getSingleBorderRadiusOptions("end-start"),
-      responsive: true,
-    },
-    borderEndEndRadius: {
-      options: getSingleBorderRadiusOptions("end-end"),
-      responsive: true,
-    },
-    borderWidth: {
-      options: {
-        "0": { "border-width": "0" },
-        "1px": { "border-width": "1px" },
-        "2px": { "border-width": "2px" },
-        "4px": { "border-width": "4px" },
-        "8px": { "border-width": "8px" },
-      },
-    },
-    borderColor: {
-      options: {
-        transparent: { "border-color": "transparent" },
-        black: { "border-color": "black" },
-        white: { "border-color": "white" },
-      },
-    },
-    borderStyle: {
-      options: {
-        solid: { "border-style": "solid" },
-        dashed: { "border-style": "dashed" },
-        dotted: { "border-style": "dotted" },
-      },
-    },
-    backgroundColor: {
-      options: {
-        transparent: { "background-color": "transparent" },
-        black: { "background-color": "black" },
-        white: { "background-color": "white" },
-      },
-    },
-    // gap: {
-    //   property: "gap",
-    //   optionsMap: spaceOptionsMaps,
-    //   options: spaces,
-    //   responsive: true,
-    // },
-    // fontSize: {
-    //   property: "font-size",
-    //   optionsMap: spaceOptionsMaps,
-    //   options: spaces,
-    //   responsive: true,
-    // },
-    // alignItems: {
-    //   property: "align-items",
-    //   options: ["start", "center", "end", "stretch", "baseline"],
-    //   responsive: true,
-    // },
-    // justifyContent: {
-    //   property: "justify-content",
-    //   options: [
-    //     "start",
-    //     "center",
-    //     "end",
-    //     "stretch",
-    //     "space-between",
-    //     "space-around",
-    //     "space-evenly",
-    //   ],
-    //   responsive: true,
-    // },
-    // borderWidth: {
-    //   property: "border-width",
-    //   options: ["0px", "1px", "2px", "4px", "8px"],
-    // },
-    // textDecoration: {
-    //   property: "--text-decoration",
-    //   options: ["none", "underline"],
-    //   responsive: true,
-    // },
-    // textDecorationHover: {
-    //   property: "--text-decoration-hover",
-    //   state: "hover",
-    //   options: ["none", "underline"],
-    //   responsive: true,
-    // },
-    // lineHeight: {
-    //   property: "line-height",
-    //   options: ["1.3", "1.5"],
-    // },
-    // fontWeight: {
-    //   property: "font-weight",
-    //   options: ["light", "normal", "medium", "bold"],
-    // },
-    // textColor: {
-    //   property: "--text-color",
-    //   options: [
-    //     "primary",
-    //     "secondary",
-    //     "tertiary",
-    //     "error",
-    //     "warning",
-    //     "success",
-    //     "info",
-    //     "inherit",
-    //   ],
-    // },
-    // textColorHover: {
-    //   property: "--text-color-hover",
-    //   options: [
-    //     "primary",
-    //     "secondary",
-    //     "tertiary",
-    //     "error",
-    //     "warning",
-    //     "success",
-    //     "info",
-    //     "inherit",
-    //   ],
-    // },
   },
 } as const satisfies MoxConfig;
 

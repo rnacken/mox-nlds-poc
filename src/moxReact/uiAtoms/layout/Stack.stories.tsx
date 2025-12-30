@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { MoxStack } from "./Stack";
+import { MoxStack, stackStyleProps } from "./Stack";
+import { getStylePropArgTypes } from "../../../storybook/helpers/getStylePropArgTypes";
 
 const meta = {
   title: "React/Atoms/Layout/Stack",
@@ -16,6 +17,7 @@ const meta = {
       </>
     ),
   },
+  argTypes: getStylePropArgTypes(stackStyleProps),
 } satisfies Meta<typeof MoxStack>;
 
 export default meta;

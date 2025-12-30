@@ -6,15 +6,9 @@
 
 @layer props {
 	.mox-lineHeight-normal {
-		line-height: normal;  
-	}
-	.mox-lineHeight-relaxed {
 		line-height: 1.5;  
 	}
-	.mox-lineHeight-snug {
-		line-height: 1.375;  
-	}
 	.mox-lineHeight-tight {
-		line-height: 1.25;  
+		line-height: 1.3;  
 	}
 }

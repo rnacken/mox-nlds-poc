@@ -66,8 +66,9 @@
 
   .mox-atom-text-block {
     display: block flow-root;
-    --current-font-size: var(--mox-space-md);
-    font-size: var(--current-font-size);
+    margin: 0;
+    color: var(--mox-text-color, inherit);
+    font-size: var(--current-font-size, var(--mox-space-md));
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
     text-decoration: var(--text-decoration, "none");

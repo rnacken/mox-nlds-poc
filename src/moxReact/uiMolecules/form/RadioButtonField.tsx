@@ -21,7 +21,7 @@ export const MoxMoleculeRadioButtonField = ({
   const id = useId();
 
   return (
-    <MoxShelf gap="md" alignItems={"start"} className={className}>
+    <MoxShelf gap="lg" alignItems={"start"} className={className}>
       <MoxAtomRadioButton id={id} />
       <MoxTextBlock as="label" htmlFor={id}>
         {children}
