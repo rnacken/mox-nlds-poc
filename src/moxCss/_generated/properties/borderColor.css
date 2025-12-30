@@ -1,0 +1,17 @@
+
+/**
+  * This file is auto-generated. Do not edit directly.
+  * Generated from src/moxCss/mox.config.ts and script: `generateCss.ts`
+*/
+
+@layer props {
+	.mox-borderColor-transparent {
+		border-color: transparent;  
+	}
+	.mox-borderColor-black {
+		border-color: black;  
+	}
+	.mox-borderColor-white {
+		border-color: white;  
+	}
+}

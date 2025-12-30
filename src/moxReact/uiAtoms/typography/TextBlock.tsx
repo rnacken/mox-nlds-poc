@@ -1,14 +1,16 @@
 import type { ElementType } from "react";
-import type { AtomProps, StylingPropMap } from "../AtomTypes";
+import type { AtomProps, StyleProps } from "../AtomTypes";
 import clsx from "clsx";
 import { propsToClassNames } from "../../helpers/propsToClassNames";
 
-export const stylingPropMap = {
-  fontSize: "fontSize",
-  color: "textColor",
-  fontWeight: "fontWeight",
-  lineHeight: "lineHeight",
-} as const satisfies StylingPropMap;
+export const styleProps = [
+  "color",
+  "fontSize",
+  "fontWeight",
+  "lineHeight",
+  "underline",
+  "underlineHover",
+] as const satisfies StyleProps;
 
 /**
  * A text component to be used for any text content.
@@ -28,12 +30,13 @@ export const MoxAtomTextBlock = <T extends ElementType = "span">({
   className,
   ref,
   ...props
-}: AtomProps<T, typeof stylingPropMap>) => {
+}: AtomProps<T, typeof styleProps>) => {
   const Component = as || ("span" as ElementType);
   // convert style props into correct classnames
-  const stylePropClassNames = propsToClassNames(stylingPropMap, props);
-
-  const { fontSize, color, fontWeight, lineHeight, ...restProps } = props;
+  const { stylePropClassNames, restProps } = propsToClassNames(
+    styleProps,
+    props
+  );
 
   return (
     <Component

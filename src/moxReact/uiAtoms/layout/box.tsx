@@ -13,15 +13,30 @@
 
 import clsx from "clsx";
 import { type ElementType } from "react";
-import type { AtomProps } from "../AtomTypes";
+import type { AtomProps, StyleProps } from "../AtomTypes";
 import { propsToClassNames } from "../../helpers/propsToClassNames";
 
-const stylingPropMap = {
-  inlineSize: "inlineSize",
-  blockSize: "blockSize",
-  // bloep: "bar",
-  // backgroundColor: ["red", "blue", "green", "transparent"],
-} as const;
+const styleProps = [
+  "size",
+  "inlineSize",
+  "blockSize",
+  "padding",
+  "paddingBlock",
+  "paddingInline",
+  "paddingBlockStart",
+  "paddingBlockEnd",
+  "paddingInlineStart",
+  "paddingInlineEnd",
+  "borderRadius",
+  "borderStartStartRadius",
+  "borderStartEndRadius",
+  "borderEndStartRadius",
+  "borderEndEndRadius",
+  "borderWidth",
+  "borderColor",
+  "borderStyle",
+  "backgroundColor",
+] as const satisfies StyleProps;
 
 // Components are always named exported with `Mox` and `level (Atom, Molecule, etc)` prefix
 export const MoxAtomBox = <T extends ElementType = "div">({
@@ -29,14 +44,15 @@ export const MoxAtomBox = <T extends ElementType = "div">({
   as,
   className,
   ref,
-  ...restProps
-}: AtomProps<T, typeof stylingPropMap>) => {
+  ...props
+}: AtomProps<T, typeof styleProps>) => {
   const Component = as || ("div" as ElementType);
 
   // convert props into correct classnames
-  const stylePropClassNames = propsToClassNames(stylingPropMap, restProps);
-
-  console.log(restProps, stylePropClassNames);
+  const { stylePropClassNames, restProps } = propsToClassNames(
+    styleProps,
+    props
+  );
 
   return (
     <Component

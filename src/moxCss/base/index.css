@@ -1,5 +1,5 @@
 @layer reset, tokens, base, atoms, molecules,
-  organisms, templates, pages, overrides;
+  organisms, props, templates, pages, overrides;
 
 @import "./reset.css";
 @import "./base.css";

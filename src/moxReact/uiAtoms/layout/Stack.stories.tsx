@@ -8,10 +8,11 @@ const meta = {
   tags: ["autodocs"],
   parameters: {},
   args: {
+    gap: "md",
     children: (
       <>
-        <MoxStack>📦</MoxStack>
-        <MoxStack>📦</MoxStack>
+        <div>📦</div>
+        <div>📦</div>
       </>
     ),
   },
@@ -22,6 +23,6 @@ type Story = StoryObj<typeof meta>;
 
 export const AsSection: Story = {
   args: {
-    // as: "section",
+    as: "section",
   },
 };

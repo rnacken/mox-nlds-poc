@@ -1,0 +1,17 @@
+
+/**
+  * This file is auto-generated. Do not edit directly.
+  * Generated from src/moxCss/mox.config.ts and script: `generateCss.ts`
+*/
+
+@layer props {
+	.mox-backgroundColor-transparent {
+		background-color: transparent;  
+	}
+	.mox-backgroundColor-black {
+		background-color: black;  
+	}
+	.mox-backgroundColor-white {
+		background-color: white;  
+	}
+}

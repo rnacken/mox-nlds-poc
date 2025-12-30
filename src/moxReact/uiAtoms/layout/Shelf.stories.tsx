@@ -8,10 +8,11 @@ const meta = {
   tags: ["autodocs"],
   parameters: {},
   args: {
+    gap: "md",
     children: (
       <>
-        <MoxShelf>📦</MoxShelf>
-        <MoxShelf>📦</MoxShelf>
+        <div>📦</div>
+        <div>📦</div>
       </>
     ),
   },

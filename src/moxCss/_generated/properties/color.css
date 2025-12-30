@@ -1,0 +1,32 @@
+
+/**
+  * This file is auto-generated. Do not edit directly.
+  * Generated from src/moxCss/mox.config.ts and script: `generateCss.ts`
+*/
+
+@layer props {
+	.mox-color-primary {
+		--text-color: var(--color-primary);  
+	}
+	.mox-color-secondary {
+		--text-color: var(--color-secondary);  
+	}
+	.mox-color-tertiary {
+		--text-color: var(--color-tertiary);  
+	}
+	.mox-color-error {
+		--text-color: var(--color-error);  
+	}
+	.mox-color-warning {
+		--text-color: var(--color-warning);  
+	}
+	.mox-color-success {
+		--text-color: var(--color-success);  
+	}
+	.mox-color-info {
+		--text-color: var(--color-info);  
+	}
+	.mox-color-inherit {
+		--text-color: inherit;  
+	}
+}

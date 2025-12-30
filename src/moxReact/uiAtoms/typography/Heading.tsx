@@ -1,6 +1,6 @@
 import type { spaces } from "../../../moxCss/mox.config";
 import type { AtomProps } from "../AtomTypes";
-import { MoxTextBlock, stylingPropMap } from "./TextBlock";
+import { MoxTextBlock, styleProps } from "./TextBlock";
 
 const levelToSpaceMap: Record<1 | 2 | 3 | 4 | 5 | 6, (typeof spaces)[number]> =
   {
@@ -19,7 +19,7 @@ export const MoxAtomHeading = ({
   level,
   sizeLevel = level,
   ...props
-}: AtomProps<"h1", typeof stylingPropMap> & {
+}: AtomProps<"h1", typeof styleProps> & {
   level: 1 | 2 | 3 | 4 | 5 | 6;
   sizeLevel?: 1 | 2 | 3 | 4 | 5 | 6;
 }) => {

@@ -9,11 +9,10 @@ const meta = {
   tags: ["autodocs"],
   parameters: {},
   args: {
-    inlineSize: "3xl",
-    blockSize: "3xl",
-    backgroundColor: "transparent",
     children: "📦",
-    style: { border: "1px solid black", padding: "16px" },
+    size: "4xl",
+    padding: "md",
+    style: { border: "1px solid black" },
   },
 } satisfies Meta<typeof MoxAtomBox>;
 

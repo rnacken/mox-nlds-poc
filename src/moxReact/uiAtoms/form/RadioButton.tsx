@@ -20,7 +20,7 @@ import clsx from "clsx";
  * 1. Labels, explanations or error-messages.
  */
 
-export const MoxAtomRadioButton = (props: AtomProps<"input", {}>) => {
+export const MoxAtomRadioButton = (props: AtomProps<"input">) => {
   const { as, className, ref, ...restProps } = props;
   const Component = as || ("input" as ElementType);
 

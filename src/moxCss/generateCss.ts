@@ -3,55 +3,62 @@ import { moxConfig, spaces } from "./mox.config";
 import * as fs from "fs";
 
 const getClassName = ({
-  property,
-  option,
-  responsive,
+  propKey,
+  optionKey,
+  responsiveKey,
   state,
 }: {
-  property: string;
-  option: string;
-  responsive?: string;
+  propKey: string;
+  optionKey: string;
+  responsiveKey?: string;
   state?: "hover" | "active" | "focus" | "disabled";
 }) => {
-  return `${responsive != null ? "\t" : ""}.${
+  return `${responsiveKey != null ? "\t\t" : "\t"}.${
     moxConfig.prefix
-  }-${property}-${option.replace(/[^a-zA-Z0-9-]/g, "-")}${
-    responsive != null ? `\\@${responsive}` : ""
+  }-${propKey}-${optionKey.replace(/[^a-zA-Z0-9-]/g, "-")}${
+    responsiveKey != null ? `\\@${responsiveKey}` : ""
   }${state != null ? `-${state}:${state}` : ""}`;
 };
 
 /**
- * Function to generate CSS class files based on the MOX CSS configuration.
+ * Function to generate CSS class files based on the Mox configuration.
  * It reads the configuration from `mox.config.ts` and creates CSS files
  * in the `_generated/classNames` directory for each defined class name.
+ *
+ * These classNames are used for the `propsToClassNames.ts` utility to map props to styles.
  */
 const generateClassNames = () => {
   const files: string[] = [];
 
-  Object.entries(moxConfig.properties).forEach(
-    ([propertyName, { property, options, ...restConfig }]) => {
+  Object.entries(moxConfig.props).forEach(
+    ([propKey, { options, ...restProp }]) => {
       const responsive =
-        "responsive" in restConfig && restConfig.responsive ? true : false;
-      const optionsMap =
-        "optionsMap" in restConfig ? restConfig.optionsMap : undefined;
+        "responsive" in restProp && restProp.responsive ? true : false;
+      const state =
+        "state" in restProp
+          ? (restProp.state as "hover" | "focus" | "active" | "disabled")
+          : undefined;
 
-      const state = "state" in restConfig ? restConfig.state : undefined;
       // Create a separate CSS file for each property
       const result: Array<string> = [
         `
 /**
   * This file is auto-generated. Do not edit directly.
   * Generated from src/moxCss/mox.config.ts and script: \`generateCss.ts\`
-*/`,
+*/
+
+@layer props {`,
       ];
-      for (const option of options) {
+      for (const [optionKey, optionValue] of Object.entries(options)) {
         result.push(`${getClassName({
-          property,
-          option,
+          propKey,
+          optionKey,
           state,
         })} {
-    ${property}: ${optionsMap == null ? option : optionsMap[option] ?? option};
-}`);
+${Object.entries(optionValue)
+  .map(([cssProp, cssValue]) => `\t\t${cssProp}: ${cssValue};`)
+  .join("\n")}  
+\t}`);
       }
 
       if (responsive) {
@@ -61,27 +68,29 @@ const generateClassNames = () => {
             moxConfig.viewportBreakpoints[
               key as keyof typeof moxConfig.viewportBreakpoints
             ];
-          result.push(`/* Viewport breakpoint: ${key} (${width}px) */`);
+          result.push(`\t/* Viewport breakpoint: ${key} (${width}px) */`);
 
           // ... add a min and max media query...
           for (const direction of ["Min", "Max"] as const) {
             result.push(
-              `@media only screen and (${direction.toLowerCase()}-device-width: ${width}px) {`
+              `\t@media only screen and (${direction.toLowerCase()}-device-width: ${width}px) {`
             );
 
             // ... for each option
-            for (const option of options) {
+            for (const [optionKey, optionValue] of Object.entries(options)) {
               result.push(`${getClassName({
-                property,
-                option,
-                responsive: `${key}${direction}`,
+                propKey,
+                optionKey,
+                responsiveKey: `${key}${direction}`,
                 state,
               })} {
-\t\t${property}: ${optionsMap == null ? option : optionsMap[option] ?? option};
-\t}`);
+${Object.entries(optionValue)
+  .map(([cssProp, cssValue]) => `\t\t\t${cssProp}: ${cssValue};`)
+  .join("\n")}  ;
+\t\t}`);
             }
 
-            result.push(`}`);
+            result.push(`\t}`);
           }
         }
         // For each container breakpoint...
@@ -90,42 +99,41 @@ const generateClassNames = () => {
             moxConfig.containerBreakpoints[
               key as keyof typeof moxConfig.containerBreakpoints
             ];
-          result.push(`/* Container breakpoint: ${key} (${width}px) */`);
+          result.push(`\t/* Container breakpoint: ${key} (${width}px) */`);
 
           // ... add a min and max container query...
           for (const direction of ["Min", "Max"] as const) {
             result.push(
-              `@container (${direction.toLowerCase()}-width: ${width}px) {`
+              `\t@container (${direction.toLowerCase()}-width: ${width}px) {`
             );
 
             // ... for each option
-            for (const option of options) {
+            for (const [optionKey, optionValue] of Object.entries(options)) {
               result.push(`${getClassName({
-                property,
-                option,
-                responsive: `${key}${direction}`,
+                propKey,
+                optionKey,
+                responsiveKey: `${key}${direction}`,
                 state,
               })} {
-\t\t${property}:  ${optionsMap == null ? option : optionsMap[option] ?? option};
-\t}`);
+${Object.entries(optionValue)
+  .map(([cssProp, cssValue]) => `\t\t\t${cssProp}: ${cssValue};`)
+  .join("\n")}  ;
+\t\t}`);
             }
 
-            result.push(`}`);
+            result.push(`\t}`);
           }
         }
       }
 
+      result.push(`}`); // end of @layer
+
       // Write the generated CSS to a file
       fs.writeFileSync(
-        posixPath.join(
-          __dirname,
-          "_generated",
-          "properties",
-          `${propertyName}.css`
-        ),
+        posixPath.join(__dirname, "_generated", "properties", `${propKey}.css`),
         result.join("\n")
       );
-      files.push(`./${propertyName}.css`);
+      files.push(`./${propKey}.css`);
     }
   );
 
@@ -136,9 +144,7 @@ const generateClassNames = () => {
   );
 
   console.info(
-    `✅ Generated properties:\n\t${Object.keys(moxConfig.properties).join(
-      ", "
-    )}\n`
+    `✅ Generated properties:\n\t${Object.keys(moxConfig.props).join(", ")}\n`
   );
 };
 

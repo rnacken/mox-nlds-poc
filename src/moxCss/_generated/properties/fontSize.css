@@ -3,533 +3,536 @@
   * This file is auto-generated. Do not edit directly.
   * Generated from src/moxCss/mox.config.ts and script: `generateCss.ts`
 */
-.mox-font-size-4xs {
-    font-size: var(--mox-space-4xs);
-}
-.mox-font-size-3xs {
-    font-size: var(--mox-space-3xs);
-}
-.mox-font-size-2xs {
-    font-size: var(--mox-space-2xs);
-}
-.mox-font-size-xs {
-    font-size: var(--mox-space-xs);
-}
-.mox-font-size-sm {
-    font-size: var(--mox-space-sm);
-}
-.mox-font-size-md {
-    font-size: var(--mox-space-md);
-}
-.mox-font-size-lg {
-    font-size: var(--mox-space-lg);
-}
-.mox-font-size-xl {
-    font-size: var(--mox-space-xl);
-}
-.mox-font-size-2xl {
-    font-size: var(--mox-space-2xl);
-}
-.mox-font-size-3xl {
-    font-size: var(--mox-space-3xl);
-}
-.mox-font-size-4xl {
-    font-size: var(--mox-space-4xl);
-}
-/* Viewport breakpoint: mobile (600px) */
-@media only screen and (min-device-width: 600px) {
-	.mox-font-size-4xs\@mobileMin {
-		font-size: var(--mox-space-4xs);
-	}
-	.mox-font-size-3xs\@mobileMin {
-		font-size: var(--mox-space-3xs);
-	}
-	.mox-font-size-2xs\@mobileMin {
-		font-size: var(--mox-space-2xs);
-	}
-	.mox-font-size-xs\@mobileMin {
-		font-size: var(--mox-space-xs);
-	}
-	.mox-font-size-sm\@mobileMin {
-		font-size: var(--mox-space-sm);
-	}
-	.mox-font-size-md\@mobileMin {
-		font-size: var(--mox-space-md);
-	}
-	.mox-font-size-lg\@mobileMin {
-		font-size: var(--mox-space-lg);
-	}
-	.mox-font-size-xl\@mobileMin {
-		font-size: var(--mox-space-xl);
-	}
-	.mox-font-size-2xl\@mobileMin {
-		font-size: var(--mox-space-2xl);
-	}
-	.mox-font-size-3xl\@mobileMin {
-		font-size: var(--mox-space-3xl);
-	}
-	.mox-font-size-4xl\@mobileMin {
-		font-size: var(--mox-space-4xl);
-	}
-}
-@media only screen and (max-device-width: 600px) {
-	.mox-font-size-4xs\@mobileMax {
-		font-size: var(--mox-space-4xs);
-	}
-	.mox-font-size-3xs\@mobileMax {
-		font-size: var(--mox-space-3xs);
-	}
-	.mox-font-size-2xs\@mobileMax {
-		font-size: var(--mox-space-2xs);
-	}
-	.mox-font-size-xs\@mobileMax {
-		font-size: var(--mox-space-xs);
-	}
-	.mox-font-size-sm\@mobileMax {
-		font-size: var(--mox-space-sm);
-	}
-	.mox-font-size-md\@mobileMax {
-		font-size: var(--mox-space-md);
-	}
-	.mox-font-size-lg\@mobileMax {
-		font-size: var(--mox-space-lg);
-	}
-	.mox-font-size-xl\@mobileMax {
-		font-size: var(--mox-space-xl);
-	}
-	.mox-font-size-2xl\@mobileMax {
-		font-size: var(--mox-space-2xl);
-	}
-	.mox-font-size-3xl\@mobileMax {
-		font-size: var(--mox-space-3xl);
-	}
-	.mox-font-size-4xl\@mobileMax {
-		font-size: var(--mox-space-4xl);
-	}
-}
-/* Viewport breakpoint: tablet (900px) */
-@media only screen and (min-device-width: 900px) {
-	.mox-font-size-4xs\@tabletMin {
-		font-size: var(--mox-space-4xs);
-	}
-	.mox-font-size-3xs\@tabletMin {
-		font-size: var(--mox-space-3xs);
-	}
-	.mox-font-size-2xs\@tabletMin {
-		font-size: var(--mox-space-2xs);
-	}
-	.mox-font-size-xs\@tabletMin {
-		font-size: var(--mox-space-xs);
-	}
-	.mox-font-size-sm\@tabletMin {
-		font-size: var(--mox-space-sm);
-	}
-	.mox-font-size-md\@tabletMin {
-		font-size: var(--mox-space-md);
-	}
-	.mox-font-size-lg\@tabletMin {
-		font-size: var(--mox-space-lg);
-	}
-	.mox-font-size-xl\@tabletMin {
-		font-size: var(--mox-space-xl);
-	}
-	.mox-font-size-2xl\@tabletMin {
-		font-size: var(--mox-space-2xl);
-	}
-	.mox-font-size-3xl\@tabletMin {
-		font-size: var(--mox-space-3xl);
-	}
-	.mox-font-size-4xl\@tabletMin {
-		font-size: var(--mox-space-4xl);
-	}
-}
-@media only screen and (max-device-width: 900px) {
-	.mox-font-size-4xs\@tabletMax {
-		font-size: var(--mox-space-4xs);
-	}
-	.mox-font-size-3xs\@tabletMax {
-		font-size: var(--mox-space-3xs);
-	}
-	.mox-font-size-2xs\@tabletMax {
-		font-size: var(--mox-space-2xs);
-	}
-	.mox-font-size-xs\@tabletMax {
-		font-size: var(--mox-space-xs);
-	}
-	.mox-font-size-sm\@tabletMax {
-		font-size: var(--mox-space-sm);
-	}
-	.mox-font-size-md\@tabletMax {
-		font-size: var(--mox-space-md);
-	}
-	.mox-font-size-lg\@tabletMax {
-		font-size: var(--mox-space-lg);
-	}
-	.mox-font-size-xl\@tabletMax {
-		font-size: var(--mox-space-xl);
-	}
-	.mox-font-size-2xl\@tabletMax {
-		font-size: var(--mox-space-2xl);
-	}
-	.mox-font-size-3xl\@tabletMax {
-		font-size: var(--mox-space-3xl);
-	}
-	.mox-font-size-4xl\@tabletMax {
-		font-size: var(--mox-space-4xl);
-	}
-}
-/* Viewport breakpoint: desktop (1200px) */
-@media only screen and (min-device-width: 1200px) {
-	.mox-font-size-4xs\@desktopMin {
-		font-size: var(--mox-space-4xs);
-	}
-	.mox-font-size-3xs\@desktopMin {
-		font-size: var(--mox-space-3xs);
-	}
-	.mox-font-size-2xs\@desktopMin {
-		font-size: var(--mox-space-2xs);
-	}
-	.mox-font-size-xs\@desktopMin {
-		font-size: var(--mox-space-xs);
-	}
-	.mox-font-size-sm\@desktopMin {
-		font-size: var(--mox-space-sm);
-	}
-	.mox-font-size-md\@desktopMin {
-		font-size: var(--mox-space-md);
-	}
-	.mox-font-size-lg\@desktopMin {
-		font-size: var(--mox-space-lg);
-	}
-	.mox-font-size-xl\@desktopMin {
-		font-size: var(--mox-space-xl);
-	}
-	.mox-font-size-2xl\@desktopMin {
-		font-size: var(--mox-space-2xl);
-	}
-	.mox-font-size-3xl\@desktopMin {
-		font-size: var(--mox-space-3xl);
-	}
-	.mox-font-size-4xl\@desktopMin {
-		font-size: var(--mox-space-4xl);
-	}
-}
-@media only screen and (max-device-width: 1200px) {
-	.mox-font-size-4xs\@desktopMax {
-		font-size: var(--mox-space-4xs);
-	}
-	.mox-font-size-3xs\@desktopMax {
-		font-size: var(--mox-space-3xs);
-	}
-	.mox-font-size-2xs\@desktopMax {
-		font-size: var(--mox-space-2xs);
-	}
-	.mox-font-size-xs\@desktopMax {
-		font-size: var(--mox-space-xs);
-	}
-	.mox-font-size-sm\@desktopMax {
-		font-size: var(--mox-space-sm);
-	}
-	.mox-font-size-md\@desktopMax {
-		font-size: var(--mox-space-md);
-	}
-	.mox-font-size-lg\@desktopMax {
-		font-size: var(--mox-space-lg);
-	}
-	.mox-font-size-xl\@desktopMax {
-		font-size: var(--mox-space-xl);
-	}
-	.mox-font-size-2xl\@desktopMax {
-		font-size: var(--mox-space-2xl);
-	}
-	.mox-font-size-3xl\@desktopMax {
-		font-size: var(--mox-space-3xl);
-	}
-	.mox-font-size-4xl\@desktopMax {
-		font-size: var(--mox-space-4xl);
-	}
-}
-/* Viewport breakpoint: mq1440 (1440px) */
-@media only screen and (min-device-width: 1440px) {
-	.mox-font-size-4xs\@mq1440Min {
-		font-size: var(--mox-space-4xs);
-	}
-	.mox-font-size-3xs\@mq1440Min {
-		font-size: var(--mox-space-3xs);
-	}
-	.mox-font-size-2xs\@mq1440Min {
-		font-size: var(--mox-space-2xs);
-	}
-	.mox-font-size-xs\@mq1440Min {
-		font-size: var(--mox-space-xs);
-	}
-	.mox-font-size-sm\@mq1440Min {
-		font-size: var(--mox-space-sm);
-	}
-	.mox-font-size-md\@mq1440Min {
-		font-size: var(--mox-space-md);
-	}
-	.mox-font-size-lg\@mq1440Min {
-		font-size: var(--mox-space-lg);
-	}
-	.mox-font-size-xl\@mq1440Min {
-		font-size: var(--mox-space-xl);
-	}
-	.mox-font-size-2xl\@mq1440Min {
-		font-size: var(--mox-space-2xl);
-	}
-	.mox-font-size-3xl\@mq1440Min {
-		font-size: var(--mox-space-3xl);
-	}
-	.mox-font-size-4xl\@mq1440Min {
-		font-size: var(--mox-space-4xl);
-	}
-}
-@media only screen and (max-device-width: 1440px) {
-	.mox-font-size-4xs\@mq1440Max {
-		font-size: var(--mox-space-4xs);
-	}
-	.mox-font-size-3xs\@mq1440Max {
-		font-size: var(--mox-space-3xs);
-	}
-	.mox-font-size-2xs\@mq1440Max {
-		font-size: var(--mox-space-2xs);
-	}
-	.mox-font-size-xs\@mq1440Max {
-		font-size: var(--mox-space-xs);
-	}
-	.mox-font-size-sm\@mq1440Max {
-		font-size: var(--mox-space-sm);
-	}
-	.mox-font-size-md\@mq1440Max {
-		font-size: var(--mox-space-md);
-	}
-	.mox-font-size-lg\@mq1440Max {
-		font-size: var(--mox-space-lg);
-	}
-	.mox-font-size-xl\@mq1440Max {
-		font-size: var(--mox-space-xl);
-	}
-	.mox-font-size-2xl\@mq1440Max {
-		font-size: var(--mox-space-2xl);
-	}
-	.mox-font-size-3xl\@mq1440Max {
-		font-size: var(--mox-space-3xl);
-	}
-	.mox-font-size-4xl\@mq1440Max {
-		font-size: var(--mox-space-4xl);
-	}
-}
-/* Container breakpoint: cq200 (200px) */
-@container (min-width: 200px) {
-	.mox-font-size-4xs\@cq200Min {
-		font-size:  var(--mox-space-4xs);
-	}
-	.mox-font-size-3xs\@cq200Min {
-		font-size:  var(--mox-space-3xs);
-	}
-	.mox-font-size-2xs\@cq200Min {
-		font-size:  var(--mox-space-2xs);
-	}
-	.mox-font-size-xs\@cq200Min {
-		font-size:  var(--mox-space-xs);
-	}
-	.mox-font-size-sm\@cq200Min {
-		font-size:  var(--mox-space-sm);
-	}
-	.mox-font-size-md\@cq200Min {
-		font-size:  var(--mox-space-md);
-	}
-	.mox-font-size-lg\@cq200Min {
-		font-size:  var(--mox-space-lg);
-	}
-	.mox-font-size-xl\@cq200Min {
-		font-size:  var(--mox-space-xl);
-	}
-	.mox-font-size-2xl\@cq200Min {
-		font-size:  var(--mox-space-2xl);
-	}
-	.mox-font-size-3xl\@cq200Min {
-		font-size:  var(--mox-space-3xl);
-	}
-	.mox-font-size-4xl\@cq200Min {
-		font-size:  var(--mox-space-4xl);
-	}
-}
-@container (max-width: 200px) {
-	.mox-font-size-4xs\@cq200Max {
-		font-size:  var(--mox-space-4xs);
-	}
-	.mox-font-size-3xs\@cq200Max {
-		font-size:  var(--mox-space-3xs);
-	}
-	.mox-font-size-2xs\@cq200Max {
-		font-size:  var(--mox-space-2xs);
-	}
-	.mox-font-size-xs\@cq200Max {
-		font-size:  var(--mox-space-xs);
-	}
-	.mox-font-size-sm\@cq200Max {
-		font-size:  var(--mox-space-sm);
-	}
-	.mox-font-size-md\@cq200Max {
-		font-size:  var(--mox-space-md);
-	}
-	.mox-font-size-lg\@cq200Max {
-		font-size:  var(--mox-space-lg);
-	}
-	.mox-font-size-xl\@cq200Max {
-		font-size:  var(--mox-space-xl);
-	}
-	.mox-font-size-2xl\@cq200Max {
-		font-size:  var(--mox-space-2xl);
-	}
-	.mox-font-size-3xl\@cq200Max {
-		font-size:  var(--mox-space-3xl);
-	}
-	.mox-font-size-4xl\@cq200Max {
-		font-size:  var(--mox-space-4xl);
-	}
-}
-/* Container breakpoint: cq400 (400px) */
-@container (min-width: 400px) {
-	.mox-font-size-4xs\@cq400Min {
-		font-size:  var(--mox-space-4xs);
-	}
-	.mox-font-size-3xs\@cq400Min {
-		font-size:  var(--mox-space-3xs);
-	}
-	.mox-font-size-2xs\@cq400Min {
-		font-size:  var(--mox-space-2xs);
-	}
-	.mox-font-size-xs\@cq400Min {
-		font-size:  var(--mox-space-xs);
-	}
-	.mox-font-size-sm\@cq400Min {
-		font-size:  var(--mox-space-sm);
-	}
-	.mox-font-size-md\@cq400Min {
-		font-size:  var(--mox-space-md);
-	}
-	.mox-font-size-lg\@cq400Min {
-		font-size:  var(--mox-space-lg);
-	}
-	.mox-font-size-xl\@cq400Min {
-		font-size:  var(--mox-space-xl);
-	}
-	.mox-font-size-2xl\@cq400Min {
-		font-size:  var(--mox-space-2xl);
-	}
-	.mox-font-size-3xl\@cq400Min {
-		font-size:  var(--mox-space-3xl);
-	}
-	.mox-font-size-4xl\@cq400Min {
-		font-size:  var(--mox-space-4xl);
-	}
-}
-@container (max-width: 400px) {
-	.mox-font-size-4xs\@cq400Max {
-		font-size:  var(--mox-space-4xs);
-	}
-	.mox-font-size-3xs\@cq400Max {
-		font-size:  var(--mox-space-3xs);
-	}
-	.mox-font-size-2xs\@cq400Max {
-		font-size:  var(--mox-space-2xs);
-	}
-	.mox-font-size-xs\@cq400Max {
-		font-size:  var(--mox-space-xs);
-	}
-	.mox-font-size-sm\@cq400Max {
-		font-size:  var(--mox-space-sm);
-	}
-	.mox-font-size-md\@cq400Max {
-		font-size:  var(--mox-space-md);
-	}
-	.mox-font-size-lg\@cq400Max {
-		font-size:  var(--mox-space-lg);
-	}
-	.mox-font-size-xl\@cq400Max {
-		font-size:  var(--mox-space-xl);
-	}
-	.mox-font-size-2xl\@cq400Max {
-		font-size:  var(--mox-space-2xl);
-	}
-	.mox-font-size-3xl\@cq400Max {
-		font-size:  var(--mox-space-3xl);
-	}
-	.mox-font-size-4xl\@cq400Max {
-		font-size:  var(--mox-space-4xl);
-	}
-}
-/* Container breakpoint: cq600 (600px) */
-@container (min-width: 600px) {
-	.mox-font-size-4xs\@cq600Min {
-		font-size:  var(--mox-space-4xs);
-	}
-	.mox-font-size-3xs\@cq600Min {
-		font-size:  var(--mox-space-3xs);
-	}
-	.mox-font-size-2xs\@cq600Min {
-		font-size:  var(--mox-space-2xs);
-	}
-	.mox-font-size-xs\@cq600Min {
-		font-size:  var(--mox-space-xs);
-	}
-	.mox-font-size-sm\@cq600Min {
-		font-size:  var(--mox-space-sm);
-	}
-	.mox-font-size-md\@cq600Min {
-		font-size:  var(--mox-space-md);
-	}
-	.mox-font-size-lg\@cq600Min {
-		font-size:  var(--mox-space-lg);
-	}
-	.mox-font-size-xl\@cq600Min {
-		font-size:  var(--mox-space-xl);
-	}
-	.mox-font-size-2xl\@cq600Min {
-		font-size:  var(--mox-space-2xl);
-	}
-	.mox-font-size-3xl\@cq600Min {
-		font-size:  var(--mox-space-3xl);
-	}
-	.mox-font-size-4xl\@cq600Min {
-		font-size:  var(--mox-space-4xl);
-	}
-}
-@container (max-width: 600px) {
-	.mox-font-size-4xs\@cq600Max {
-		font-size:  var(--mox-space-4xs);
-	}
-	.mox-font-size-3xs\@cq600Max {
-		font-size:  var(--mox-space-3xs);
-	}
-	.mox-font-size-2xs\@cq600Max {
-		font-size:  var(--mox-space-2xs);
-	}
-	.mox-font-size-xs\@cq600Max {
-		font-size:  var(--mox-space-xs);
-	}
-	.mox-font-size-sm\@cq600Max {
-		font-size:  var(--mox-space-sm);
-	}
-	.mox-font-size-md\@cq600Max {
-		font-size:  var(--mox-space-md);
-	}
-	.mox-font-size-lg\@cq600Max {
-		font-size:  var(--mox-space-lg);
-	}
-	.mox-font-size-xl\@cq600Max {
-		font-size:  var(--mox-space-xl);
-	}
-	.mox-font-size-2xl\@cq600Max {
-		font-size:  var(--mox-space-2xl);
-	}
-	.mox-font-size-3xl\@cq600Max {
-		font-size:  var(--mox-space-3xl);
-	}
-	.mox-font-size-4xl\@cq600Max {
-		font-size:  var(--mox-space-4xl);
+
+@layer props {
+	.mox-fontSize-4xs {
+		--font-size: var(--mox-space-4xs);  
+	}
+	.mox-fontSize-3xs {
+		--font-size: var(--mox-space-3xs);  
+	}
+	.mox-fontSize-2xs {
+		--font-size: var(--mox-space-2xs);  
+	}
+	.mox-fontSize-xs {
+		--font-size: var(--mox-space-xs);  
+	}
+	.mox-fontSize-sm {
+		--font-size: var(--mox-space-sm);  
+	}
+	.mox-fontSize-md {
+		--font-size: var(--mox-space-md);  
+	}
+	.mox-fontSize-lg {
+		--font-size: var(--mox-space-lg);  
+	}
+	.mox-fontSize-xl {
+		--font-size: var(--mox-space-xl);  
+	}
+	.mox-fontSize-2xl {
+		--font-size: var(--mox-space-2xl);  
+	}
+	.mox-fontSize-3xl {
+		--font-size: var(--mox-space-3xl);  
+	}
+	.mox-fontSize-4xl {
+		--font-size: var(--mox-space-4xl);  
+	}
+	/* Viewport breakpoint: mobile (600px) */
+	@media only screen and (min-device-width: 600px) {
+		.mox-fontSize-4xs\@mobileMin {
+			--font-size: var(--mox-space-4xs);  ;
+		}
+		.mox-fontSize-3xs\@mobileMin {
+			--font-size: var(--mox-space-3xs);  ;
+		}
+		.mox-fontSize-2xs\@mobileMin {
+			--font-size: var(--mox-space-2xs);  ;
+		}
+		.mox-fontSize-xs\@mobileMin {
+			--font-size: var(--mox-space-xs);  ;
+		}
+		.mox-fontSize-sm\@mobileMin {
+			--font-size: var(--mox-space-sm);  ;
+		}
+		.mox-fontSize-md\@mobileMin {
+			--font-size: var(--mox-space-md);  ;
+		}
+		.mox-fontSize-lg\@mobileMin {
+			--font-size: var(--mox-space-lg);  ;
+		}
+		.mox-fontSize-xl\@mobileMin {
+			--font-size: var(--mox-space-xl);  ;
+		}
+		.mox-fontSize-2xl\@mobileMin {
+			--font-size: var(--mox-space-2xl);  ;
+		}
+		.mox-fontSize-3xl\@mobileMin {
+			--font-size: var(--mox-space-3xl);  ;
+		}
+		.mox-fontSize-4xl\@mobileMin {
+			--font-size: var(--mox-space-4xl);  ;
+		}
+	}
+	@media only screen and (max-device-width: 600px) {
+		.mox-fontSize-4xs\@mobileMax {
+			--font-size: var(--mox-space-4xs);  ;
+		}
+		.mox-fontSize-3xs\@mobileMax {
+			--font-size: var(--mox-space-3xs);  ;
+		}
+		.mox-fontSize-2xs\@mobileMax {
+			--font-size: var(--mox-space-2xs);  ;
+		}
+		.mox-fontSize-xs\@mobileMax {
+			--font-size: var(--mox-space-xs);  ;
+		}
+		.mox-fontSize-sm\@mobileMax {
+			--font-size: var(--mox-space-sm);  ;
+		}
+		.mox-fontSize-md\@mobileMax {
+			--font-size: var(--mox-space-md);  ;
+		}
+		.mox-fontSize-lg\@mobileMax {
+			--font-size: var(--mox-space-lg);  ;
+		}
+		.mox-fontSize-xl\@mobileMax {
+			--font-size: var(--mox-space-xl);  ;
+		}
+		.mox-fontSize-2xl\@mobileMax {
+			--font-size: var(--mox-space-2xl);  ;
+		}
+		.mox-fontSize-3xl\@mobileMax {
+			--font-size: var(--mox-space-3xl);  ;
+		}
+		.mox-fontSize-4xl\@mobileMax {
+			--font-size: var(--mox-space-4xl);  ;
+		}
+	}
+	/* Viewport breakpoint: tablet (900px) */
+	@media only screen and (min-device-width: 900px) {
+		.mox-fontSize-4xs\@tabletMin {
+			--font-size: var(--mox-space-4xs);  ;
+		}
+		.mox-fontSize-3xs\@tabletMin {
+			--font-size: var(--mox-space-3xs);  ;
+		}
+		.mox-fontSize-2xs\@tabletMin {
+			--font-size: var(--mox-space-2xs);  ;
+		}
+		.mox-fontSize-xs\@tabletMin {
+			--font-size: var(--mox-space-xs);  ;
+		}
+		.mox-fontSize-sm\@tabletMin {
+			--font-size: var(--mox-space-sm);  ;
+		}
+		.mox-fontSize-md\@tabletMin {
+			--font-size: var(--mox-space-md);  ;
+		}
+		.mox-fontSize-lg\@tabletMin {
+			--font-size: var(--mox-space-lg);  ;
+		}
+		.mox-fontSize-xl\@tabletMin {
+			--font-size: var(--mox-space-xl);  ;
+		}
+		.mox-fontSize-2xl\@tabletMin {
+			--font-size: var(--mox-space-2xl);  ;
+		}
+		.mox-fontSize-3xl\@tabletMin {
+			--font-size: var(--mox-space-3xl);  ;
+		}
+		.mox-fontSize-4xl\@tabletMin {
+			--font-size: var(--mox-space-4xl);  ;
+		}
+	}
+	@media only screen and (max-device-width: 900px) {
+		.mox-fontSize-4xs\@tabletMax {
+			--font-size: var(--mox-space-4xs);  ;
+		}
+		.mox-fontSize-3xs\@tabletMax {
+			--font-size: var(--mox-space-3xs);  ;
+		}
+		.mox-fontSize-2xs\@tabletMax {
+			--font-size: var(--mox-space-2xs);  ;
+		}
+		.mox-fontSize-xs\@tabletMax {
+			--font-size: var(--mox-space-xs);  ;
+		}
+		.mox-fontSize-sm\@tabletMax {
+			--font-size: var(--mox-space-sm);  ;
+		}
+		.mox-fontSize-md\@tabletMax {
+			--font-size: var(--mox-space-md);  ;
+		}
+		.mox-fontSize-lg\@tabletMax {
+			--font-size: var(--mox-space-lg);  ;
+		}
+		.mox-fontSize-xl\@tabletMax {
+			--font-size: var(--mox-space-xl);  ;
+		}
+		.mox-fontSize-2xl\@tabletMax {
+			--font-size: var(--mox-space-2xl);  ;
+		}
+		.mox-fontSize-3xl\@tabletMax {
+			--font-size: var(--mox-space-3xl);  ;
+		}
+		.mox-fontSize-4xl\@tabletMax {
+			--font-size: var(--mox-space-4xl);  ;
+		}
+	}
+	/* Viewport breakpoint: desktop (1200px) */
+	@media only screen and (min-device-width: 1200px) {
+		.mox-fontSize-4xs\@desktopMin {
+			--font-size: var(--mox-space-4xs);  ;
+		}
+		.mox-fontSize-3xs\@desktopMin {
+			--font-size: var(--mox-space-3xs);  ;
+		}
+		.mox-fontSize-2xs\@desktopMin {
+			--font-size: var(--mox-space-2xs);  ;
+		}
+		.mox-fontSize-xs\@desktopMin {
+			--font-size: var(--mox-space-xs);  ;
+		}
+		.mox-fontSize-sm\@desktopMin {
+			--font-size: var(--mox-space-sm);  ;
+		}
+		.mox-fontSize-md\@desktopMin {
+			--font-size: var(--mox-space-md);  ;
+		}
+		.mox-fontSize-lg\@desktopMin {
+			--font-size: var(--mox-space-lg);  ;
+		}
+		.mox-fontSize-xl\@desktopMin {
+			--font-size: var(--mox-space-xl);  ;
+		}
+		.mox-fontSize-2xl\@desktopMin {
+			--font-size: var(--mox-space-2xl);  ;
+		}
+		.mox-fontSize-3xl\@desktopMin {
+			--font-size: var(--mox-space-3xl);  ;
+		}
+		.mox-fontSize-4xl\@desktopMin {
+			--font-size: var(--mox-space-4xl);  ;
+		}
+	}
+	@media only screen and (max-device-width: 1200px) {
+		.mox-fontSize-4xs\@desktopMax {
+			--font-size: var(--mox-space-4xs);  ;
+		}
+		.mox-fontSize-3xs\@desktopMax {
+			--font-size: var(--mox-space-3xs);  ;
+		}
+		.mox-fontSize-2xs\@desktopMax {
+			--font-size: var(--mox-space-2xs);  ;
+		}
+		.mox-fontSize-xs\@desktopMax {
+			--font-size: var(--mox-space-xs);  ;
+		}
+		.mox-fontSize-sm\@desktopMax {
+			--font-size: var(--mox-space-sm);  ;
+		}
+		.mox-fontSize-md\@desktopMax {
+			--font-size: var(--mox-space-md);  ;
+		}
+		.mox-fontSize-lg\@desktopMax {
+			--font-size: var(--mox-space-lg);  ;
+		}
+		.mox-fontSize-xl\@desktopMax {
+			--font-size: var(--mox-space-xl);  ;
+		}
+		.mox-fontSize-2xl\@desktopMax {
+			--font-size: var(--mox-space-2xl);  ;
+		}
+		.mox-fontSize-3xl\@desktopMax {
+			--font-size: var(--mox-space-3xl);  ;
+		}
+		.mox-fontSize-4xl\@desktopMax {
+			--font-size: var(--mox-space-4xl);  ;
+		}
+	}
+	/* Viewport breakpoint: mq1440 (1440px) */
+	@media only screen and (min-device-width: 1440px) {
+		.mox-fontSize-4xs\@mq1440Min {
+			--font-size: var(--mox-space-4xs);  ;
+		}
+		.mox-fontSize-3xs\@mq1440Min {
+			--font-size: var(--mox-space-3xs);  ;
+		}
+		.mox-fontSize-2xs\@mq1440Min {
+			--font-size: var(--mox-space-2xs);  ;
+		}
+		.mox-fontSize-xs\@mq1440Min {
+			--font-size: var(--mox-space-xs);  ;
+		}
+		.mox-fontSize-sm\@mq1440Min {
+			--font-size: var(--mox-space-sm);  ;
+		}
+		.mox-fontSize-md\@mq1440Min {
+			--font-size: var(--mox-space-md);  ;
+		}
+		.mox-fontSize-lg\@mq1440Min {
+			--font-size: var(--mox-space-lg);  ;
+		}
+		.mox-fontSize-xl\@mq1440Min {
+			--font-size: var(--mox-space-xl);  ;
+		}
+		.mox-fontSize-2xl\@mq1440Min {
+			--font-size: var(--mox-space-2xl);  ;
+		}
+		.mox-fontSize-3xl\@mq1440Min {
+			--font-size: var(--mox-space-3xl);  ;
+		}
+		.mox-fontSize-4xl\@mq1440Min {
+			--font-size: var(--mox-space-4xl);  ;
+		}
+	}
+	@media only screen and (max-device-width: 1440px) {
+		.mox-fontSize-4xs\@mq1440Max {
+			--font-size: var(--mox-space-4xs);  ;
+		}
+		.mox-fontSize-3xs\@mq1440Max {
+			--font-size: var(--mox-space-3xs);  ;
+		}
+		.mox-fontSize-2xs\@mq1440Max {
+			--font-size: var(--mox-space-2xs);  ;
+		}
+		.mox-fontSize-xs\@mq1440Max {
+			--font-size: var(--mox-space-xs);  ;
+		}
+		.mox-fontSize-sm\@mq1440Max {
+			--font-size: var(--mox-space-sm);  ;
+		}
+		.mox-fontSize-md\@mq1440Max {
+			--font-size: var(--mox-space-md);  ;
+		}
+		.mox-fontSize-lg\@mq1440Max {
+			--font-size: var(--mox-space-lg);  ;
+		}
+		.mox-fontSize-xl\@mq1440Max {
+			--font-size: var(--mox-space-xl);  ;
+		}
+		.mox-fontSize-2xl\@mq1440Max {
+			--font-size: var(--mox-space-2xl);  ;
+		}
+		.mox-fontSize-3xl\@mq1440Max {
+			--font-size: var(--mox-space-3xl);  ;
+		}
+		.mox-fontSize-4xl\@mq1440Max {
+			--font-size: var(--mox-space-4xl);  ;
+		}
+	}
+	/* Container breakpoint: cq200 (200px) */
+	@container (min-width: 200px) {
+		.mox-fontSize-4xs\@cq200Min {
+			--font-size: var(--mox-space-4xs);  ;
+		}
+		.mox-fontSize-3xs\@cq200Min {
+			--font-size: var(--mox-space-3xs);  ;
+		}
+		.mox-fontSize-2xs\@cq200Min {
+			--font-size: var(--mox-space-2xs);  ;
+		}
+		.mox-fontSize-xs\@cq200Min {
+			--font-size: var(--mox-space-xs);  ;
+		}
+		.mox-fontSize-sm\@cq200Min {
+			--font-size: var(--mox-space-sm);  ;
+		}
+		.mox-fontSize-md\@cq200Min {
+			--font-size: var(--mox-space-md);  ;
+		}
+		.mox-fontSize-lg\@cq200Min {
+			--font-size: var(--mox-space-lg);  ;
+		}
+		.mox-fontSize-xl\@cq200Min {
+			--font-size: var(--mox-space-xl);  ;
+		}
+		.mox-fontSize-2xl\@cq200Min {
+			--font-size: var(--mox-space-2xl);  ;
+		}
+		.mox-fontSize-3xl\@cq200Min {
+			--font-size: var(--mox-space-3xl);  ;
+		}
+		.mox-fontSize-4xl\@cq200Min {
+			--font-size: var(--mox-space-4xl);  ;
+		}
+	}
+	@container (max-width: 200px) {
+		.mox-fontSize-4xs\@cq200Max {
+			--font-size: var(--mox-space-4xs);  ;
+		}
+		.mox-fontSize-3xs\@cq200Max {
+			--font-size: var(--mox-space-3xs);  ;
+		}
+		.mox-fontSize-2xs\@cq200Max {
+			--font-size: var(--mox-space-2xs);  ;
+		}
+		.mox-fontSize-xs\@cq200Max {
+			--font-size: var(--mox-space-xs);  ;
+		}
+		.mox-fontSize-sm\@cq200Max {
+			--font-size: var(--mox-space-sm);  ;
+		}
+		.mox-fontSize-md\@cq200Max {
+			--font-size: var(--mox-space-md);  ;
+		}
+		.mox-fontSize-lg\@cq200Max {
+			--font-size: var(--mox-space-lg);  ;
+		}
+		.mox-fontSize-xl\@cq200Max {
+			--font-size: var(--mox-space-xl);  ;
+		}
+		.mox-fontSize-2xl\@cq200Max {
+			--font-size: var(--mox-space-2xl);  ;
+		}
+		.mox-fontSize-3xl\@cq200Max {
+			--font-size: var(--mox-space-3xl);  ;
+		}
+		.mox-fontSize-4xl\@cq200Max {
+			--font-size: var(--mox-space-4xl);  ;
+		}
+	}
+	/* Container breakpoint: cq400 (400px) */
+	@container (min-width: 400px) {
+		.mox-fontSize-4xs\@cq400Min {
+			--font-size: var(--mox-space-4xs);  ;
+		}
+		.mox-fontSize-3xs\@cq400Min {
+			--font-size: var(--mox-space-3xs);  ;
+		}
+		.mox-fontSize-2xs\@cq400Min {
+			--font-size: var(--mox-space-2xs);  ;
+		}
+		.mox-fontSize-xs\@cq400Min {
+			--font-size: var(--mox-space-xs);  ;
+		}
+		.mox-fontSize-sm\@cq400Min {
+			--font-size: var(--mox-space-sm);  ;
+		}
+		.mox-fontSize-md\@cq400Min {
+			--font-size: var(--mox-space-md);  ;
+		}
+		.mox-fontSize-lg\@cq400Min {
+			--font-size: var(--mox-space-lg);  ;
+		}
+		.mox-fontSize-xl\@cq400Min {
+			--font-size: var(--mox-space-xl);  ;
+		}
+		.mox-fontSize-2xl\@cq400Min {
+			--font-size: var(--mox-space-2xl);  ;
+		}
+		.mox-fontSize-3xl\@cq400Min {
+			--font-size: var(--mox-space-3xl);  ;
+		}
+		.mox-fontSize-4xl\@cq400Min {
+			--font-size: var(--mox-space-4xl);  ;
+		}
+	}
+	@container (max-width: 400px) {
+		.mox-fontSize-4xs\@cq400Max {
+			--font-size: var(--mox-space-4xs);  ;
+		}
+		.mox-fontSize-3xs\@cq400Max {
+			--font-size: var(--mox-space-3xs);  ;
+		}
+		.mox-fontSize-2xs\@cq400Max {
+			--font-size: var(--mox-space-2xs);  ;
+		}
+		.mox-fontSize-xs\@cq400Max {
+			--font-size: var(--mox-space-xs);  ;
+		}
+		.mox-fontSize-sm\@cq400Max {
+			--font-size: var(--mox-space-sm);  ;
+		}
+		.mox-fontSize-md\@cq400Max {
+			--font-size: var(--mox-space-md);  ;
+		}
+		.mox-fontSize-lg\@cq400Max {
+			--font-size: var(--mox-space-lg);  ;
+		}
+		.mox-fontSize-xl\@cq400Max {
+			--font-size: var(--mox-space-xl);  ;
+		}
+		.mox-fontSize-2xl\@cq400Max {
+			--font-size: var(--mox-space-2xl);  ;
+		}
+		.mox-fontSize-3xl\@cq400Max {
+			--font-size: var(--mox-space-3xl);  ;
+		}
+		.mox-fontSize-4xl\@cq400Max {
+			--font-size: var(--mox-space-4xl);  ;
+		}
+	}
+	/* Container breakpoint: cq600 (600px) */
+	@container (min-width: 600px) {
+		.mox-fontSize-4xs\@cq600Min {
+			--font-size: var(--mox-space-4xs);  ;
+		}
+		.mox-fontSize-3xs\@cq600Min {
+			--font-size: var(--mox-space-3xs);  ;
+		}
+		.mox-fontSize-2xs\@cq600Min {
+			--font-size: var(--mox-space-2xs);  ;
+		}
+		.mox-fontSize-xs\@cq600Min {
+			--font-size: var(--mox-space-xs);  ;
+		}
+		.mox-fontSize-sm\@cq600Min {
+			--font-size: var(--mox-space-sm);  ;
+		}
+		.mox-fontSize-md\@cq600Min {
+			--font-size: var(--mox-space-md);  ;
+		}
+		.mox-fontSize-lg\@cq600Min {
+			--font-size: var(--mox-space-lg);  ;
+		}
+		.mox-fontSize-xl\@cq600Min {
+			--font-size: var(--mox-space-xl);  ;
+		}
+		.mox-fontSize-2xl\@cq600Min {
+			--font-size: var(--mox-space-2xl);  ;
+		}
+		.mox-fontSize-3xl\@cq600Min {
+			--font-size: var(--mox-space-3xl);  ;
+		}
+		.mox-fontSize-4xl\@cq600Min {
+			--font-size: var(--mox-space-4xl);  ;
+		}
+	}
+	@container (max-width: 600px) {
+		.mox-fontSize-4xs\@cq600Max {
+			--font-size: var(--mox-space-4xs);  ;
+		}
+		.mox-fontSize-3xs\@cq600Max {
+			--font-size: var(--mox-space-3xs);  ;
+		}
+		.mox-fontSize-2xs\@cq600Max {
+			--font-size: var(--mox-space-2xs);  ;
+		}
+		.mox-fontSize-xs\@cq600Max {
+			--font-size: var(--mox-space-xs);  ;
+		}
+		.mox-fontSize-sm\@cq600Max {
+			--font-size: var(--mox-space-sm);  ;
+		}
+		.mox-fontSize-md\@cq600Max {
+			--font-size: var(--mox-space-md);  ;
+		}
+		.mox-fontSize-lg\@cq600Max {
+			--font-size: var(--mox-space-lg);  ;
+		}
+		.mox-fontSize-xl\@cq600Max {
+			--font-size: var(--mox-space-xl);  ;
+		}
+		.mox-fontSize-2xl\@cq600Max {
+			--font-size: var(--mox-space-2xl);  ;
+		}
+		.mox-fontSize-3xl\@cq600Max {
+			--font-size: var(--mox-space-3xl);  ;
+		}
+		.mox-fontSize-4xl\@cq600Max {
+			--font-size: var(--mox-space-4xl);  ;
+		}
 	}
 }

@@ -3,15 +3,18 @@
   * This file is auto-generated. Do not edit directly.
   * Generated from src/moxCss/mox.config.ts and script: `generateCss.ts`
 */
-.mox-font-weight-light {
-    font-weight: light;
-}
-.mox-font-weight-normal {
-    font-weight: normal;
-}
-.mox-font-weight-medium {
-    font-weight: medium;
-}
-.mox-font-weight-bold {
-    font-weight: bold;
+
+@layer props {
+	.mox-fontWeight-light {
+		font-weight: 300;  
+	}
+	.mox-fontWeight-normal {
+		font-weight: 400;  
+	}
+	.mox-fontWeight-medium {
+		font-weight: 500;  
+	}
+	.mox-fontWeight-bold {
+		font-weight: 700;  
+	}
 }

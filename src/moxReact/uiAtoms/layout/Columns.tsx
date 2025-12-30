@@ -1,4 +1,5 @@
 /**
+ * ## Not implemented yet
  *
  * Columns component that displays its children in columns.
  * The number of columns is determined by the `count` prop (responsive).

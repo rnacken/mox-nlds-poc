@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { MoxColumns } from "./Columns";
 
 const meta = {
-  title: "React/Atoms/Layout/Columns",
+  title: "React/Atoms/Layout/Columns*",
   component: MoxColumns,
   tags: ["autodocs"],
   parameters: {},

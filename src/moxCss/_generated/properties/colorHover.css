@@ -1,0 +1,32 @@
+
+/**
+  * This file is auto-generated. Do not edit directly.
+  * Generated from src/moxCss/mox.config.ts and script: `generateCss.ts`
+*/
+
+@layer props {
+	.mox-colorHover-primary-hover:hover {
+		--text-color-hover: var(--color-primary);  
+	}
+	.mox-colorHover-secondary-hover:hover {
+		--text-color-hover: var(--color-secondary);  
+	}
+	.mox-colorHover-tertiary-hover:hover {
+		--text-color-hover: var(--color-tertiary);  
+	}
+	.mox-colorHover-error-hover:hover {
+		--text-color-hover: var(--color-error);  
+	}
+	.mox-colorHover-warning-hover:hover {
+		--text-color-hover: var(--color-warning);  
+	}
+	.mox-colorHover-success-hover:hover {
+		--text-color-hover: var(--color-success);  
+	}
+	.mox-colorHover-info-hover:hover {
+		--text-color-hover: var(--color-info);  
+	}
+	.mox-colorHover-inherit-hover:hover {
+		--text-color-hover: inherit;  
+	}
+}

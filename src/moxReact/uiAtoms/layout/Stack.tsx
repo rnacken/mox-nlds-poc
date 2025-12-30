@@ -1,13 +1,27 @@
 import type { ElementType } from "react";
-import type { AtomProps, StylingPropMap } from "../AtomTypes";
+import type { AtomProps, StyleProps } from "../AtomTypes";
 import { propsToClassNames } from "../../helpers/propsToClassNames";
 import clsx from "clsx";
 
-const stylingPropMap = {
-  gap: "gap",
+export const styleProps = [
+  "gap",
+  "columnnGap",
+  "rowGap",
+  "alignItems",
+  "justifyContent",
+  "direction",
+  "wrap",
+] as const satisfies StyleProps;
+
+/**
+ * Stack component that displays its children in a stack (vertical) layout.
+ * Functionally a flex-box with direction `column`.
+ *
+ * Responsibilities:
+ * 1. Arrange child elements in a vertical column.
   alignItems: "alignItems",
   justifyContent: "justifyContent",
-} as const satisfies StylingPropMap;
+} as const satisfies StyleProps;
 
 /**
  * Stack component that displays its children in a stack (vertical) layout.
@@ -32,13 +46,14 @@ export const MoxAtomStack = <T extends ElementType = "div">({
   className,
   ref,
   ...props
-}: AtomProps<T, typeof stylingPropMap>) => {
+}: AtomProps<T, typeof styleProps>) => {
   const Component = as || ("div" as ElementType);
 
   // convert style props into correct classnames
-  const stylePropClassNames = propsToClassNames(stylingPropMap, props);
-
-  const { gap, alignItems, ...restProps } = props;
+  const { stylePropClassNames, restProps } = propsToClassNames(
+    styleProps,
+    props
+  );
 
   return (
     <Component
