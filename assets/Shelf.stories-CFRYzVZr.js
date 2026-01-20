@@ -1,0 +1,5 @@
+import{j as r}from"./iframe-C3RczD5j.js";import{M as t}from"./Shelf-BTL0hEZJ.js";import{g as e}from"./getStylePropArgTypes-aGthtbFn.js";import{s as o}from"./Stack-B5Ift6-G.js";import"./preload-helper-DivXI2Cm.js";import"./mox.config-CZM7FRF_.js";import"./propsToClassNames-WTUPRG8B.js";import"./clsx-B-dksMZM.js";const l={title:"React/Atoms/Layout/Shelf",component:t,tags:["autodocs"],parameters:{},args:{gap:"md",children:r.jsxs(r.Fragment,{children:[r.jsx("div",{children:"📦"}),r.jsx("div",{children:"📦"})]})},argTypes:e(o)},s={args:{}};s.parameters={...s.parameters,docs:{...s.parameters?.docs,source:{originalSource:`{
+  args: {
+    // as: "section",
+  }
+}`,...s.parameters?.docs?.source}}};const x=["AsSection"];export{s as AsSection,x as __namedExportsOrder,l as default};
