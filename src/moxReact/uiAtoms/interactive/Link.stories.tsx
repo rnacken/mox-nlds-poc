@@ -41,7 +41,7 @@ export const LinkBox: Story = {
     children: (
       <MoxBox
         padding="xl"
-        borderColor="black"
+        borderColor="zwart"
         borderStyle={"dashed"}
         borderWidth={"2px"}
       >

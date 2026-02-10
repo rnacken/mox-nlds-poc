@@ -3,7 +3,8 @@
  *
  * Contains the settings to be used for calculating & generating the css files in `_generated`:
  * - spaces: all clamp-values for spacing for each space-key (e.g., xs, sm, md, lg, xl)
- * - responsive: all css-classes that should be generated for responsive design
+ * - properties: all css-classes that should be generated for (possibly) responsive css properties
+ * - markup: all css-classes that should be generated for markup elements (e.g., p, a, etc.)
  *
  */
 
@@ -12,7 +13,9 @@ import { prefix } from "./configOptions";
 import { boxProps } from "./props/box";
 import { flexProps } from "./props/flex";
 import { linkProps } from "./props/link";
+import { markupStyles } from "./props/markup";
 import { textProps } from "./props/text";
+import { utilsProps } from "./props/utils";
 
 // Unfortunately, at the moment it's not possible to define these values with `css vars` - a media/container-query can be defined before any vars are available.
 const viewportBreakpoints = {
@@ -32,10 +35,12 @@ const containerBreakpoints = {
 
 const props = {
   // Keys of these objects are used to map React props to classnames (see: `propsToClassNames` helper)
+  ...flexProps,
   ...linkProps,
   ...textProps,
-  ...flexProps,
   ...boxProps,
+  ...utilsProps,
+  ...markupStyles,
 };
 
 export const moxConfig = {
@@ -54,9 +59,7 @@ export const moxConfig = {
 export type MoxConfigProps = {
   [propKey: string]: {
     options: {
-      [optionKey: string]: {
-        [cssProperty: string]: string;
-      };
+      [optionKey: string]: string;
     };
     responsive?: boolean;
     state?: "hover" | "focus" | "active" | "disabled";
@@ -71,25 +74,86 @@ type MoxConfig = {
   props: MoxConfigProps;
 };
 
-//todo: make function to create styles based on these values inside .mox-content class
-const markupContent = {
+export const markupContent = {
   p: {
+    markup: "p",
     alignItems: "start",
     inlineSize: { mobileMin: "md", mobileMax: "xs" },
+  },
+  a: {
+    // markup: "a",
+    color: "primary",
+    underline: "underline",
+    underlineHover: "none",
+  },
+  blockquote: {
+    // markup: "blockquote",
+    backgroundColor: "primary-subtle-2",
+    padding: "md",
+    borderStartStartRadius: "lint-0.5",
+  },
+  "a.btn-primary": {
+    backgroundColor: "primary",
+    backgroundColorHover: "primary-hover",
+    paddingBlock:
+      "sm" /* small adjustment to compensate for missing textblock inside button */,
+    paddingInline: "md",
+    underline: "none",
+    underlineHover: "none",
+    display: "inline-block",
+    fontWeight: "bold",
+  },
+  "a.btn-secondary": {
+    backgroundColor: "secondary",
+    backgroundColorHover: "secondary-hover",
+    paddingBlock:
+      "sm" /* small adjustment to compensate for missing textblock inside button */,
+    paddingInline: "md",
+    underline: "none",
+    underlineHover: "none",
+    display: "inline-block",
+    fontWeight: "bold",
+  },
+  "a.btn-outline-primary": {
+    backgroundColor: "wit",
+    paddingBlock:
+      "sm" /* small adjustment to compensate for missing textblock inside button */,
+    paddingInline: "md",
+    underline: "none",
+    underlineHover: "none",
+    display: "inline-block",
+    borderColor: "primary",
+    borderColorHover: "primary-hover",
+    color: "primary",
+    borderWidth: "2px",
+    borderStyle: "solid",
+    fontWeight: "bold",
+  },
+  "a.btn-outline-secondary": {
+    backgroundColor: "wit",
+    paddingBlock:
+      "sm" /* small adjustment to compensate for missing textblock inside button */,
+    paddingInline: "md",
+    underline: "none",
+    underlineHover: "none",
+    display: "inline-block",
+    borderColor: "secondary",
+    borderColorHover: "secondary-hover",
+    color: "secondary",
+    borderWidth: "2px",
+    borderStyle: "solid",
+    fontWeight: "bold",
+  },
+  button: {
+    backgroundColor: "primary",
+    backgroundColorHover: "primary-hover",
+    paddingBlock:
+      "sm" /* small adjustment to compensate for missing textblock inside button */,
+    paddingInline: "md",
+    display: "inline-block",
+    fontWeight: "bold",
   },
 } as const satisfies Record<
   string,
   StylePropTypes<readonly (keyof typeof props)[]>
 >;
-
-// // css:
-
-// .markup-content {
-//   p {
-//     align-items: start;
-
-//     @media and screen (600px) {
-//       inlineSize: 'xs'
-//     }
-//   }
-// }

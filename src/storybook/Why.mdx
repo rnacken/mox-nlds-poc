@@ -10,7 +10,7 @@ import Card from "./assets/textBox/card.png";
 
     Uit het NLDS volgen we de belangrijkste aanbevelingen en regels op, maar we stappen ook bewust af van een aantal ideeen: we zien wat problemen zien bij de huidige aanpak van andere NLDS-gebaseerde systemen (bv Rijkshuisstijl Community - RHC):
 
-    ## 1. Inconsistentie in kwaliteit / naamgeving / APIs / aanwezigheid / etc
+    ## 1. 😕 Inconsistentie in kwaliteit / naamgeving / APIs / aanwezigheid / etc
 
     De huidige lijst met componenten van NLDS mist een hierarchie (complex en eenvoudig staan door elkaar) en consistentie, want een componenten komen uit Utrecht, RHC, Amsterdam, etc.
 
@@ -23,12 +23,14 @@ import Card from "./assets/textBox/card.png";
     - We zullen voor Mox *geen* componenten van andere implementaties gebruiken.
     - We hebben een atomische structuur van **Atoms, Molecules en Organisms** (van eenvoudig naar complex). De **Atoms** zijn de kleinste bouwblokken, waar alle **Molecules** uit opgebouwd zijn (en **Organisms** bestaan weer uit **Atoms** en **Molecules**).
 
-    ### Gevolgen:
+    ### ➡️ Gevolgen:
     - Consistente **Atoms**, die je altijd zelf kunt gebruiken om een eigen **Molecule/Organism** component te maken.
     - **Atoms** doen een 'belofte': ze hebben altijd dezelfde API (altijd `as`, `ref`, `className` en `styling` props, nooit omringende spacing zoals `padding` of `margin`, altijd slechts 1 tag, zoals `div`).
     - Voor styling kunnen we gebruik maken van stabiele `@layer` opzet, zodat gebruikers makkelijk styling kunnen overriden.
 
-    ## 2. Geen universeel scaling systeem voor spaces / layouts
+    ---
+
+    ## 2. 😕 Geen universeel scaling systeem voor spaces / layouts
 
     Er is `by design` voor gekozen om geen spacing-componenten te maken (bv een flex-box element). Dit is een probleem want daardoor zijn er nu componenten die:
     - Spacing properties (`gap`, `padding`, `width`, etc) hardcoded hebben (e.g. `2rem`), wat niet responsive meeschaalt met onze scaling.
@@ -39,14 +41,16 @@ import Card from "./assets/textBox/card.png";
     - We definieren 1 scaling systeem, voor zowel typografie als spacing.
     - We zorgen voor een text-box trimming om ongewilde text-leading te voorkomen (zie [CSS: text-box](/docs/css-text-box--docs)).
 
-    ## 3. Wildgroei aan tokens
+    ---
+
+    ## 3. 😕 Wildgroei aan tokens
 
     Momenteel heeft het Rijkshuisstijl Community theme bijna 1400 `tokens`, die allemaal aangepast kunnen worden in Figma (en de Tokens Studio plugin).
     Voor designers is dit niet goed meer bij te houden, en zodra er een update komt van de token-lijst is het lastig om te controleren wat de impact is op een design.
 
     ### Mox aanpak:
 
-    - We houden enkel een lijst van `tokens` bij voor de Atoms in ons systeem: de kleinste bouwblokken. Wensen voor een globale aanpassing van complexere componenten (**Molecules** en **Organisms**)
+    - We houden enkel een lijst van `tokens` bij voor de Atoms in ons systeem: de kleinste bouwblokken.
     - Voor **Molecules & Organisms** bestaan er geen `tokens` (mogelijk een enkele uitzondering).
 
     ### Gevolgen:
@@ -57,18 +61,4 @@ import Card from "./assets/textBox/card.png";
       - of: bouw je je eigen component gebaseerd op de **Atoms**
 
   </div>
-  <div className="sb-section">
-    <div className="sb-section-item">
-      <img
-        src={Card}
-        alt="A wall of logos representing different styling technologies"
-      />
-      <h4 className="sb-section-item-heading">Add styling and CSS</h4>
-      <p className="sb-section-item-paragraph">Like with web applications, there are many ways to include CSS within Storybook. Learn more about setting up styling within Storybook.</p>
-      <a
-        href="https://storybook.js.org/docs/configure/styling-and-css/?renderer=react&ref=configure"
-        target="_blank"
-      >Learn more</a>
-    </div>
- </div>
 </div>

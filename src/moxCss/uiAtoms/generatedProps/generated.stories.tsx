@@ -21,9 +21,13 @@ export const AllGeneratedCss = () => {
   return (
     <div>
       <style>{`
-h1, p {
+h1, p, code {
 all: revert;    
 }
+code {
+        background-color: #f0f0f0;
+}
+
 .generated-css-table {
   border-collapse: collapse;
   width: 100%;
@@ -57,7 +61,8 @@ all: revert;
       <p>
         Je kan ze simpelweg gebruiken als classNames, maar met React wordt het
         nog eenvoudiger: bekijk bij een component welke property je kan
-        instellen (bv een `MoxBox` heeft o.a. de property `backgroundColor`).
+        instellen (bv een <code>MoxBox</code> heeft o.a. de property{" "}
+        <code>backgroundColor</code>).
         <br />
         De mogelijke options voor die prop zijn dezelfde die hier opgesomd
         staan.
@@ -127,7 +132,7 @@ all: revert;
                                           type="button"
                                           onClick={setProp(
                                             propName,
-                                            `${option}@${breakpoint}Min`
+                                            `${option}@${breakpoint}Min`,
                                           )}
                                           style={{
                                             ...(propStates[propName] ===
@@ -145,7 +150,7 @@ all: revert;
                                           type="button"
                                           onClick={setProp(
                                             propName,
-                                            `${option}@${breakpoint}Max`
+                                            `${option}@${breakpoint}Max`,
                                           )}
                                           style={{
                                             ...(propStates[propName] ===
@@ -161,10 +166,10 @@ all: revert;
                                         </button>
                                       </li>
                                     </>
-                                  )
+                                  ),
                                 )}
                               </>
-                            )
+                            ),
                           )}
                           {Object.entries(moxConfig.containerBreakpoints).map(
                             ([breakpoint, bpSize]) => (
@@ -178,7 +183,7 @@ all: revert;
                                           type="button"
                                           onClick={setProp(
                                             propName,
-                                            `${option}@${breakpoint}Min`
+                                            `${option}@${breakpoint}Min`,
                                           )}
                                           style={{
                                             ...(propStates[propName] ===
@@ -196,7 +201,7 @@ all: revert;
                                           type="button"
                                           onClick={setProp(
                                             propName,
-                                            `${option}@${breakpoint}Max`
+                                            `${option}@${breakpoint}Max`,
                                           )}
                                           style={{
                                             ...(propStates[propName] ===
@@ -210,10 +215,10 @@ all: revert;
                                         >{`${option}@${breakpoint}Max`}</button>
                                       </li>
                                     </>
-                                  )
+                                  ),
                                 )}
                               </>
-                            )
+                            ),
                           )}
                         </>
                       )}

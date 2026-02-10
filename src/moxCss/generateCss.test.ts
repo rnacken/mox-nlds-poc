@@ -1,7 +1,6 @@
 import { describe, it, expect } from "vitest";
 import * as fs from "fs";
 import { posix as posixPath } from "path";
-import { moxConfig } from "./mox.config";
 
 /**
  * These tests verify the generated CSS files that already exist.
@@ -18,7 +17,7 @@ describe("generateCss.ts", () => {
     it("should correctly generate CSS files for all defined properties with base options", () => {
       // Test a property without responsive or state (e.g., borderWidth)
       const borderWidthCss = readGeneratedFile(
-        "_generated/properties/borderWidth.css"
+        "_generated/properties/borderWidth.css",
       );
 
       expect(borderWidthCss).toBeDefined();
@@ -33,7 +32,7 @@ describe("generateCss.ts", () => {
 
     it("should generate CSS for properties with CSS variable options", () => {
       const inlineSizeCss = readGeneratedFile(
-        "_generated/properties/inlineSize.css"
+        "_generated/properties/inlineSize.css",
       );
 
       expect(inlineSizeCss).toBeDefined();
@@ -56,39 +55,39 @@ describe("generateCss.ts", () => {
   describe("Test Case 2: Responsive CSS classes across breakpoints", () => {
     it("should generate responsive classes for viewport breakpoints", () => {
       const inlineSizeCss = readGeneratedFile(
-        "_generated/properties/inlineSize.css"
+        "_generated/properties/inlineSize.css",
       );
 
       expect(inlineSizeCss).toBeDefined();
 
       // Check for mobile breakpoint (600px)
       expect(inlineSizeCss).toContain(
-        "/* Viewport breakpoint: mobile (600px) */"
+        "/* Viewport breakpoint: mobile (600px) */",
       );
       expect(inlineSizeCss).toContain(
-        "@media only screen and (min-device-width: 600px)"
+        "@media only screen and (min-device-width: 600px)",
       );
       expect(inlineSizeCss).toContain(".mox-inlineSize-xl\\@mobileMin {");
       expect(inlineSizeCss).toContain(
-        "@media only screen and (max-device-width: 600px)"
+        "@media only screen and (max-device-width: 600px)",
       );
       expect(inlineSizeCss).toContain(".mox-inlineSize-xl\\@mobileMax {");
 
       // Check for tablet breakpoint (900px)
       expect(inlineSizeCss).toContain(
-        "/* Viewport breakpoint: tablet (900px) */"
+        "/* Viewport breakpoint: tablet (900px) */",
       );
       expect(inlineSizeCss).toContain(
-        "@media only screen and (min-device-width: 900px)"
+        "@media only screen and (min-device-width: 900px)",
       );
       expect(inlineSizeCss).toContain(".mox-inlineSize-md\\@tabletMin {");
 
       // Check for desktop breakpoint (1200px)
       expect(inlineSizeCss).toContain(
-        "/* Viewport breakpoint: desktop (1200px) */"
+        "/* Viewport breakpoint: desktop (1200px) */",
       );
       expect(inlineSizeCss).toContain(
-        "@media only screen and (min-device-width: 1200px)"
+        "@media only screen and (min-device-width: 1200px)",
       );
       expect(inlineSizeCss).toContain(".mox-inlineSize-sm\\@desktopMin {");
     });
@@ -113,7 +112,7 @@ describe("generateCss.ts", () => {
 
     it("should NOT generate responsive classes for non-responsive properties", () => {
       const borderWidthCss = readGeneratedFile(
-        "_generated/properties/borderWidth.css"
+        "_generated/properties/borderWidth.css",
       );
 
       expect(borderWidthCss).toBeDefined();
@@ -126,21 +125,23 @@ describe("generateCss.ts", () => {
   describe("Test Case 3: State-dependent CSS classes", () => {
     it("should generate state-dependent classes with :hover pseudo-class", () => {
       const underlineHoverCss = readGeneratedFile(
-        "_generated/properties/underlineHover.css"
+        "_generated/properties/underlineHover.css",
       );
 
       expect(underlineHoverCss).toBeDefined();
       expect(underlineHoverCss).toContain(
-        ".mox-underlineHover-underline-hover:hover {"
+        ".mox-underlineHover-underline-hover:hover {",
       );
       expect(underlineHoverCss).toContain("text-decoration: underline;");
-      expect(underlineHoverCss).toContain(".mox-underlineHover-none-hover:hover {");
+      expect(underlineHoverCss).toContain(
+        ".mox-underlineHover-none-hover:hover {",
+      );
       expect(underlineHoverCss).toContain("text-decoration: none;");
     });
 
     it("should NOT add state suffix for properties without state", () => {
       const underlineCss = readGeneratedFile(
-        "_generated/properties/underline.css"
+        "_generated/properties/underline.css",
       );
 
       expect(underlineCss).toBeDefined();
@@ -152,7 +153,7 @@ describe("generateCss.ts", () => {
     it("should properly escape special characters in class names", () => {
       // Test with a property that has special characters in option keys (e.g., "1px")
       const borderRadiusCss = readGeneratedFile(
-        "_generated/properties/borderRadius.css"
+        "_generated/properties/borderRadius.css",
       );
 
       expect(borderRadiusCss).toBeDefined();
@@ -165,7 +166,7 @@ describe("generateCss.ts", () => {
   describe("Clamp spaces generation", () => {
     it("should generate clamp space files for all defined spaces", () => {
       const clampXlCss = readGeneratedFile(
-        "_generated/clampSpaces/clamp-xl.css"
+        "_generated/clampSpaces/clamp-xl.css",
       );
 
       expect(clampXlCss).toBeDefined();

@@ -3,15 +3,14 @@
  */
 export const mapOptionsToValues = <O extends string>(
   options: ReadonlyArray<O>,
-  cssProps: Array<string>
+  cssProps: Array<string>,
 ) => {
-  const mappedBasicOptions = {} as Record<O, Record<string, string>>;
+  const mappedBasicOptions = {} as Record<O, string>;
   for (const option of options) {
-    const result = cssProps.reduce((acc, cssProp) => {
-      acc[cssProp] = `${option}`;
-      return acc;
-    }, {} as Record<string, string>);
-    mappedBasicOptions[option] = result;
+    const result = cssProps.map((cssProp) => {
+      return `${cssProp}: ${option};`;
+    });
+    mappedBasicOptions[option] = result.join("\n");
   }
   return mappedBasicOptions;
 };

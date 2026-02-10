@@ -4,157 +4,157 @@
 */
 
 @layer props {
-  .mox-borderColor-primary {
+  .mox-borderColorHover-primary-hover:hover {
     border-color: var(--mox-color-primary);
   }
-  .mox-borderColor-primary-hover {
+  .mox-borderColorHover-primary-hover-hover:hover {
     border-color: var(--mox-color-primary-hover);
   }
-  .mox-borderColor-primary-subtle {
+  .mox-borderColorHover-primary-subtle-hover:hover {
     border-color: var(--mox-color-primary-subtle);
   }
-  .mox-borderColor-primary-subtle-hover {
+  .mox-borderColorHover-primary-subtle-hover-hover:hover {
     border-color: var(--mox-color-primary-subtle-hover);
   }
-  .mox-borderColor-primary-subtle-2 {
+  .mox-borderColorHover-primary-subtle-2-hover:hover {
     border-color: var(--mox-color-primary-subtle-2);
   }
-  .mox-borderColor-primary-subtle-2-hover {
+  .mox-borderColorHover-primary-subtle-2-hover-hover:hover {
     border-color: var(--mox-color-primary-subtle-2-hover);
   }
-  .mox-borderColor-secondary {
+  .mox-borderColorHover-secondary-hover:hover {
     border-color: var(--mox-color-secondary);
   }
-  .mox-borderColor-secondary-hover {
+  .mox-borderColorHover-secondary-hover-hover:hover {
     border-color: var(--mox-color-secondary-hover);
   }
-  .mox-borderColor-secondary-subtle {
+  .mox-borderColorHover-secondary-subtle-hover:hover {
     border-color: var(--mox-color-secondary-subtle);
   }
-  .mox-borderColor-secondary-subtle-hover {
+  .mox-borderColorHover-secondary-subtle-hover-hover:hover {
     border-color: var(--mox-color-secondary-subtle-hover);
   }
-  .mox-borderColor-secondary-subtle-2 {
+  .mox-borderColorHover-secondary-subtle-2-hover:hover {
     border-color: var(--mox-color-secondary-subtle-2);
   }
-  .mox-borderColor-secondary-subtle-2-hover {
+  .mox-borderColorHover-secondary-subtle-2-hover-hover:hover {
     border-color: var(--mox-color-secondary-subtle-2-hover);
   }
-  .mox-borderColor-neutral {
+  .mox-borderColorHover-neutral-hover:hover {
     border-color: var(--mox-color-neutral);
   }
-  .mox-borderColor-neutral-hover {
+  .mox-borderColorHover-neutral-hover-hover:hover {
     border-color: var(--mox-color-neutral-hover);
   }
-  .mox-borderColor-neutral-subtle {
+  .mox-borderColorHover-neutral-subtle-hover:hover {
     border-color: var(--mox-color-neutral-subtle);
   }
-  .mox-borderColor-neutral-subtle-hover {
+  .mox-borderColorHover-neutral-subtle-hover-hover:hover {
     border-color: var(--mox-color-neutral-subtle-hover);
   }
-  .mox-borderColor-neutral-subtle-2 {
+  .mox-borderColorHover-neutral-subtle-2-hover:hover {
     border-color: var(--mox-color-neutral-subtle-2);
   }
-  .mox-borderColor-neutral-subtle-2-hover {
+  .mox-borderColorHover-neutral-subtle-2-hover-hover:hover {
     border-color: var(--mox-color-neutral-subtle-2-hover);
   }
-  .mox-borderColor-accent {
+  .mox-borderColorHover-accent-hover:hover {
     border-color: var(--mox-color-accent);
   }
-  .mox-borderColor-accent-hover {
+  .mox-borderColorHover-accent-hover-hover:hover {
     border-color: var(--mox-color-accent-hover);
   }
-  .mox-borderColor-accent-subtle {
+  .mox-borderColorHover-accent-subtle-hover:hover {
     border-color: var(--mox-color-accent-subtle);
   }
-  .mox-borderColor-accent-subtle-hover {
+  .mox-borderColorHover-accent-subtle-hover-hover:hover {
     border-color: var(--mox-color-accent-subtle-hover);
   }
-  .mox-borderColor-accent-subtle-2 {
+  .mox-borderColorHover-accent-subtle-2-hover:hover {
     border-color: var(--mox-color-accent-subtle-2);
   }
-  .mox-borderColor-accent-subtle-2-hover {
+  .mox-borderColorHover-accent-subtle-2-hover-hover:hover {
     border-color: var(--mox-color-accent-subtle-2-hover);
   }
-  .mox-borderColor-info {
+  .mox-borderColorHover-info-hover:hover {
     border-color: var(--mox-color-info);
   }
-  .mox-borderColor-info-hover {
+  .mox-borderColorHover-info-hover-hover:hover {
     border-color: var(--mox-color-info-hover);
   }
-  .mox-borderColor-info-subtle {
+  .mox-borderColorHover-info-subtle-hover:hover {
     border-color: var(--mox-color-info-subtle);
   }
-  .mox-borderColor-info-subtle-hover {
+  .mox-borderColorHover-info-subtle-hover-hover:hover {
     border-color: var(--mox-color-info-subtle-hover);
   }
-  .mox-borderColor-info-subtle-2 {
+  .mox-borderColorHover-info-subtle-2-hover:hover {
     border-color: var(--mox-color-info-subtle-2);
   }
-  .mox-borderColor-info-subtle-2-hover {
+  .mox-borderColorHover-info-subtle-2-hover-hover:hover {
     border-color: var(--mox-color-info-subtle-2-hover);
   }
-  .mox-borderColor-success {
+  .mox-borderColorHover-success-hover:hover {
     border-color: var(--mox-color-success);
   }
-  .mox-borderColor-success-hover {
+  .mox-borderColorHover-success-hover-hover:hover {
     border-color: var(--mox-color-success-hover);
   }
-  .mox-borderColor-success-subtle {
+  .mox-borderColorHover-success-subtle-hover:hover {
     border-color: var(--mox-color-success-subtle);
   }
-  .mox-borderColor-success-subtle-hover {
+  .mox-borderColorHover-success-subtle-hover-hover:hover {
     border-color: var(--mox-color-success-subtle-hover);
   }
-  .mox-borderColor-success-subtle-2 {
+  .mox-borderColorHover-success-subtle-2-hover:hover {
     border-color: var(--mox-color-success-subtle-2);
   }
-  .mox-borderColor-success-subtle-2-hover {
+  .mox-borderColorHover-success-subtle-2-hover-hover:hover {
     border-color: var(--mox-color-success-subtle-2-hover);
   }
-  .mox-borderColor-warning {
+  .mox-borderColorHover-warning-hover:hover {
     border-color: var(--mox-color-warning);
   }
-  .mox-borderColor-warning-hover {
+  .mox-borderColorHover-warning-hover-hover:hover {
     border-color: var(--mox-color-warning-hover);
   }
-  .mox-borderColor-warning-subtle {
+  .mox-borderColorHover-warning-subtle-hover:hover {
     border-color: var(--mox-color-warning-subtle);
   }
-  .mox-borderColor-warning-subtle-hover {
+  .mox-borderColorHover-warning-subtle-hover-hover:hover {
     border-color: var(--mox-color-warning-subtle-hover);
   }
-  .mox-borderColor-warning-subtle-2 {
+  .mox-borderColorHover-warning-subtle-2-hover:hover {
     border-color: var(--mox-color-warning-subtle-2);
   }
-  .mox-borderColor-warning-subtle-2-hover {
+  .mox-borderColorHover-warning-subtle-2-hover-hover:hover {
     border-color: var(--mox-color-warning-subtle-2-hover);
   }
-  .mox-borderColor-error {
+  .mox-borderColorHover-error-hover:hover {
     border-color: var(--mox-color-error);
   }
-  .mox-borderColor-error-hover {
+  .mox-borderColorHover-error-hover-hover:hover {
     border-color: var(--mox-color-error-hover);
   }
-  .mox-borderColor-error-subtle {
+  .mox-borderColorHover-error-subtle-hover:hover {
     border-color: var(--mox-color-error-subtle);
   }
-  .mox-borderColor-error-subtle-hover {
+  .mox-borderColorHover-error-subtle-hover-hover:hover {
     border-color: var(--mox-color-error-subtle-hover);
   }
-  .mox-borderColor-error-subtle-2 {
+  .mox-borderColorHover-error-subtle-2-hover:hover {
     border-color: var(--mox-color-error-subtle-2);
   }
-  .mox-borderColor-error-subtle-2-hover {
+  .mox-borderColorHover-error-subtle-2-hover-hover:hover {
     border-color: var(--mox-color-error-subtle-2-hover);
   }
-  .mox-borderColor-zwart {
+  .mox-borderColorHover-zwart-hover:hover {
     border-color: var(--mox-color-zwart);
   }
-  .mox-borderColor-wit {
+  .mox-borderColorHover-wit-hover:hover {
     border-color: var(--mox-color-wit);
   }
-  .mox-borderColor-transparant {
+  .mox-borderColorHover-transparant-hover:hover {
     border-color: var(--mox-color-transparant);
   }
 }

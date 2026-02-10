@@ -8,38 +8,40 @@ import { mapOptionsToCSSVars } from "../helpers/mapOptionsToCSSVars";
 import { mapOptionsToValues } from "../helpers/mapOptionsToValues";
 import { type MoxConfigProps } from "../mox.config";
 
+const css = String.raw;
+
 const borderRadiusOptions = {
-  "0": { "border-radius": "0" },
-  "1px": { "border-radius": "1px" },
-  "2px": { "border-radius": "2px" },
-  "4px": { "border-radius": "4px" },
-  "8px": { "border-radius": "8px" },
-  circle: { "border-radius": "50%" },
+  "0": css`
+    border-radius: 0;
+  `,
+  "1px": css`
+    border-radius: 1px;
+  `,
+  "2px": css`
+    border-radius: 2px;
+  `,
+  "4px": css`
+    border-radius: 4px;
+  `,
+  "8px": css`
+    border-radius: 8px;
+  `,
+  circle: css`
+    border-radius: 50%;
+  `,
 } as const;
 
 const getSingleBorderRadiusOptions = (
-  position: "start-start" | "start-end" | "end-start" | "end-end"
+  position: "start-start" | "start-end" | "end-start" | "end-end",
 ) => {
   return {
     ...borderRadiusOptions,
-    "lint-0.25": {
-      [`border-${position}-radius`]: "calc(0.25 * var(--mox-lint-inline-size))",
-    },
-    "lint-0.5": {
-      [`border-${position}-radius`]: "calc(0.5 * var(--mox-lint-inline-size))",
-    },
-    "lint-1": {
-      [`border-${position}-radius`]: "calc(1 * var(--mox-lint-inline-size))",
-    },
-    "lint-2": {
-      [`border-${position}-radius`]: "calc(2 * var(--mox-lint-inline-size))",
-    },
-    "lint-4": {
-      [`border-${position}-radius`]: "calc(4 * var(--mox-lint-inline-size))",
-    },
-    "lint-8": {
-      [`border-${position}-radius`]: "calc(8 * var(--mox-lint-inline-size))",
-    },
+    "lint-0.25": css`border-${position}-radius: calc(0.25 * var(--mox-lint-inline-size));`,
+    "lint-0.5": css`border-${position}-radius: calc(0.5 * var(--mox-lint-inline-size));`,
+    "lint-1": css`border-${position}-radius: calc(1 * var(--mox-lint-inline-size));`,
+    "lint-2": css`border-${position}-radius: calc(2 * var(--mox-lint-inline-size));`,
+    "lint-4": css`border-${position}-radius: calc(4 * var(--mox-lint-inline-size));`,
+    "lint-8": css`border-${position}-radius: calc(8 * var(--mox-lint-inline-size));`,
   };
 };
 
@@ -66,35 +68,90 @@ export const boxProps = {
   },
   borderWidth: {
     options: {
-      "0": { "border-width": "0" },
-      "1px": { "border-width": "1px" },
-      "2px": { "border-width": "2px" },
-      "4px": { "border-width": "4px" },
-      "8px": { "border-width": "8px" },
+      "0": css`
+        border-width: 0;
+      `,
+      "1px": css`
+        border-width: 1px;
+      `,
+      "2px": css`
+        border-width: 2px;
+      `,
+      "4px": css`
+        border-width: 4px;
+      `,
+      "8px": css`
+        border-width: 8px;
+      `,
     },
   },
   borderColor: {
     options: mapOptionsToCSSVars(colorOptions, ["border-color"], "color"),
   },
+  borderColorHover: {
+    options: mapOptionsToCSSVars(colorOptions, ["border-color"], "color"),
+    state: "hover",
+  },
+  borderColorActive: {
+    options: mapOptionsToCSSVars(colorOptions, ["border-color"], "color"),
+    state: "active",
+  },
   borderStyle: {
     options: {
-      solid: { "border-style": "solid" },
-      dashed: { "border-style": "dashed" },
-      dotted: { "border-style": "dotted" },
-      none: { "border-style": "none" },
+      solid: css`
+        border-style: solid;
+      `,
+      dashed: css`
+        border-style: dashed;
+      `,
+      dotted: css`
+        border-style: dotted;
+      `,
+      none: css`
+        border-style: none;
+      `,
     },
   },
   backgroundColor: {
     options: colorOptions.reduce(
       (acc, propName) => ({
         ...acc,
-        [propName as keyof typeof colorOptions]: {
-          "background-color": `var(--mox-color-${propName})`,
-          "--mox-text-color": `var(--mox-color-${propName}-contrast)`,
-        },
+        [propName as keyof typeof colorOptions]: css`
+          background-color: var(--mox-color-${propName});
+          --mox-text-color: var(--mox-color-${propName}-contrast);
+          color: var(--mox-text-color);
+        `,
       }),
-      {}
-    ) as Record<(typeof colorOptions)[number], Record<string, string>>,
+      {},
+    ) as Record<(typeof colorOptions)[number], string>,
+  },
+  backgroundColorHover: {
+    options: colorOptions.reduce(
+      (acc, propName) => ({
+        ...acc,
+        [propName as keyof typeof colorOptions]: css`
+          background-color: var(--mox-color-${propName});
+          --mox-text-color: var(--mox-color-${propName}-contrast);
+          color: var(--mox-text-color);
+        `,
+      }),
+      {},
+    ) as Record<(typeof colorOptions)[number], string>,
+    state: "hover",
+  },
+  backgroundColorActive: {
+    options: colorOptions.reduce(
+      (acc, propName) => ({
+        ...acc,
+        [propName as keyof typeof colorOptions]: css`
+          background-color: var(--mox-color-${propName});
+          --mox-text-color: var(--mox-color-${propName}-contrast);
+          color: var(--mox-text-color);
+        `,
+      }),
+      {},
+    ) as Record<(typeof colorOptions)[number], string>,
+    state: "active",
   },
   size: {
     options: {
