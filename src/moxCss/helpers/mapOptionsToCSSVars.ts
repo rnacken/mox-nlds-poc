@@ -11,15 +11,14 @@ import { prefix } from "../configOptions";
 export const mapOptionsToCSSVars = <O extends string>(
   options: ReadonlyArray<O>,
   cssProps: Array<string>,
-  varName: string
+  varName: string,
 ) => {
-  const mappedOptions = {} as Record<O, Record<string, string>>;
+  const mappedOptions = {} as Record<O, string>;
   for (const option of options) {
-    const result = cssProps.reduce((acc, cssProp) => {
-      acc[cssProp] = `var(--${prefix}-${varName}-${option})`;
-      return acc;
-    }, {} as Record<string, string>);
-    mappedOptions[option] = result;
+    const result = cssProps.map((cssProp) => {
+      return `${cssProp}: var(--${prefix}-${varName}-${option});`;
+    });
+    mappedOptions[option] = result.join("\n");
   }
   return mappedOptions;
 };

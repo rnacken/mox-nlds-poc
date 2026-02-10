@@ -1,4 +1,4 @@
-import type { spaces } from "../../../moxCss/mox.config";
+import type { spaces } from "../../../moxCss/configOptions";
 import type { AtomProps } from "../AtomTypes";
 import { MoxTextBlock, textBlockStyleProps } from "./TextBlock";
 

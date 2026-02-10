@@ -4,10 +4,12 @@
 */
 
 @layer props {
-  .mox-lineHeight-normal {
-    line-height: 1.5;
+  .mox-markup-p {
+    text-decoration: none;
+    margin-block: 1rem;
   }
-  .mox-lineHeight-tight {
-    line-height: 1.3;
+  .mox-markup-image {
+  }
+  .mox-markup-button {
   }
 }
